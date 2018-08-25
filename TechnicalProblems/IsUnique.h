@@ -2,8 +2,6 @@
 #ifndef _IS_UNIQUE_H_
 #define _IS_UNIQUE_H_
 
-#include <string>
-
 /**
  * Problem: Implement an algorithm to determine if a string has all unique
  * characters. What if you cannot use additional data structures?
