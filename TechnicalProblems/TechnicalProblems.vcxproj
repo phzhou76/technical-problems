@@ -154,6 +154,7 @@
     <ClInclude Include="CheckPermutation.h" />
     <ClInclude Include="IsUnique.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="URLify.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CheckPermutation.cpp" />
@@ -165,6 +166,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TechnicalProblems.cpp" />
+    <ClCompile Include="URLify.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Arrays and Strings.txt" />
