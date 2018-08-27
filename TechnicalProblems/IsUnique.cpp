@@ -148,7 +148,7 @@ void IsUnique::setBit(std::vector<int> &bitVectors, int charValue, bool setValue
 	}
 }
 
-/** 
+/**
  * Implementation without any data structures, assuming that standard sorting
  * algorithms do not use any additional data structures. The C++ sort() method
  * sorts the string in-place.
@@ -330,5 +330,6 @@ void IsUnique::testIsUnique()
 		}
 	}
 
-	std::cout << "Number of correct tests: " << numSuccessful << "/" << numTotal << std::endl;
+	std::cout << "Number of correct tests: " << numSuccessful << "/" << numTotal
+		<< std::endl << std::endl << std::endl;
 }

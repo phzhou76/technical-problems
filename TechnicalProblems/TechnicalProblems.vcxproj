@@ -153,12 +153,14 @@
   <ItemGroup>
     <ClInclude Include="CheckPermutation.h" />
     <ClInclude Include="IsUnique.h" />
+    <ClInclude Include="PalindromePermutation.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="URLify.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CheckPermutation.cpp" />
     <ClCompile Include="IsUnique.cpp" />
+    <ClCompile Include="PalindromePermutation.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

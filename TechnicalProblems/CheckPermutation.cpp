@@ -174,5 +174,6 @@ void CheckPermutation::testCheckPermutation()
 		}
 	}
 
-	std::cout << "Number of correct tests: " << numSuccessful << "/" << numTotal << std::endl;
+	std::cout << "Number of correct tests: " << numSuccessful << "/" << numTotal 
+		<< std::endl << std::endl << std::endl;
 }

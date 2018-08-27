@@ -16,19 +16,28 @@
     <Filter Include="Header Files\Notes">
       <UniqueIdentifier>{8d0e4a46-59a6-4ba0-aa99-b36f59a3dda9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Arrays and Strings">
+      <UniqueIdentifier>{3681e7b1-8580-4762-85d4-06f92362d9a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Arrays and Strings">
+      <UniqueIdentifier>{7980396e-f3fb-4b28-b752-b0007bb6d474}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="URLify.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
     <ClInclude Include="IsUnique.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
     <ClInclude Include="CheckPermutation.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
-    <ClInclude Include="URLify.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="PalindromePermutation.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -38,14 +47,17 @@
     <ClCompile Include="TechnicalProblems.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IsUnique.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CheckPermutation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Arrays and Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="IsUnique.cpp">
+      <Filter>Source Files\Arrays and Strings</Filter>
     </ClCompile>
     <ClCompile Include="URLify.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Arrays and Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromePermutation.cpp">
+      <Filter>Source Files\Arrays and Strings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
