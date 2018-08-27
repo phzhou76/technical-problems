@@ -13,14 +13,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Notes">
-      <UniqueIdentifier>{8d0e4a46-59a6-4ba0-aa99-b36f59a3dda9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Arrays and Strings">
       <UniqueIdentifier>{3681e7b1-8580-4762-85d4-06f92362d9a2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Arrays and Strings">
       <UniqueIdentifier>{7980396e-f3fb-4b28-b752-b0007bb6d474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Linked Lists">
+      <UniqueIdentifier>{70354511-06f8-4902-98b8-367ec8e65e87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Linked Lists">
+      <UniqueIdentifier>{8fbdd075-b5c4-4155-b291-35f39dd6bb4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Notes">
+      <UniqueIdentifier>{8d0e4a46-59a6-4ba0-aa99-b36f59a3dda9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +44,12 @@
     </ClInclude>
     <ClInclude Include="PalindromePermutation.h">
       <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedListNode.h">
+      <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -62,7 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Arrays and Strings.txt">
-      <Filter>Header Files\Notes</Filter>
+      <Filter>Resource Files\Notes</Filter>
+    </Text>
+    <Text Include="Linked Lists.txt">
+      <Filter>Resource Files\Notes</Filter>
     </Text>
   </ItemGroup>
 </Project>

@@ -152,6 +152,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CheckPermutation.h" />
+    <ClInclude Include="DoublyLinkedList.h" />
+    <ClInclude Include="DoublyLinkedListNode.h" />
     <ClInclude Include="IsUnique.h" />
     <ClInclude Include="PalindromePermutation.h" />
     <ClInclude Include="pch.h" />
@@ -172,6 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Arrays and Strings.txt" />
+    <Text Include="Linked Lists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
