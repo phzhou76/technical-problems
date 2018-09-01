@@ -1,0 +1,36 @@
+Stacks:
+
+Stacks are data structures that use LIFO (last-in, first-out) ordering. It does
+not provide constant time access to any element, but does offer contant time
+insertions to and deletions from the top of the stack. 
+
+Operations:
+	1. pop() - Removes the item on top of the stack.
+	2. push(item) - Adds an item to the top of the stack.
+	3. peek() - Returns a reference to the item on top of the stack.
+	4. isEmpty() - Returns true if the stack is empty.
+
+Note: Just like how function calls are placed onto a call stack for recursive
+calls, stacks can be used to implement iterative algorithms recursively within the
+same function.
+
+Stacks can be implemented with linked lists by pushing to and popping from either 
+the head or tail of the linked list.
+
+
+Queues:
+
+Queues are data structures that use FIFO (first-in, first-out) ordering. Like
+stacks, it does not provide constant time access to any element, but does offer
+constant time insertions to the back and deletions from the front of the queue.
+
+Operations:
+	1. add(item) - Adds an item to the end of the queue.
+	2. remove() - Removes the item from the front of the queue.
+	3. peek() - Returns the front of the queue.
+	4. isEmpty() - Returns true if the queue is empty.
+
+Note: Queues are often used in algorithms involving breadth-first search or caches.
+
+Queues can be implemented with linked lists by adding to and removing from opposite
+ends of the linked list.

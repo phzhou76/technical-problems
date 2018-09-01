@@ -2,18 +2,19 @@ Note: Many questions about arrays and strings are interchangeable in their solut
 In other words, solutions applicable to problems about arrays are also applicable
 to problems about strings, and vice versa.
 
+/******************************************************************************/
 
 Hash Tables:
 
 Hash tables are data structures that map keys to values through the use of a hash
-function. One way of implementing them is to have a hash function with an array of
-Linked Lists.
+function. One way of implementing them is to have a hash function with an array 
+of Linked Lists.
 
-Insertion: The input key is used in the hash function to generate a hash value, which
-	is then used as the index to access the underlying array. At that element in the
-	array is a Linked List (typically, to resolve any collisions that may occur between
-	two keys with the same hash value). The value is placed at the end of that Linked
-	List.
+Insertion: The input key is used in the hash function to generate a hash value, 
+	which is then used as the index to access the underlying array. At that element
+	in the array is a Linked List (typically, to resolve any collisions that may
+	occur between two keys with the same hash value). The value is placed at the
+	end of that Linked List.
 
 Find: The same hash process is used to transform the key into the position in the
 	array. The specific Linked List is then searched to find the desired value.
@@ -24,21 +25,23 @@ Worst-case Runtime: O(n), assuming that all key value pairs map to the same hash
 	algorithm needs to look through the entire Linked List to insert a new value
 	or verify if that value exists.
 
+/******************************************************************************/
 
 Resizable Arrays:
 
-Resizable arrays are arrays that have a fixed size on initialization and provide a
-O(1) access runtime, but increase in size when the size limit is hit. For example,
+Resizable arrays are arrays that have a fixed size on initialization and provide
+a O(1) access runtime, but increase in size when the size limit is hit. For example,
 the ArrayList object in Java will double in size when the size limit is hit.
 
 Because the resizable array is still in contiguous memory, the array must first
 allocate an increased amount of memory elsewhere, and then copy all of its contents 
-over to that part of the memory - a O(n) operation. However, resizing is such a rare 
-operation that the amortized runtime for insertion is still O(1), as the O(n) operation
-happens every n insertions.
+over to that part of the memory - a O(n) operation. However, resizing is such a
+rare operation that the amortized runtime for insertion is still O(1), as the O(n)
+operation happens every n insertions.
 
 Average Runtime: O(1), for both insertion and find.	
 
+/******************************************************************************/
 
 Immutable Strings and StringBuilder:
 

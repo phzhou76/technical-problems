@@ -45,10 +45,13 @@
     <ClInclude Include="PalindromePermutation.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
-    <ClInclude Include="DoublyLinkedList.h">
+    <ClInclude Include="RemoveDuplicatesLinkedList.h">
       <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
-    <ClInclude Include="DoublyLinkedListNode.h">
+    <ClInclude Include="LinkedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListNode.h">
       <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
   </ItemGroup>
@@ -70,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="PalindromePermutation.cpp">
       <Filter>Source Files\Arrays and Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveDuplicatesLinkedList.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

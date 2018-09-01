@@ -1,0 +1,363 @@
+Trees:
+
+A tree is a type of graph that has the following structure:
+	1. Contains a root node at the very top of the tree that has no parent nodes.
+	2. The root node has zero or more child nodes.
+	3. Each child node has zero or more child nodes.
+	4. Cannot contain a cycle; i.e. a node cannot reach itself.
+	5. Contains leaf nodes at the bottom of the tree, which have no child nodes.
+
+Tree and graph questions will often contain ambiguities that you need to clarify
+with the interviewer, such as the following:
+
+Trees vs. Binary Trees:
+
+A binary tree is one in which any node can only have up to two child nodes. However,
+a tree is one in which any node can have as many child nodes as they want. In other
+words, a binary tree is a specific type of tree, but a tree is not a specific type
+of binary tree.
+
+Binary Tree vs. Binary Search Tree:
+
+A binary search tree is a binary tree that has a specific ordering applied to it.
+The equality ordering can differ, but in general, all descendants to the left are
+less than the current node, which is less than all descendants to the right.
+
+Note: If the tree is a binary search tree, be sure to ask the interviewer the
+following to clarify the structure of the BST:
+	1. Are duplicates allowed in the BST?
+	2. Are descendants to the left less than or equal to the current node, or are
+		they strictly less than the current node?
+	3. Are descendants to the right greater than or equal to the current node, or
+		are they strictly greater than the current node?
+
+Balanced vs. Unbalanced Trees:
+
+A balanced tree simply means that it takes O(log n) to perform any insert or find
+operations on the tree - it does not necessarily mean that the left and right halves
+of the tree are perfectly balanced. It is possible for an unbalanced tree to have
+all of its elements in the right sub-tree, which would make insert or find operations
+have a runtime of O(n).
+
+Red-black trees and AVL trees are two examples of trees that self-balance themselves.
+
+Tree Terminology:
+	1. Complete Binary Trees - A complete binary tree is one in which every level
+		of the tree is fully filled, with the last level being filled from left
+		to right (if it is not completely filled).
+	2. Full Binary Trees - A full binary tree is one in which each node in the tree
+		has either none or two child nodes.
+	3. Perfect Binary Trees - A perfect binary tree is both complete and full; i.e.
+		every level is completely filled with nodes, and the leaf nodes are at the
+		same level. This kind of tree has 2^n - 1 nodes, where n is the number of
+		levels in the tree.
+
+Binary Tree Traversal:
+
+In-order Traversal - The algorithm will first visit the left subtree, then the
+	current node, and then the right subtree, like such:
+
+	void inorder(Node * node)
+	{
+		if(node != nullptr)
+		{
+			inorder(node->left);
+			/* Do something with node. */
+			inorder(node->right);
+		}
+	}
+
+	If performed on a binary search tree, this algorithm will visit the nodes in
+	ascending order.
+
+Pre-order Traversal - The algorithm will first visit the current node, then the
+	left subtree, and then the right subtree, like such:
+
+	void preorder(Node * node)
+	{
+		if(node != nullptr)
+		{
+			/* Do something with node. */
+			preorder(node->left);
+			preorder(node->right);
+		}
+	}
+
+	The root node will always be the first one visited in a pre-order traversal.
+	This algorithm is used in depth-first search.
+
+Post-order Traversal - The algorithm will first visit the left subtree, then the
+	right subtree, and then the current node, like such:
+
+	void postorder(Node * node)
+	{
+		if(node != nullptr)
+		{
+			postorder(node->left);
+			postorder(node->right);
+			/* Do something with node. */
+		}
+	}
+
+	The root node will always be the last one visited in a post-order traversal.
+
+/******************************************************************************/
+
+Binary Heaps:
+
+Min-heaps and max-heaps are both complete binary trees in structure; i.e. each
+level in the tree is completely filled other than the last level, which is filled
+from left to right.
+
+A min-heap is a binary tree in which the parent node is always lesser in value
+than that of its child nodes. Therefore, the root node is the minimum element in
+the tree.
+
+A max-heap is a binary tree in which the parent node is always greater in value
+than that of its child nodes. Therefore, the root node is the maximum element in
+the tree.
+
+Note: Besides the ordering between the child and parent nodes, there is no other
+ordering in binary heaps, like that found in binary search trees. For example,
+two nodes in completely different subtrees have no relation to each other in terms
+of ordering, except for the fact that both nodes must be either less than or 
+greater than their parent in a max-heap or a min-heap, respectively.
+
+In binary heaps, there are two operations that can be performed on them:
+	1. insert(item) - When insertion is performed on a binary heap, the new element
+		is inserted at the bottom of the tree on the rightmost spot to preserve
+		the complete binary tree property. That new element is then "bubbled up"
+		by switching places with the parent node until the property of the binary
+		heap is preserved:
+			Min-heap: The new element is bubbled up until the parent has a lesser
+				value than the new element.
+			Max-heap: The new element is bubbled up until the parent has a greater
+				value than the new element.
+	2. extract() - When extraction is performed on a binary heap, the root element
+		of the binary heap needs to be extracted. To do this, the root element and
+		the last element in the binary heap (the rightmost node in the bottom level
+		of the binary tree) will swap places, at which point the root element can
+		be safely extracted. The newly swapped root element then needs to "trickle
+		down" by swapping places with its child nodes until the property of the
+		binary heap is preserved:
+			Min-heap: The new root element will keep swapping with the lesser of
+				its two child nodes until both child nodes are greater than it.
+			Max-heap: The new root element will keep swapping with the greater of
+				its two child nodes until both child nodes are lesser than it.
+
+Both insert(item) and extract() have an O(log n) runtime complexity.
+
+/******************************************************************************/
+
+Tries (Prefix Trees):
+
+A trie is an n-ary tree that has characters stored at each node. A path from the
+root to a node can form a sequence of characters. If a null node exists comes after
+a node, then the sequence of characters from the root node to the node before the
+null node form a valid word. (A null node does not need to be used to indicate
+that the sequence is a valid word - a boolean value on the node can also be used.)
+
+For example, if the nodes 'M', 'A', 'N' were in the trie, and a null node was a
+child node of 'N', then the sequence "MAN" would be a valid string. If the 'Y' node
+was a child of the 'N' node, and the null node was a child of the 'Y' node, then
+the sequence "MANY" would be a valid string.
+
+Each node in the trie can have 1 to ALPHABET_SIZE + 1 child nodes, since each node
+must have at least one child node that contains a character or is a null node. 
+(However, if a boolean value is used to mark valid words, then each node in the
+trie can have 0 to ALPHABET_SIZE child nodes.)
+
+Uses:
+
+Tries are used to quickly look up prefixes for words. Hash maps can quickly
+determine if a string is a valid string, but they cannot tell us if a string is 
+a prefix of a valid string, whereas tries can.
+
+For determining if a string is a valid word, tries actually have the same runtime
+complexity as a hash map. The trie will take O(N) time to determine if a string
+is a valid word, where N is the length of the string, as it will look through every
+character in the string and determine if a null node was found. The hash map needs
+to examine every character in the string before transforming it into a hash value
+to do a constant time lookup, which ends up taking O(N) time as well.
+
+If a problem uses lists of valid words, then using a trie may be a good optimization
+to make. For example, if the prefixes "MA", "MAN", and "MANI" were being looked
+up in a list of prefixes, it's a good idea to pass a reference to the "MA" node
+to look up "MAN", and to pass a reference to the "MAN" node to look up "MANI".
+This optimization prevents us from needing to restart from the root on every lookup.
+
+/******************************************************************************/
+
+Graphs:
+
+A graph is a collection of nodes that may have edges between them. A tree is a type
+of graph in that it is a connected graph without any cycles.
+
+The edges between graphs can be directed or undirected. If edges between nodes
+are directed, then traversal is only possible from one node to the other in one
+direction. If edges between nodes are undirected, then traversal is possible
+between the nodes in both directions.
+
+Graph Terminology:
+	1. Directed Graph - A graph that has edges that can only be traversed in one
+		direction.
+	2. Undirected Graph - A graph that has edges that can be traversed in either
+		direction.
+	3. Connected graph - A graph that has a path between every pair of vertices.
+		A graph that has multiple isolated subgraphs (even if each subgraph is
+		considered to be "connected") is not a connected graph.
+
+Graph Representation:
+
+Adjacency List - This graph representation requires that every node have a list
+	of nodes that they are adjacent to (i.e. have an outgoing edge to). That means
+	that in an undirected graph, an edge from node A to node B would appear twice,
+	once in node A showing that there was a link to node B, and once in node B
+	showing that there was a link to node A.
+
+	Implementation (1): An adjacency list could be implemented with a Graph class that
+		holds a list of all Node objects in the graph. Each Node object would then
+		hold a list of Node objects that it had an outgoing edge to.
+
+		class Graph
+		{
+		public:
+			std::vector<Node*> nodes;
+		}
+
+		class Node
+		{
+		public:
+			std::vector<Node*> adjacentNodes;
+		}
+
+	Implementation (2): An adjacency list could be implemented with a hash map
+		that mapped Node objects to a list of adjacent Node objects that the key
+		Node object had outgoing edges to.
+
+Adjacency Matrix - This graph representation uses a NxN boolean matrix, where N
+	is the number of nodes in the graph. If the value of [i][j] is true, then there
+	exists an edge from i to j. For this reason, undirected graphs have symmetric
+	adjacency matrices, since if [i][j] was set to true, then [j][i] would also
+	be set to true.
+
+	Note: This representation is usually not efficient for sparse graphs, as most
+		of the matrix would be set to false; making adjacency lists more space
+		efficient - O(N^2) space complexity for an adjacency matrix versus O(N)
+		space complexity for an adjacency list.
+
+	Note: This representation requires that an entire row or column be scanned to
+		find a node's adjacent neighbors, whereas the list of adjacent neighbors
+		can be immediately accessed in an adjacency list. This makes adjacency
+		matrices somewhat less ideal than adjacency lists when it comes to 
+		algorithms like breadth-first or depth-first search, which involves
+		examining adjacent nodes on each iteration.
+
+Graph Search:
+
+Depth-first Search (DFS) - Traverse the graph in preorder traversal; i.e. explore
+	each branch completely before exploring another branch. This graph search
+	algorithm works best when the desired node is far away, since it focuses on
+	travelling deep before it travels wide. In addition, if the shortest path to
+	a specific node is not a concern, DFS uses less space in traversing a graph,
+	since breadth-first search must hold all the nodes at each level of a graph.
+
+	Implementation: The starting node in the graph is first placed into a stack
+		and is marked as visited. Then, while the stack is not empty, extract the
+		node from the top of the stack, and push any of its neighbors that haven't
+		already been visited to the stack, and mark those neighbors as visited.
+
+		void dfs(Node * start)
+		{
+			if(start != nullptr)
+			{
+				std::stack<Node *> toVisit;
+				toVisit.push(start);
+				start->visited = true;
+
+				while(!toVisit.isEmpty())
+				{
+					Node * currentNode = toVisit.peek();
+					toVisit.pop();
+
+					/* Do something with currentNode here. */
+
+					for(Node * neighbor : currentNode->neighbors)
+					{
+						if(!neighbor->visited)
+						{
+							toVisit.push(neighbor);
+							neighbor->visited = true;
+						}
+					}
+				}
+			}
+		}
+
+Breadth-first Search (BFS) - Traverse the entirety of a level in a graph before
+	heading to the next level. This graph search algorithm works best when the
+	desired node is close, since it focuses on travelling wide before it travels
+	deep. In addition, if the shortest path from the start to a desired node needs
+	to be calculated, BFS should be used. However, BFS has a space complexity of
+	O(2^K), where K is the current level of the graph that the algorithm is on,
+	since it must hold all of the nodes of each level before heading onto the next
+	level.
+
+	Implementation: The starting node in the graph is first placed into a queue
+		and is marked as visited. Then, while the queue is not empty, extract the
+		node from the front of the queue, and add any neighbors that haven't already
+		been visited to the back of the queue, and mark those neighbors as visited.
+
+		void bfs(Node * start)
+		{
+			if(start != nullptr)
+			{
+				std::queue<Node *> toVisit;
+				toVisit.enqueue(start);
+				start->visited = true;
+
+				while(!toVisit.isEmpty())
+				{
+					Node * currentNode = toVisit.dequeue();
+
+					/* Do something with currentNode here. */
+
+					for(Node * neighbor : currentNode->neighbors)
+					{
+						if(!neighbor->visited)
+						{
+							toVisit.enqueue(neighbor);
+							neighbor->visited = true;
+						}
+					}
+				}
+			}
+		}
+
+Bidirectional Breadth-first Search - If the start and destination node are known,
+	then the shortest path can be found between them by performing BFS on both
+	nodes simultaneously. When the two searches have collided (i.e. the same nodes
+	are found by both searches), then the shortest path between the two nodes will
+	have been found. The result will be the same as if BFS had been performed on
+	just one of the nodes, but the runtime complexity of the search is considerably
+	faster.
+
+	Consider a graph where every node has K neighbors, and there is a starting 
+	node T and a destination node D with the shortest path of length L between
+	them. If BFS was just done on the starting node T to find the destination node
+	D, then on the first iteration, K nodes would need to be searched. On the next
+	iteration, each of the original K nodes would need K nodes to be searched,
+	which results in K^2 nodes being searched. Repeat the same process until level
+	L is searched, which means that O(K^L) nodes were searched to find the
+	destination node D.
+
+	However, if BFS was applied to both the starting and the destination node, then
+	the two searches would collide at the middle - at level L/2. This results in
+	a O(K^(L/2)) runtime complexity for both. K^(L/2) * K^(L/2) = K^L, so searching
+	from both the starting and destination nodes results in a faster search by a
+	factor of K^(L/2).
+
+	This implies that if the hardware that ran the BFS was only capable of running
+	up to O(K^L) nodes, we can now run bidirectional search on nodes that have a
+	shortest path of 2L from each other, as the collision between the searches
+	would happen after O(K^L) nodes were searched.
