@@ -16,14 +16,8 @@
     <Filter Include="Header Files\Arrays and Strings">
       <UniqueIdentifier>{3681e7b1-8580-4762-85d4-06f92362d9a2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Arrays and Strings">
-      <UniqueIdentifier>{7980396e-f3fb-4b28-b752-b0007bb6d474}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Linked Lists">
       <UniqueIdentifier>{70354511-06f8-4902-98b8-367ec8e65e87}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Linked Lists">
-      <UniqueIdentifier>{8fbdd075-b5c4-4155-b291-35f39dd6bb4c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\Notes">
       <UniqueIdentifier>{8d0e4a46-59a6-4ba0-aa99-b36f59a3dda9}</UniqueIdentifier>
@@ -45,14 +39,14 @@
     <ClInclude Include="PalindromePermutation.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
-    <ClInclude Include="RemoveDuplicatesLinkedList.h">
-      <Filter>Header Files\Linked Lists</Filter>
-    </ClInclude>
     <ClInclude Include="LinkedList.h">
       <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
     <ClInclude Include="LinkedListNode.h">
       <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="TwoSum.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -62,27 +56,21 @@
     <ClCompile Include="TechnicalProblems.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CheckPermutation.cpp">
-      <Filter>Source Files\Arrays and Strings</Filter>
-    </ClCompile>
-    <ClCompile Include="IsUnique.cpp">
-      <Filter>Source Files\Arrays and Strings</Filter>
-    </ClCompile>
-    <ClCompile Include="URLify.cpp">
-      <Filter>Source Files\Arrays and Strings</Filter>
-    </ClCompile>
-    <ClCompile Include="PalindromePermutation.cpp">
-      <Filter>Source Files\Arrays and Strings</Filter>
-    </ClCompile>
-    <ClCompile Include="RemoveDuplicatesLinkedList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Arrays and Strings.txt">
       <Filter>Resource Files\Notes</Filter>
     </Text>
     <Text Include="Linked Lists.txt">
+      <Filter>Resource Files\Notes</Filter>
+    </Text>
+    <Text Include="Stacks and Queues.txt">
+      <Filter>Resource Files\Notes</Filter>
+    </Text>
+    <Text Include="Trees and Graphs.txt">
+      <Filter>Resource Files\Notes</Filter>
+    </Text>
+    <Text Include="Bit Manipulation.txt">
       <Filter>Resource Files\Notes</Filter>
     </Text>
   </ItemGroup>

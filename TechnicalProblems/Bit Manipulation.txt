@@ -1,0 +1,49 @@
+Bit Manipulation:
+
+& - The AND operation.
+| - The OR operation.
+^ - The XOR operation.
+~ - The NOT operation.
+
+Tips and Tricks:
+	1. If two of the same bit values are added together, it's equal to multiplying
+		one of the values by 2. In that case, just shift the bits of one of the
+		values over by 1, since that is equivalent to multiplying by 2. For example,
+		1001 + 1001 is equal to 2 * 1001, or 1001 << 1.
+	2. If a bit value is being multiplied by a value that only has one bit set to
+		1 (a 2^x value, where x is a number), shift the bit value to the right by
+		x bits. For example, 1000 * 1011 is equal to 2^3 * 1011, or 1011 << 3.
+	3. Any value XORed with its negated value is equal to all 1s. For example,
+		1101 ^ ~1101 = 1111.
+	4. Can zero out the last x bits by negating 0, shifting that result x bits to
+		the right, and ANDing the result with the input bit value. For example,
+		1101 & (~0 << 3) is 1000.
+
+Other Tips and Tricks:
+	1. x ^ 0000.. = x
+		a. Explanation: 1 ^ 0 is 1, and 0 ^ 0 is 0, so x ^ 0000.. will just preserve
+			the bits of the original value.
+	2. x ^ 1111.. = ~x
+		a. Explanation: 1 ^ 1 is 0, and 0 ^ 1 is 1, so x ^ 1111.. will invert each
+			bit in the original value.
+	3. x ^ x = 0
+		a. Explanation: 1 ^ 1 is 0, and 0 ^ 0 is 0, so x ^ x will cancel each bit
+			out and set it to 0.
+	4. x & 0000.. = 0
+		a. Explanation: Any bit AND 0 is 0, so x & 0000.. will set all bits to 0.
+	5. x & 1111.. = x
+		a. Explanation: 1 & 1 is 1, and 0 & 1 is 0, so x & 1111.. will not change
+			any of the bits in the original value.
+	6. x & x = x
+		a. Explanation: 1 & 1 is 1, and 0 & 0 is 0, so x & x will not change any
+			of the bits in the original value.
+	7. x | 0000.. = x
+		a. Explanation: 1 | 0 is 1, and 0 | 0 is 0, so x | 0000.. will not change
+			any of the bits in the original value.
+	8. x | 1111.. = 1111..
+		a. Explanation: 1 | 1 is 1, and 0 | 1 is 1, so x | 1111.. will set all of
+			the bits to 1.
+	9. x | x = x
+		a. Explanation: 1 | 1 is 1, and 0 | 0 is 0, so x | x will not change any
+			of the bits in the original value.
+	
