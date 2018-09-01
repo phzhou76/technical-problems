@@ -17,7 +17,7 @@
  */
 class URLify
 {
-private:
+public:
 
 	/**
 	 * Implementation with no extra data structures, assuming that the entire char

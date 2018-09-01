@@ -18,7 +18,7 @@
  */
 class PalindromePermutation
 {
-private:
+public:
 
 	/**
 	 * Implementation with a hash map. Since a palindrome is a string that has even
@@ -165,8 +165,6 @@ private:
 
 		return true;
 	}
-
-public:
 
 	/** Tests solutions to the Palindrome Permutation problem */
 	static void testPalindromePermutation()

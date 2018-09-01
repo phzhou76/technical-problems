@@ -20,8 +20,8 @@
  */
 class CheckPermutation
 {
-private:
-	
+public:
+
 	/** Implementation with a hash map. */
 	static bool checkPermutation(std::string stringA, std::string stringB)
 	{
@@ -95,8 +95,6 @@ private:
 
 		return true;
 	}
-
-public:
 
 	/** Tests solutions to the Check Permutation problem. */
 	static void testCheckPermutation()

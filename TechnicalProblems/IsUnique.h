@@ -16,7 +16,7 @@
  */
 class IsUnique
 {
-private:
+public:
 
 	/** Implementation with a hash map. */
 	static bool determineIsUnique(std::string inputString)
@@ -186,8 +186,6 @@ private:
 
 		return true;
 	}
-
-public:
 
 	/** Tests solutions to the Is Unique problem. */
 	static void testIsUnique()
