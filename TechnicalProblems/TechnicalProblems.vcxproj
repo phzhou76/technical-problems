@@ -151,14 +151,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AddTwoNumbers.h" />
     <ClInclude Include="CheckPermutation.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListNode.h" />
     <ClInclude Include="IsUnique.h" />
+    <ClInclude Include="LongestSubstring.h" />
+    <ClInclude Include="MedianSortedArrays.h" />
     <ClInclude Include="PalindromePermutation.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ReverseInteger.h" />
     <ClInclude Include="TwoSum.h" />
     <ClInclude Include="URLify.h" />
+    <ClInclude Include="ZigZagConversion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

@@ -48,6 +48,21 @@
     <ClInclude Include="TwoSum.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
+    <ClInclude Include="AddTwoNumbers.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestSubstring.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MedianSortedArrays.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ZigZagConversion.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseInteger.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
