@@ -9,7 +9,7 @@
  * P   A   H   N
  * A P L S I I G
  * Y   I   R
- * 
+ *
  * Which is then read as "PAHNAPLSIIGYIR". Write code that will take a string and
  * make this conversion given a number of rows.
  */
@@ -41,7 +41,7 @@ public:
 			}
 			else
 			{
-				/* For each left index, there could be a right index. But for 
+				/* For each left index, there could be a right index. But for
 				 * every right index, there must be a left index. */
 				for (int leftIndex = i; leftIndex < inputString.length(); leftIndex += rowModulus)
 				{
@@ -55,7 +55,7 @@ public:
 			}
 		}
 
-		return convertedString;	
+		return convertedString;
 	}
 };
 #endif	// _ZIG_ZAG_CONVERSION_H_

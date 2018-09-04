@@ -161,6 +161,7 @@
     <ClInclude Include="PalindromePermutation.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ReverseInteger.h" />
+    <ClInclude Include="StringToInteger.h" />
     <ClInclude Include="TwoSum.h" />
     <ClInclude Include="URLify.h" />
     <ClInclude Include="ZigZagConversion.h" />

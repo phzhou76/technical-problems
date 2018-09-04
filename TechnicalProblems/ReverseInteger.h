@@ -5,7 +5,7 @@
 #include "pch.h"
 
 /**
- * Problem: Given a 32-bit signed integer, reverse the digits of the integer, and 
+ * Problem: Given a 32-bit signed integer, reverse the digits of the integer, and
  * return the result as an integer.
  *
  * Note: Assume that the problem is given in an environment which stores 32-bit
@@ -15,7 +15,7 @@
 class ReverseInteger
 {
 public:
-	int reverse(int inputInt)
+	static int reverse(int inputInt)
 	{
 		/* Count the number of digits first to parse in reverse order. */
 		int numDigits = countDigits(inputInt);
@@ -48,7 +48,7 @@ public:
 		return reversedInput;
 	}
 
-	bool checkOverflow(int digit, int exponent)
+	static bool checkOverflow(int digit, int exponent)
 	{
 		int digitAbs = std::abs(digit);
 
@@ -65,12 +65,12 @@ public:
 		return exponent > 8 && digitAbs > 2;
 	}
 
-	bool checkAddOverflow(int originalValue, int toAddValue)
+	static bool checkAddOverflow(int originalValue, int toAddValue)
 	{
-		/* Case 1: If the value that will be added onto the original value is 
+		/* Case 1: If the value that will be added onto the original value is
 		 * positive, then a positive overflow needs to be checked, since a negative
 		 * overflow is not possible.
-		 * Case 2: If the value that will be added onto the original value is 
+		 * Case 2: If the value that will be added onto the original value is
 		 * negative, then a negative overflow needs to be checked, since a positive
 		 * overflow is not possible. */
 		int bufferValueRemaining = toAddValue < 0 ? std::numeric_limits<int>::min()
@@ -78,22 +78,22 @@ public:
 		bufferValueRemaining -= toAddValue;
 
 		/* Case 1: If the buffer value is positive, then the original value must
-		 * be less than the buffer value, since it would result in a positive 
-		 * overflow if the original value was greater than the buffer value and 
+		 * be less than the buffer value, since it would result in a positive
+		 * overflow if the original value was greater than the buffer value and
 		 * if the value was added onto by the positive toAddValue.
 		 * Case 2: If the buffer value is negative, then the original value must
 		 * be greater than the buffer value, since it would result in a negative
-		 * overflow if the original value was less than the buffer value and if 
+		 * overflow if the original value was less than the buffer value and if
 		 * the value was "subtracted" by the negative toAddValue. */
 		return bufferValueRemaining < 0 ? (originalValue < bufferValueRemaining) :
 			(originalValue > bufferValueRemaining);
 	}
 
-	int countDigits(int inputInt)
+	static int countDigits(int inputInt)
 	{
-		/* Because the input integer can be negative, the digit counting must 
-		 * continue while the input integer's division by 10 result is not 
-		 * explicitly 0; i.e. inputInt > 0 doesn't work for negative integers 
+		/* Because the input integer can be negative, the digit counting must
+		 * continue while the input integer's division by 10 result is not
+		 * explicitly 0; i.e. inputInt > 0 doesn't work for negative integers
 		 * because the condition will fail on the first digit. */
 		int digitCount = 0;
 		do

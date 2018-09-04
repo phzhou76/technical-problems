@@ -30,7 +30,7 @@ public:
 		 * to the substring. In addition, if the char has been encountered before,
 		 * but its last known place was to the left of the start of the substring,
 		 * then it can be added to the substring, since it's guaranteed that no
-		 * copies of that char existed in the substring before this char. 
+		 * copies of that char existed in the substring before this char.
 		 *
 		 * In either case, the last known position of the char should be updated,
 		 * and the length of the substring should be calculated.
@@ -50,7 +50,7 @@ public:
 
 			/* However, if the char has been encountered before, and it lies to
 			 * the right of the start of the substring, then duplicates of this
-			 * char will exist if the current char is added to the substring. 
+			 * char will exist if the current char is added to the substring.
 			 *
 			 * Move the start of the substring in front of the previous occurrence
 			 * of this char, and update the last known position of this char. */

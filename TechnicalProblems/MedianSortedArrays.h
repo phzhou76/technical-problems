@@ -125,7 +125,7 @@ public:
 		int iMin = 0;
 		int iMax = shorterList.size();
 
-		/* Half of the size of the combined lists. Preliminary calculation used 
+		/* Half of the size of the combined lists. Preliminary calculation used
 		 * for calculated j. */
 		int halfLength = (shorterList.size() + longerList.size()) / 2;
 
@@ -164,7 +164,7 @@ public:
 				int maxLeft = 0;
 
 				/* Edge case: i == 0 means that no elements are on list A's left
-				 * subset, so maximum value of left combined subset must be the 
+				 * subset, so maximum value of left combined subset must be the
 				 * maximum of list B's left subset. */
 				if (i == 0)
 				{
@@ -172,7 +172,7 @@ public:
 				}
 
 				/* Edge case: j == 0 means that no elements are on list B's left
-				 * subset, so maximum value of left combined subset must be the 
+				 * subset, so maximum value of left combined subset must be the
 				 * maximum of list A's left subset. */
 				else if (j == 0)
 				{
@@ -186,7 +186,7 @@ public:
 				}
 
 				/* If there is an odd number of elements when the two lists are
-				 * combined, then the median is just the maximum of the left 
+				 * combined, then the median is just the maximum of the left
 				 * subset. */
 				if ((shorterList.size() + longerList.size()) % 2 == 1)
 				{
@@ -196,7 +196,7 @@ public:
 				/* If this part of the code is hit, then an even number of elements
 				 * is present. Calculate the minimum of the right subsets with
 				 * similar edge cases as the maximum of the left subsets, and return
-				 * the average of the maximum of the left and the minimum of the 
+				 * the average of the maximum of the left and the minimum of the
 				 * right as the median. */
 				int minRight = 0;
 
@@ -205,7 +205,7 @@ public:
 				{
 					minRight = longerList[j];
 				}
-				
+
 				/* No elements in the right subset of list B. */
 				else if (j == longerList.size())
 				{

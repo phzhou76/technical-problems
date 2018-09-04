@@ -7,12 +7,12 @@
 /**
  * Problem: Given two non-empty linked lists representing two non-negative integers,
  * add the two numbers and return it as a linked list. The numbers are stored in
- * reverse order; i.e. 807 would be stored as 7->0->8. 
+ * reverse order; i.e. 807 would be stored as 7->0->8.
  */
 class AddTwoNumbers
 {
 public:
-	static LinkedListNode<int> * addTwoNumbers(LinkedListNode<int> * num1, 
+	static LinkedListNode<int> * addTwoNumbers(LinkedListNode<int> * num1,
 		LinkedListNode<int> * num2)
 	{
 		LinkedListNode<int> * sumList = nullptr;

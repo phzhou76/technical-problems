@@ -13,7 +13,7 @@
  *		'a' considered two different characters?
  *	2. What about whitespaces and non-letter characters, like exclamation marks?
  *	3. Is an empty string considered a permutation of another empty string?
- * 
+ *
  * The solution assumes that a string is considered to be a permutation of another
  * string if one string has the same number of each unique character as the other
  * string.
