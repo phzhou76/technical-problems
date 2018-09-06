@@ -153,13 +153,22 @@
   <ItemGroup>
     <ClInclude Include="AddTwoNumbers.h" />
     <ClInclude Include="CheckPermutation.h" />
+    <ClInclude Include="ContainerWithMostWater.h" />
+    <ClInclude Include="FirstLastElementSortedArray.h" />
+    <ClInclude Include="GenerateParentheses.h" />
+    <ClInclude Include="IntegerToRoman.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListNode.h" />
     <ClInclude Include="IsUnique.h" />
+    <ClInclude Include="LongestCommonPrefix.h" />
     <ClInclude Include="LongestSubstring.h" />
     <ClInclude Include="MedianSortedArrays.h" />
+    <ClInclude Include="MergedKSortedLists.h" />
+    <ClInclude Include="MergeTwoSortedLists.h" />
+    <ClInclude Include="PalindromeNumber.h" />
     <ClInclude Include="PalindromePermutation.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RemoveNthFromLastNode.h" />
     <ClInclude Include="ReverseInteger.h" />
     <ClInclude Include="StringToInteger.h" />
     <ClInclude Include="TwoSum.h" />

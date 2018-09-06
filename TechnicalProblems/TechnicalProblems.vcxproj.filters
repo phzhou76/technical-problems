@@ -22,6 +22,9 @@
     <Filter Include="Resource Files\Notes">
       <UniqueIdentifier>{8d0e4a46-59a6-4ba0-aa99-b36f59a3dda9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Numerical Manipulation">
+      <UniqueIdentifier>{3a85f277-84fd-4a1d-b250-ae634cdf38a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -60,11 +63,38 @@
     <ClInclude Include="ZigZagConversion.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
-    <ClInclude Include="ReverseInteger.h">
-      <Filter>Header Files\Arrays and Strings</Filter>
-    </ClInclude>
     <ClInclude Include="StringToInteger.h">
       <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseInteger.h">
+      <Filter>Header Files\Numerical Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="PalindromeNumber.h">
+      <Filter>Header Files\Numerical Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerWithMostWater.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegerToRoman.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestCommonPrefix.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveNthFromLastNode.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeTwoSortedLists.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="GenerateParentheses.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstLastElementSortedArray.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MergedKSortedLists.h">
+      <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
