@@ -32,7 +32,8 @@ public:
 		int convertedRomanInt = 0;
 
 		/* O(1) space complexity solution with no data structures. 50 ms slower
-		 * than data structure version due to conditional statements. */
+		 * than data structure version due to switch statements. Confusingly enough,
+		 * switch statements take longer to process than if/else statements. */
 #if 0
 		int i = 0;
 		while (i < s.length())
