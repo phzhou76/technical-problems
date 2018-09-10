@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Numerical Manipulation">
       <UniqueIdentifier>{3a85f277-84fd-4a1d-b250-ae634cdf38a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Stacks and Queues">
+      <UniqueIdentifier>{a42687f2-9183-4fe0-a0f1-99458b651149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Trees and Graphs">
+      <UniqueIdentifier>{4840a269-3414-4af4-ab80-3e6016a2266a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -107,6 +113,27 @@
     </ClInclude>
     <ClInclude Include="RemoveDuplicatesFromSortedArray.h">
       <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSubarray.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchInsertPosition.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="NumberOfOneBits.h">
+      <Filter>Header Files\Numerical Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="EvaluateReversePolishNotation.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MinStack.h">
+      <Filter>Header Files\Stacks and Queues</Filter>
+    </ClInclude>
+    <ClInclude Include="PathSum.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeNode.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
