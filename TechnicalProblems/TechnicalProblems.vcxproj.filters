@@ -96,6 +96,18 @@
     <ClInclude Include="MergedKSortedLists.h">
       <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
+    <ClInclude Include="LongestIncreasingSubsequence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveElement.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplementStrStr.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="DivideTwoIntegers.h">
+      <Filter>Header Files\Numerical Manipulation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
