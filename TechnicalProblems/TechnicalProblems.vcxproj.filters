@@ -156,6 +156,24 @@
     <ClInclude Include="LongestPalindromicSubstring.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
+    <ClInclude Include="ProductOfArrayExceptSelf.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseString.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="FizzBuzz.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleNumber.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumDepthBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveZeroes.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
