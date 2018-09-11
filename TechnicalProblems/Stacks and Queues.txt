@@ -17,6 +17,7 @@ same function.
 Stacks can be implemented with linked lists by pushing to and popping from either 
 the head or tail of the linked list.
 
+/******************************************************************************/
 
 Queues:
 

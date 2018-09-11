@@ -1,0 +1,38 @@
+Recursion:
+
+Usually a problem can be solved with a recursive approach if it involves building
+off of subproblems. In general, problems that involve calculating the nth object
+can be solved with recursion, since that usually means that the (n-1)th result can
+be calculated and modified in some way to come up with the nth result.
+
+Approach:
+
+The typical way to approach a recursive problem is to first calculate the solutions
+to its subproblems, and then modify those solutions to create a solution for the
+main problem.
+
+There are three common ways to divide a recursive problem into subproblems:
+	1. Bottom-Up Approach: Start with knowing how to solve the problem for a simple
+		case, like calculating something for a list of one element. Then, we figure
+		out how to calculate that for a list of two elements from the result of a
+		list of one element, then a list of three elements from the result of a list
+		of two elements, and so on. It's important to think about how the solution
+		can be built for one specific case off the results of previous cases.
+	2. Top-Down Approach: Divide the problem for case N into subproblems; need to
+		be aware of overlapping cases though.
+	3. Half-and-Half Approach: Divide the data set in half, and recursively
+		calculate the solutions on each half.
+
+Recursive versus Iterative Solutions:
+
+Recursive solutions are often very space inefficient, since each new recursive method
+call will add a layer onto the call stack. This means that if the recursive algorithm
+recurses to a layer of depth n, it will use O(n) space just for the call stack. For
+this reason, it's more efficient to implement all recursive solutions iteratively.
+
+/******************************************************************************/
+
+Dynamic Programming and Memoization:
+
+Dynamic programming usually takes the calculated results of subproblems, caches them,
+and reuses them for future subproblems that rely on those results.
