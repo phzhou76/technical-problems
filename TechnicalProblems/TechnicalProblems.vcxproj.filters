@@ -135,6 +135,15 @@
     <ClInclude Include="TreeNode.h">
       <Filter>Header Files\Trees and Graphs</Filter>
     </ClInclude>
+    <ClInclude Include="PathSumII.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="MajorityElement.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestPalindromicSubstring.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -158,6 +167,9 @@
       <Filter>Resource Files\Notes</Filter>
     </Text>
     <Text Include="Bit Manipulation.txt">
+      <Filter>Resource Files\Notes</Filter>
+    </Text>
+    <Text Include="Recursion and Dynamic Programming.txt">
       <Filter>Resource Files\Notes</Filter>
     </Text>
   </ItemGroup>

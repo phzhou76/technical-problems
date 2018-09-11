@@ -163,7 +163,9 @@
     <ClInclude Include="LinkedListNode.h" />
     <ClInclude Include="IsUnique.h" />
     <ClInclude Include="LongestCommonPrefix.h" />
+    <ClInclude Include="LongestPalindromicSubstring.h" />
     <ClInclude Include="LongestSubstring.h" />
+    <ClInclude Include="MajorityElement.h" />
     <ClInclude Include="MaximumSubarray.h" />
     <ClInclude Include="MedianSortedArrays.h" />
     <ClInclude Include="MergedKSortedLists.h" />
@@ -173,6 +175,7 @@
     <ClInclude Include="PalindromeNumber.h" />
     <ClInclude Include="PalindromePermutation.h" />
     <ClInclude Include="PathSum.h" />
+    <ClInclude Include="PathSumII.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedArray.h" />
     <ClInclude Include="RemoveNthFromLastNode.h" />
@@ -199,6 +202,7 @@
     <Text Include="Arrays and Strings.txt" />
     <Text Include="Bit Manipulation.txt" />
     <Text Include="Linked Lists.txt" />
+    <Text Include="Recursion and Dynamic Programming.txt" />
     <Text Include="Stacks and Queues.txt" />
     <Text Include="Trees and Graphs.txt" />
   </ItemGroup>
