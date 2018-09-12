@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AddTwoNumbers.h" />
+    <ClInclude Include="BinaryTreeInorderTraversal.h" />
     <ClInclude Include="CheckPermutation.h" />
     <ClInclude Include="ContainerWithMostWater.h" />
     <ClInclude Include="DivideTwoIntegers.h" />
@@ -183,6 +184,7 @@
     <ClInclude Include="PathSum.h" />
     <ClInclude Include="PathSumII.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Permutations.h" />
     <ClInclude Include="ProductOfArrayExceptSelf.h" />
     <ClInclude Include="RemoveElement.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedArray.h" />
@@ -193,7 +195,9 @@
     <ClInclude Include="SearchInsertPosition.h" />
     <ClInclude Include="SingleNumber.h" />
     <ClInclude Include="StringToInteger.h" />
+    <ClInclude Include="SumOfTwoIntegers.h" />
     <ClInclude Include="SwapNodesInPairs.h" />
+    <ClInclude Include="TopKFrequentElements.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="TwoSum.h" />
     <ClInclude Include="URLify.h" />

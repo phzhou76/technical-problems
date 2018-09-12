@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Trees and Graphs">
       <UniqueIdentifier>{4840a269-3414-4af4-ab80-3e6016a2266a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Recursion and Dynamic Programming">
+      <UniqueIdentifier>{e9b2f136-2cdc-4d3a-8c05-76a588018964}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -102,9 +105,6 @@
     <ClInclude Include="MergedKSortedLists.h">
       <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
-    <ClInclude Include="LongestIncreasingSubsequence.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RemoveElement.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
@@ -172,6 +172,21 @@
       <Filter>Header Files\Trees and Graphs</Filter>
     </ClInclude>
     <ClInclude Include="MoveZeroes.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestIncreasingSubsequence.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="SumOfTwoIntegers.h">
+      <Filter>Header Files\Numerical Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTreeInorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="TopKFrequentElements.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="Permutations.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
   </ItemGroup>
