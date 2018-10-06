@@ -19,9 +19,6 @@
     <Filter Include="Header Files\Linked Lists">
       <UniqueIdentifier>{70354511-06f8-4902-98b8-367ec8e65e87}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\Notes">
-      <UniqueIdentifier>{8d0e4a46-59a6-4ba0-aa99-b36f59a3dda9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Numerical Manipulation">
       <UniqueIdentifier>{3a85f277-84fd-4a1d-b250-ae634cdf38a2}</UniqueIdentifier>
     </Filter>
@@ -33,6 +30,9 @@
     </Filter>
     <Filter Include="Header Files\Recursion and Dynamic Programming">
       <UniqueIdentifier>{e9b2f136-2cdc-4d3a-8c05-76a588018964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TODO Problems">
+      <UniqueIdentifier>{41fa5b35-82be-4582-bdbb-e9480ba8c883}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +189,33 @@
     <ClInclude Include="Permutations.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
+    <ClInclude Include="ExcelSheetColumnNumber.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseLinkedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteNodeInLinkedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="UniquePaths.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="UniquePathsII.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="PascalsTriangle.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="PascalsTriangleII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="SpiralMatrix.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="NextPermutation.h">
+      <Filter>Header Files\TODO Problems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -197,25 +224,5 @@
     <ClCompile Include="TechnicalProblems.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Arrays and Strings.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Linked Lists.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Stacks and Queues.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Trees and Graphs.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Bit Manipulation.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Recursion and Dynamic Programming.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
   </ItemGroup>
 </Project>
