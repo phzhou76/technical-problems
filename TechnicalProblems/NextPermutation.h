@@ -21,6 +21,19 @@
 class NextPermutation
 {
 public:
+
+	/* Observe that in a permutation of decreasing numbers, no larger permutation
+	 * is possible (e.g. 951). Then, in a permutation of numbers, we need to start
+	 * from the ones place, and head towards the most significant bit until we 
+	 * find a digit that is less than the previous digit. 
+	 * 
+	 * Swap places between that digit and the least-value digit that is still 
+	 * greater than it, which gives the next lexicographically greater value for
+	 * that digit's place. 
+	 * 
+	 * Then, sort all digits to the right of that digit such that the values are
+	 * in increasing value, which minimizes the value of the digits to the right
+	 * of the swapped digit. */
 	void nextPermutation(std::vector<int> &nums)
 	{
 

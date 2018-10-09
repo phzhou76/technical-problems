@@ -2,6 +2,7 @@
 #ifndef _REVERSE_LINKED_LIST_H_
 #define _REVERSE_LINKED_LIST_H_
 
+#include "pch.h"
 #include "LinkedListNode.h"
 
 /**
@@ -13,7 +14,7 @@ public:
 	LinkedListNode<int>* reverseList(LinkedListNode<int>* head)
 	{
 		/* Iterative solution. */
-#if 0
+#if 1
 		/* If the head doesn't exist, or if there's only one element in the Linked
 		 * List, then no reversing needs to be done. */
 		if (head == nullptr || head->mNextNode == nullptr)
@@ -52,7 +53,7 @@ public:
 #endif
 
 		/* Recursive solution. */
-#if 1
+#if 0
 		/* If the head doesn't exist, or if there's only one element in the Linked
 		 * List, then no reversing needs to be done. */
 		if (head == nullptr || head->mNextNode == nullptr)
