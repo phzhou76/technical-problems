@@ -13,12 +13,15 @@
  *		string should not contain leading or trailing spaces.
  *	3. You need to reduce multiple spaces between words to a single space in the
  *		reversed string.
+ *
+ * Questions:
+ *	1. Do characters other than a-z count as non-space characters? E.g. '@'.
  */
 class ReverseWordsInString
 {
 public:
 
-	/* This problem can be solved in a 3-step process to achieve a linear runtime
+	/* This problem can be solved in a 3-step process to achieve a O(n) runtime
 	 * and a O(1) space complexity.
 	 *	1. Reverse the original string such that the words are in their correct
 	 *		positions, but the characters in each string are reversed.

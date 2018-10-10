@@ -22,18 +22,25 @@ class NextPermutation
 {
 public:
 
-	/* Observe that in a permutation of decreasing numbers, no larger permutation
-	 * is possible (e.g. 951). Then, in a permutation of numbers, we need to start
-	 * from the ones place, and head towards the most significant bit until we 
-	 * find a digit that is less than the previous digit. 
+	/* Observe that in a permutation of decreasing digits, no larger permutation
+	 * is possible (e.g. 951). Then, that means that if a number does have a next
+	 * greater permutation of digits, there is one digit in the number that is
+	 * less than the digit to its right. 
+	 *
+	 * So, we need to start looking at the ones place, and head towards the most
+	 * significant digit. If we find a digit that is less than the digit on the
+	 * right, then that place would be used for swapping digits. However, if we
+	 * don't find any digits that are less than their respective digits on the
+	 * right, we know that this is the greatest permutation of digits. Reverse
+	 * the contents of the array to obtain the lowest value permutation.
+	 *
+	 * Assuming that we find the digit that is less than the digit on the right,
+	 * we can get the next possible greater permutation by swapping that digit
+	 * with the lowest value digit that is still greater than it to the right.
 	 * 
-	 * Swap places between that digit and the least-value digit that is still 
-	 * greater than it, which gives the next lexicographically greater value for
-	 * that digit's place. 
-	 * 
-	 * Then, sort all digits to the right of that digit such that the values are
-	 * in increasing value, which minimizes the value of the digits to the right
-	 * of the swapped digit. */
+	 * Then, sort the digits to the right of the swapped digit in ascending order
+	 * so that the minimum value possible to the right of the swapped digit is 
+	 * achieved. */
 	void nextPermutation(std::vector<int> &nums)
 	{
 

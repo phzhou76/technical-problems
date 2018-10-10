@@ -30,8 +30,7 @@ public:
 			 * in the row should take the sum of the two elements in the row above.
 			 * 
 			 * If the element's zero-based index is i, then the two elements that
-			 * should be used for its sum are located at i - 1 and i.
-			 */
+			 * should be used for its sum are located at i - 1 and i. */
 			for (int rowElement = 0; rowElement < row; ++rowElement)
 			{
 				if (rowElement == 0 || rowElement == row - 1)

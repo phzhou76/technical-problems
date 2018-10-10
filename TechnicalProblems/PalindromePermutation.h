@@ -23,8 +23,7 @@ public:
 	/**
 	 * Implementation with a hash map. Since a palindrome is a string that has even
 	 * counts on all of its chars, or even counts on all of its chars and an odd count
-	 * for at most one of its chars, a hash map can be used to keep track.
-	 */
+	 * for at most one of its chars, a hash map can be used to keep track. */
 	static bool checkIsPermutationOfPalindrome(std::string inputString)
 	{
 		if (inputString.length() < 2)
@@ -68,8 +67,7 @@ public:
 		/* A string is a permutation of a palindrome if one of two conditions are true:
 		 *	1. All char counts are even - i.e. the odd char count is 0.
 		 *	2. Only one char count is odd, the rest are even - i.e. the odd char count
-		 *		is 1.
-		 */
+		 *		is 1. */
 		return oddCharCount < 2;
 	}
 

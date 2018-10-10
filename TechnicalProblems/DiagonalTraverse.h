@@ -14,6 +14,9 @@
  * [7, 8, 9]
  *
  * Output: [1, 2, 4, 7, 5, 3, 6, 8, 9]
+ *
+ * Questions:
+ *	1. What should be returned if the matrix is empty, or if it is one-dimensional?
  */
 class DiagonalTraverse
 {
@@ -23,28 +26,29 @@ public:
 	 * Thus, there needs to be a bool to signify whether or not the current
 	 * diagonal is upwards or downwards in slope. 
 	 *
-	 * If it's upwards, -1 to row and +1 to column on every iteration. If it's 
-	 * downwards, +1 to row and -1 to column on every iteration.
+	 * Possible directions:
+	 *	1. Upwards: -1 to row, +1 to column on every iteration.
+	 *	2. Downwards: +1 to row, -1 to column on every iteration.
 	 *
 	 * Then, we need to consider what happens when the diagonals reach their last
-	 * element. This can be detected if the next row or column goes out of bounds
-	 * of the matrix.
+	 * element. The last element of the diagonal can be detected if the coordinate
+	 * position of the next element is out of bounds of the matrix.
 	 *
 	 * For upward diagonals:
 	 *	1. If there is an element to the right of the last element in the upward
 	 *		diagonal, then that is the start of the next diagonal. Use the row
-	 *		of the current element, but +1 to column.
+	 *		of the current element, but add one to the column.
 	 *	2. Else, there isn't an element to the right of the last element in the 
-	 *		upward diagonal, then the element below is the start of the next 
-	 *		diagonal. Add 1 to the row, but keep the original value of the column.
+	 *		upward diagonal. Then, the element below is the start of the next 
+	 *		diagonal. Add one to the row, but keep the original value of the column.
 	 *
 	 * For downward diagonals:
 	 *	1. If there is an element below the last element in the downward diagonal,
 	 *		then that is the start of the next diagonal. Add one to the row of the
 	 *		current element, but keep the original value of the column.
 	 *	2. Else, there isn't an element below the last element in the downward
-	 *		diagonal, then the element to the right is the start of the diagonal.
-	 *		Keep the original row of the last element, but +1 to column.
+	 *		diagonal. Then, the element to the right is the start of the diagonal.
+	 *		Keep the original row of the last element, but add one to the column.
 	 *
 	 * Invert the upward bool at the end of every diagonal. Eventually, when both
 	 * the row and the column go out of bounds, then we know we've gone through

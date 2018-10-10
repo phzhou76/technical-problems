@@ -44,14 +44,13 @@ public:
 	 *		interval's end value), then we know that the intervals do not overlap.
 	 *		In this case, append the current interval to the merged array.
 	 *	2. If the current interval begins before or at where the previous interval
-	 *		ends (i.e. the current interval's start value is less than or equa
+	 *		ends (i.e. the current interval's start value is less than or equal
 	 *		to the previous interval's end value), then we know that the intervals
 	 *		overlap. In this case, update the last element in the merged array to
 	 *		the greater of the end values between the merged interval and the
 	 *		current interval.
 	 *
-	 * Repeat this process for every interval in the list, and return the result.
-	 */
+	 * Repeat this process for every interval in the list, and return the result. */
 	std::vector<Interval> merge(std::vector<Interval> &intervals)
 	{
 		if (intervals.empty())

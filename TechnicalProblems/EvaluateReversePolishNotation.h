@@ -16,6 +16,17 @@
 class EvaluateReversePolishNotation
 {
 public:
+
+	/* Evaluating a series of tokens in Reverse Polish Notation is like doing
+	 * arithmetic with computer architecture that uses stacks. 
+	 *
+	 * Numbers that are encountered are pushed to the stack. If an operator is 
+	 * encountered, then pop two numbers off the stack (where the first number 
+	 * that gets popped is the second parameter, and the second number that gets
+	 * popped is the first parameter). Perform the operation on the two numbers,
+	 * and push the result back to the stack. When all of the tokens have been 
+	 * processed, the result of the entire expression should be at the top of the
+	 * stack. */
 	int evalRPN(std::vector<std::string>& tokens) {
 		std::stack<int> calculatorStack;
 

@@ -246,9 +246,6 @@
     <ClInclude Include="MajorityElementII.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
-    <ClInclude Include="LongestSubarrayNonnegativeIntegers.h">
-      <Filter>Header Files\Arrays and Strings</Filter>
-    </ClInclude>
     <ClInclude Include="DesignCache.h">
       <Filter>Header Files\Storage Scalability</Filter>
     </ClInclude>
@@ -326,6 +323,9 @@
     </ClInclude>
     <ClInclude Include="PermutationsII.h">
       <Filter>Header Files\Arrays and Strings\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestSubarrayNonnegativeIntegers.h">
+      <Filter>Header Files\Arrays and Strings\Incomplete Problems</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

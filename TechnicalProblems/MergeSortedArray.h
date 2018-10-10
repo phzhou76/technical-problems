@@ -23,20 +23,20 @@ public:
 	 * to avoid overwriting any data. */
 	void merge(std::vector<int> &nums1, int m, std::vector<int> &nums2, int n)
 	{
-		int nums1Ptr = m - 1;
-		int nums2Ptr = n - 1;
-		int mergedPtr = m + n - 1;
+		int nums1Index = m - 1;
+		int nums2Index = n - 1;
+		int mergedIndex = m + n - 1;
 
-		while (nums1Ptr >= 0 && nums2Ptr >= 0)
+		while (nums1Index >= 0 && nums2Index >= 0)
 		{
 			/* Place the greater of the two values at the back. */
-			if (nums1[nums1Ptr] > nums2[nums2Ptr])
+			if (nums1[nums1Index] > nums2[nums2Index])
 			{
-				nums1[mergedPtr--] = nums1[nums1Ptr--];
+				nums1[mergedIndex--] = nums1[nums1Index--];
 			}
 			else
 			{
-				nums1[mergedPtr--] = nums2[nums2Ptr--];
+				nums1[mergedIndex--] = nums2[nums2Index--];
 			}
 		}
 
@@ -44,11 +44,11 @@ public:
 	     * array. Place the rest of num2 into the merged array. If all elements
 		 * in num2 have been placed into the array, then we don't need to do 
 		 * anything, since the rest of num1's elements are already there. */
-		if (nums1Ptr < 0)
+		if (nums1Index < 0)
 		{
-			while (nums2Ptr >= 0)
+			while (nums2Index >= 0)
 			{
-				nums1[mergedPtr--] = nums2[nums2Ptr--];
+				nums1[mergedIndex--] = nums2[nums2Index--];
 			}
 		}
 	}

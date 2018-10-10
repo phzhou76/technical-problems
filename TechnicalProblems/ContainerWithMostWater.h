@@ -17,7 +17,12 @@ class ContainerWithMostWater
 public:
 	int maxArea(std::vector<int>& height) {
 		int maxArea = 0;
-
+		
+		/* The following solution is a brute force solution, since it generates
+		 * all possible containers and determines which container holds the most
+		 * water. Thus, this algorithm has a O(n^2) runtime and a O(1) space 
+		 * complexity. */
+#if 1
 		/* Width of containers can go from 1 to the number of lines - 1, as the
 		 * lines form the sides of the containers. */
 		for (int containerWidth = 1; containerWidth < height.size(); ++containerWidth)
@@ -37,6 +42,43 @@ public:
 				{
 					maxArea = containerArea;
 				}
+			}
+		}
+#endif
+
+		/* The solution to this problem can be optimized by using a two pointer
+		 * strategy. Consider the area between the leftmost and rightmost lines. 
+		 * To maximize the area between the lines, we need to look at higher lines.
+		 *
+		 * So, if we move the higher of the two lines inwards towards the center,
+		 * will that possibly lead to an increase in the area between the two 
+		 * lines? No, since the area of the container is being limited by the
+		 * shorter of the two lines. Even if the next line inward was higher, the
+		 * area of the container couldn't utilize the higher line, since the lower
+		 * line is bottlenecking the area. 
+		 *
+		 * Then, if we move the shorter of the two lines inwards towards the center,
+		 * it's possible that we may encounter a higher line, which could be 
+		 * utilized to generate a greater container area. */
+
+		int leftIndex = 0;
+		int rightIndex = height.size() - 1;
+
+		while (leftIndex < rightIndex)
+		{
+			int containerArea = std::min(height[leftIndex], height[rightIndex])
+				* (rightIndex - leftIndex);
+			maxArea = std::max(maxArea, containerArea);
+
+			/* Move the shorter of the two lines to possibly obtain a taller 
+			 * line. */
+			if (height[leftIndex] < height[rightIndex])
+			{
+				++leftIndex;
+			}
+			else
+			{
+				++rightIndex;
 			}
 		}
 

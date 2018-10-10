@@ -15,7 +15,7 @@
  *	3. Is an empty string considered a permutation of another empty string?
  *
  * The solution assumes that a string is considered to be a permutation of another
- * string if one string has the same number of each unique character as the other
+ * string if one string has the same number of each unique characters as the other
  * string.
  */
 class CheckPermutation
@@ -69,8 +69,7 @@ public:
 		 * Second, neither string has more of any char than the other string. Combining
 		 * these two statements means that both strings have the same chars and
 		 * have the same count of each char, which makes the strings permutations
-		 * of each other.
-		 */
+		 * of each other. */
 		return true;
 	}
 

@@ -31,8 +31,7 @@ public:
 	 *	1. The first pass is used to generate two possible candidate values that
 	 *		have a count of greater than N/3.
 	 *	2. The second pass is used to count the frequency of those candidate values
-	 *		to confirm that the count is greater than N/3.
-	 */
+	 *		to confirm that the count is greater than N/3. */
 	std::vector<int> majorityElement(std::vector<int> &nums)
 	{
 		if (nums.empty())
@@ -66,8 +65,7 @@ public:
 		 * value together. Subtract a count from both candidate values to signify
 		 * that a triplet has been formed. If a candidate truly has greater than
 		 * N/3 count, then there should be instances of it left over at the end
-		 * that aren't paired by different values.
-		 */
+		 * that aren't paired by different values. */
 		for (auto it : nums)
 		{
 			/* Case 1: This number matches the first candidate. Increase count
@@ -93,7 +91,7 @@ public:
 				candidate1 = it;
 				count1 = 1;
 			}
-			/* Case 4: The count of the second candidate was decrease to 0, or
+			/* Case 4: The count of the second candidate was decreased to 0, or
 			 * the second candidate was never set. This means that the number held
 			 * by the second candidate was completely paired up with different
 			 * values. Set the second candidate to this number and its count to 1. */

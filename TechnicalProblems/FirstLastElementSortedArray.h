@@ -15,6 +15,12 @@
 class FirstLastElementSortedArray
 {
 public:
+
+	/* Because the array is sorted, we don't have to do a linear scan to determine
+	 * where the starting and ending position of the given target value is. Instead,
+	 * we can do binary search on the array, and if we detect the target during our
+	 * recursion, determine if the target's index is smaller than the minimum index,
+	 * or greater than the maximum index. */
 	std::vector<int> searchRange(std::vector<int>& nums, int target) {
 		/* Target cannot be found inside an empty array. */
 		if (nums.size() == 0)
