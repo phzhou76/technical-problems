@@ -155,6 +155,7 @@
     <ClInclude Include="AddTwoNumbers.h" />
     <ClInclude Include="BinaryTreeInorderTraversal.h" />
     <ClInclude Include="CheckPermutation.h" />
+    <ClInclude Include="CombinationSumII.h" />
     <ClInclude Include="ContainerWithMostWater.h" />
     <ClInclude Include="DeleteNodeInLinkedList.h" />
     <ClInclude Include="DesignCache.h" />
@@ -187,6 +188,7 @@
     <ClInclude Include="MajorityElement.h" />
     <ClInclude Include="MajorityElementII.h" />
     <ClInclude Include="MaximumDepthBinaryTree.h" />
+    <ClInclude Include="MaximumSizeRectangle.h" />
     <ClInclude Include="MaximumSubarray.h" />
     <ClInclude Include="MedianSortedArrays.h" />
     <ClInclude Include="MergedKSortedLists.h" />
