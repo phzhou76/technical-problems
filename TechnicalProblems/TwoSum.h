@@ -15,7 +15,7 @@ class TwoSum
 {
 public:
 	static std::vector<int> twoSum(std::vector<int>& nums, int target) {
-		/* Map of an element to its index. */
+		/* Map of a number to its index. */
 		std::unordered_map<int, int> elementToIndex;
 		std::vector<int> sumPair;
 

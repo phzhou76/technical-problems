@@ -166,11 +166,14 @@
     <ClInclude Include="FirstLastElementSortedArray.h" />
     <ClInclude Include="FizzBuzz.h" />
     <ClInclude Include="GenerateParentheses.h" />
+    <ClInclude Include="HeightReconstruction.h" />
     <ClInclude Include="ImplementStrStr.h" />
     <ClInclude Include="InsertionSortList.h" />
     <ClInclude Include="IntegerToRoman.h" />
     <ClInclude Include="IntersectionLinkedLists.h" />
+    <ClInclude Include="InvertBinaryTree.h" />
     <ClInclude Include="LeetCodeLinkedListNode.h" />
+    <ClInclude Include="LeetCodeTreeNode.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListCycle.h" />
     <ClInclude Include="LinkedListNode.h" />
@@ -231,6 +234,7 @@
     <ClInclude Include="SquareRoot.h" />
     <ClInclude Include="StringToInteger.h" />
     <ClInclude Include="SumOfTwoIntegers.h" />
+    <ClInclude Include="SumRootToLeafNumbers.h" />
     <ClInclude Include="SwapNodesInPairs.h" />
     <ClInclude Include="ThreeSumClosest.h" />
     <ClInclude Include="TopKFrequentElements.h" />
@@ -239,6 +243,7 @@
     <ClInclude Include="UniquePaths.h" />
     <ClInclude Include="UniquePathsII.h" />
     <ClInclude Include="URLify.h" />
+    <ClInclude Include="ValidParentheses.h" />
     <ClInclude Include="ZigZagConversion.h" />
   </ItemGroup>
   <ItemGroup>

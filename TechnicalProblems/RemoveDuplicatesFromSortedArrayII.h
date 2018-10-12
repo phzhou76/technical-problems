@@ -47,7 +47,7 @@ public:
 			}
 			/* If the current value being looked at is different from the previous
 			 * value being looked at, just add the current value immediately to
-			 * the new array.*/
+			 * the new array. */
 			else
 			{
 				nums[newPointer++] = nums[oldPointer];
@@ -56,6 +56,8 @@ public:
 			}
 		}
 
+		/* Because newPointer will point to the index after the end of the unique
+		 * array, that can be used as the size, since they're equivalent values. */
 		return newPointer;
 	}
 };

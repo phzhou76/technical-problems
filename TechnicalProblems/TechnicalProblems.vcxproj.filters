@@ -58,6 +58,9 @@
     <Filter Include="Header Files\Stacks and Queues\TODO Problems">
       <UniqueIdentifier>{cbfb4b9c-4e65-4840-9ad9-046c0ef9be9c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Stacks and Queues\Incomplete Problems">
+      <UniqueIdentifier>{bff540ae-5bb7-40d8-9b84-faa62c294d8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -321,11 +324,26 @@
     <ClInclude Include="SimplifyPath.h">
       <Filter>Header Files\Stacks and Queues\TODO Problems</Filter>
     </ClInclude>
-    <ClInclude Include="PermutationsII.h">
-      <Filter>Header Files\Arrays and Strings\TODO Problems</Filter>
-    </ClInclude>
     <ClInclude Include="LongestSubarrayNonnegativeIntegers.h">
       <Filter>Header Files\Arrays and Strings\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="SumRootToLeafNumbers.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="LeetCodeTreeNode.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightReconstruction.h">
+      <Filter>Header Files\Stacks and Queues\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="InvertBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PermutationsII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ValidParentheses.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
