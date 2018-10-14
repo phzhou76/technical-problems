@@ -61,9 +61,6 @@
     <Filter Include="Header Files\Stacks and Queues\Incomplete Problems">
       <UniqueIdentifier>{bff540ae-5bb7-40d8-9b84-faa62c294d8c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Recursion and Dynamic Programming\Incomplete Problems">
-      <UniqueIdentifier>{17f747a2-e009-4412-b4c3-3d0b6d658c3a}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -348,11 +345,44 @@
     <ClInclude Include="ValidParentheses.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
-    <ClInclude Include="MaximumSizeRectangle.h">
-      <Filter>Header Files\Recursion and Dynamic Programming\Incomplete Problems</Filter>
-    </ClInclude>
     <ClInclude Include="CombinationSumII.h">
       <Filter>Header Files\Arrays and Strings\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Subsets.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="SubsetsII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupAnagrams.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="CopyListRandomPointer.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="FlattenBinaryTreeToLinkedList.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PreorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PostorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PopulateNextRightPointers.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PopulateNextRightPointersII.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="LargestRectangleInHistogram.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSizeRectangle.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

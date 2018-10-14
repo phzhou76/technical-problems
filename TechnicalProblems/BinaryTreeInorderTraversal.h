@@ -28,39 +28,44 @@ public:
 		std::stack<TreeNode *> toVisitStack;
 
 		TreeNode * currentNode = root;
-		while (currentNode != nullptr)
+		
+		/* This loop takes care of two possible conditions:
+		 *	1. The stack could be empty, but currentNode might be pointing to
+		 *		something. This is possible if the currentNode is pointing to
+		 *		the root, or if all elements in the stack have been popped, and
+		 *		currentNode is pointing to the right child.
+		 *	2. currentNode may be null, but the stack still has elements inside
+		 *		it. This is possible if all left children to the leftmost node
+		 *		in the subtree have been added, and the leftmost node has no
+		 *		right child. */
+		while (currentNode != nullptr || !toVisitStack.empty())
 		{
-			/* Case 1: If there is a left subtree, then the nodes in that left
-			 * subtree need to be added to the inorder list before this node's
-			 * value can be added to the inorder list. Add this node to the "to
-			 * visit" stack to examine after the left subtree has been examined
-			 * and move to the left child node. */
-			if (currentNode->left != nullptr)
+			/* This loop will continue to add all left children in the subtree
+			 * until the leftmost node has been added. However, in the case where
+			 * all left nodes have been added and the leftmost node has no right
+			 * child, currentNode will be null and this loop will not run. */
+			while (currentNode != nullptr)
 			{
 				toVisitStack.push(currentNode);
 				currentNode = currentNode->left;
 			}
 
-			/* Case 2: If there is no left subtree, then this node's value can
-			 * be added to the inorder list. After that, if this node has a right
-			 * child, then the right subtree can be examined. */
-			else
-			{
-				inorderList.push_back(currentNode->val);
+			/* Pop the most recently visited value on the stack and add it to the
+			 * iteration list. Then, see if the most recently added node has a 
+			 * right subtree, and explore it if it does. 
+			 *
+			 * If it does, then currentNode will point to it, and we'll repeat
+			 * the process of adding all of the left children in that subtree
+			 * that has the right child as the root.
+			 *
+			 * If it doesn't, then we'll start to backtrack up the tree, popping
+			 * nodes from the top of the stack until one of the nodes has a right
+			 * child. */
+			currentNode = toVisitStack.top();
+			toVisitStack.pop();
 
-				/* If this node has a right child, then go to that right child
-				 * for processing. Otherwise, go back up the tree, and for each
-				 * node examined, add its value to the inorder list, and if it
-				 * has a right child, process the right child. */
-				while (!toVisitStack.empty() && currentNode->right == nullptr)
-				{
-					currentNode = toVisitStack.top();
-					toVisitStack.pop();
-					inorderList.push_back(currentNode->val);
-				}
-
-				currentNode = currentNode->right;
-			}
+			inorderList.push_back(currentNode->val);
+			currentNode = currentNode->right;
 		}
 
 		return inorderList;

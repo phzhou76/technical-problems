@@ -11,6 +11,20 @@
 class MaximumSizeRectangle
 {
 public:
+
+	/* Use a temporary array to hold the height of the column that ends in the
+	 * current element. For example, if row = 2 and column = 3, then the array[3]
+	 * will be the height of the column that ends in the third row of the matrix.
+	 *
+	 * If the current element is 1, then add 1 to the previous row's height, since
+	 * the column size can be extended by 1. However, if the current element in
+	 * the matrix is 0, then set the column size to 0, since no column can end
+	 * with the current element.
+	 *
+	 * On each iteration, after the column heights for each element in the row have
+	 * been calculated, find the maximum area of that "histogram" (see the solution
+	 * in LargestRectangleHistogram). Record the maximum area of that row if it
+	 * is greater than the overall maximum area found. */
 	int maximalRectangle(std::vector<std::vector<char>> &matrix)
 	{
 		/* If the matrix has no rows or no columns, return 0. */
@@ -19,88 +33,133 @@ public:
 			return 0;
 		}
 
-		/* Holds the maximum width and height of all rectangles that have the
-		 * bottom right corner at the given coordinate. */
-		std::vector<std::vector<std::pair<int, int>>> maxDimensions(matrix.size(),
-			std::vector<std::pair<int, int>>(matrix[0].size(), std::pair<int, int>(0, 0)));
+		/* Holds the heights of the columns that end with the current row. */
+		std::vector<int> columnHeights(matrix[0].size(), 0);
 
-		/* Holds the maximum area rectangle found so far. */
-		int maxArea = 0;
-
-		/* Initialize the top left element first. */
-		if (matrix[0][0] == '1')
+		/* Initialize the column heights of the first row (it will be either 0
+		 * or 1). */
+		for (int col = 0; col < matrix[0].size(); ++col)
 		{
-			maxDimensions[0][0].first = maxDimensions[0][0].second = 1;
-			maxArea = 1;
+			columnHeights[col] = matrix[0][col] == '0' ? 0 : 1;
 		}
 
-		/* Note that if the current element is 0, then no rectangle can end with
-		 * the current element. In this case, set the maximum width and height
-		 * of the element to 0. */
+		/* Calculate the maximum size of the rectangle for this row. */
+		int maxSizeRectangle = calculateMaxRectangle(columnHeights);
 
-		/* Initialize the first row. */
-		for (int i = 1; i < matrix[0].size(); ++i)
-		{
-			if (matrix[0][i] == '1')
-			{
-				maxDimensions[0][i].first = maxDimensions[0][i - 1].first + 1;
-				maxDimensions[0][i].second = 1;
-
-				int currentArea = maxDimensions[0][i].first * maxDimensions[0][i].second;
-				if (currentArea > maxArea)
-				{
-					maxArea = currentArea;
-				}
-			}
-		}
-
-		/* Initialize the first column. */
-		for (int i = 1; i < matrix.size(); ++i)
-		{
-			if (matrix[i][0] == '1')
-			{
-				maxDimensions[i][0].first = 1;
-				maxDimensions[i][0].second = maxDimensions[i - 1][0].second + 1;
-
-				int currentArea = maxDimensions[i][0].first * maxDimensions[i][0].second;
-				if (currentArea > maxArea)
-				{
-					maxArea = currentArea;
-				}
-			}
-		}
-
-		/* Scan the rest of the matrix. If the current element contains a 1, then
-		 * it's possible to have a rectangle have the current element as its
-		 * bottom right coordinate. 
-		 *
-		 * To calculate the maximum height and width of all rectangles that have
-		 * this element as the bottom right:
-		 *	1. Take the max height saved in the top element, and add 1.
-		 *	2. Take the max width saved in the left element, and add 1. */
+		/* Sweep through the rest of the rows. */
 		for (int row = 1; row < matrix.size(); ++row)
 		{
-			for (int col = 1; col < matrix[row].size(); ++col)
+			for (int col = 0; col < matrix[row].size(); ++col)
 			{
-				if (matrix[row][col] == '1')
+				if (matrix[row][col] == '0')
 				{
-					/* Calculate max width. */
-					maxDimensions[row][col].first = maxDimensions[row][col - 1].first + 1;
+					columnHeights[col] = 0;
+				}
+				else
+				{
+					columnHeights[col] += 1;
+				}
+			}
 
-					/* Calculate max height. */
-					maxDimensions[row][col].second = maxDimensions[row - 1][col].second + 1;
+			/* Holds the max size rectangle of the current row. */
+			int currRowMSR = calculateMaxRectangle(columnHeights);
+			if (currRowMSR > maxSizeRectangle)
+			{
+				maxSizeRectangle = currRowMSR;
+			}
+		}
 
-					int currentArea = maxDimensions[row][col].first *
-						maxDimensions[row][col].second;
-					if (currentArea > maxArea)
-					{
-						maxArea = currentArea;
-					}
+		return maxSizeRectangle;
+	}
+
+	/* Calculate the max size rectangle in the "histogram", as the array represents
+	 * columns placed next to each other. */
+	int calculateMaxRectangle(std::vector<int> &columnHeights)
+	{
+		/* Holds the indices of each column. The topmost index in the stack will
+		 * point to the highest bar. */
+		std::stack<int> columnIndices;
+
+		/* Max size rectangle found so far. */
+		int maxSize = 0;
+
+		/* Used to mark the right side of a rectangle where a specific column is
+		 * the shortest column in the rectangle. */
+		int rightSideIndex = 0;
+		
+		while (rightSideIndex < columnHeights.size())
+		{
+			/* If the current column is taller than the column on top of the stack,
+			 * then we will need to find a max width rectangle for this column
+			 * first before we find one for the column on top of the stack. The
+			 * column on top of the stack will serve as the left side for this
+			 * rectangle, as it is shorter than the current column. 
+			 *
+			 * Edge case: If the stack is empty, then this column is either the
+			 * first column, or all other columns to the left of it are taller
+			 * than it. */
+			if (columnIndices.empty() ||
+				columnHeights[rightSideIndex] > columnHeights[columnIndices.top()])
+			{
+				columnIndices.push(rightSideIndex);
+				++rightSideIndex;
+			}
+
+			/* If the current column is not taller than the column on top of the
+			 * stack, then it will serve as the right side of all rectangles whose:
+			 *	1. Shortest bar is in the stack.
+			 *	2. Shortest bar is taller than the current column. */
+			else
+			{
+				/* Start to calculate the widest rectangle where the top of the
+				 * stack is the shortest bar. */
+				int topIndex = columnIndices.top();
+				columnIndices.pop();
+
+				/* Obtain the left side by looking at the column below the previously
+				 * top column. If the stack is empty, then there are no other
+				 * shorter columns to the left of the right side. */
+				int leftSideIndex = columnIndices.empty() ? -1 : columnIndices.top();
+
+				int height = columnHeights[topIndex];
+
+				/* Width is 0 to right side if stack was empty after the top was
+				 * popped off, since that means all columns to the left of the
+				 * right side are taller than the current column. */
+				int width = leftSideIndex == -1 ? rightSideIndex
+					: (rightSideIndex - leftSideIndex - 1);
+
+				int rectangleArea = height * width;
+				if (rectangleArea > maxSize)
+				{
+					maxSize = rectangleArea;
 				}
 			}
 		}
 
-		return maxArea;
+		/* Lastly, if there are still any elements left over (rightSideIndex
+		 * would be equal to columnHeights.size() at this point), we need to
+		 * calculate the size of the rectangle with each column as the shortest
+		 * column. */
+		while (!columnIndices.empty())
+		{
+			int topIndex = columnIndices.top();
+			columnIndices.pop();
+
+			int leftSideIndex = columnIndices.empty() ? -1 : columnIndices.top();
+
+			int height = columnHeights[topIndex];
+			int width = leftSideIndex == -1 ? rightSideIndex
+				: (rightSideIndex - leftSideIndex - 1);
+
+			int rectangleArea = height * width;
+			if (rectangleArea > maxSize)
+			{
+				maxSize = rectangleArea;
+			}
+		}
+
+		return maxSize;
 	}
 };
 

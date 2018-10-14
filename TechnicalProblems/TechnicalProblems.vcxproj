@@ -156,7 +156,9 @@
     <ClInclude Include="BinaryTreeInorderTraversal.h" />
     <ClInclude Include="CheckPermutation.h" />
     <ClInclude Include="CombinationSumII.h" />
+    <ClInclude Include="ConstructBinaryTree.h" />
     <ClInclude Include="ContainerWithMostWater.h" />
+    <ClInclude Include="CopyListRandomPointer.h" />
     <ClInclude Include="DeleteNodeInLinkedList.h" />
     <ClInclude Include="DesignCache.h" />
     <ClInclude Include="DiagonalTraverse.h" />
@@ -166,13 +168,16 @@
     <ClInclude Include="FactorialTrailingZeroes.h" />
     <ClInclude Include="FirstLastElementSortedArray.h" />
     <ClInclude Include="FizzBuzz.h" />
+    <ClInclude Include="FlattenBinaryTreeToLinkedList.h" />
     <ClInclude Include="GenerateParentheses.h" />
+    <ClInclude Include="GroupAnagrams.h" />
     <ClInclude Include="HeightReconstruction.h" />
     <ClInclude Include="ImplementStrStr.h" />
     <ClInclude Include="InsertionSortList.h" />
     <ClInclude Include="IntegerToRoman.h" />
     <ClInclude Include="IntersectionLinkedLists.h" />
     <ClInclude Include="InvertBinaryTree.h" />
+    <ClInclude Include="LargestRectangleInHistogram.h" />
     <ClInclude Include="LeetCodeLinkedListNode.h" />
     <ClInclude Include="LeetCodeTreeNode.h" />
     <ClInclude Include="LinkedList.h" />
@@ -211,6 +216,10 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Permutations.h" />
     <ClInclude Include="PermutationsII.h" />
+    <ClInclude Include="PopulateNextRightPointers.h" />
+    <ClInclude Include="PopulateNextRightPointersII.h" />
+    <ClInclude Include="PostorderTraversal.h" />
+    <ClInclude Include="PreorderTraversal.h" />
     <ClInclude Include="PrintJSONFormatString.h" />
     <ClInclude Include="ProductOfArrayExceptSelf.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedList.h" />
@@ -235,6 +244,8 @@
     <ClInclude Include="SpiralMatrix.h" />
     <ClInclude Include="SquareRoot.h" />
     <ClInclude Include="StringToInteger.h" />
+    <ClInclude Include="Subsets.h" />
+    <ClInclude Include="SubsetsII.h" />
     <ClInclude Include="SumOfTwoIntegers.h" />
     <ClInclude Include="SumRootToLeafNumbers.h" />
     <ClInclude Include="SwapNodesInPairs.h" />
