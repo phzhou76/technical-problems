@@ -193,6 +193,7 @@
     <ClInclude Include="MajorityElement.h" />
     <ClInclude Include="MajorityElementII.h" />
     <ClInclude Include="MaximumDepthBinaryTree.h" />
+    <ClInclude Include="MaximumProductSubarray.h" />
     <ClInclude Include="MaximumSizeRectangle.h" />
     <ClInclude Include="MaximumSubarray.h" />
     <ClInclude Include="MedianSortedArrays.h" />
@@ -200,6 +201,7 @@
     <ClInclude Include="MergeIntervals.h" />
     <ClInclude Include="MergeSortedArray.h" />
     <ClInclude Include="MergeTwoSortedLists.h" />
+    <ClInclude Include="MinimumEditDistance.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="MoveZeroes.h" />
     <ClInclude Include="MultiplyStrings.h" />
@@ -222,6 +224,7 @@
     <ClInclude Include="PreorderTraversal.h" />
     <ClInclude Include="PrintJSONFormatString.h" />
     <ClInclude Include="ProductOfArrayExceptSelf.h" />
+    <ClInclude Include="RegularExpressionMatch.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedList.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedArrayII.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedListII.h" />

@@ -384,6 +384,15 @@
     <ClInclude Include="MaximumSizeRectangle.h">
       <Filter>Header Files\Recursion and Dynamic Programming</Filter>
     </ClInclude>
+    <ClInclude Include="MaximumProductSubarray.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularExpressionMatch.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MinimumEditDistance.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
