@@ -260,6 +260,7 @@
     <ClInclude Include="UniquePathsII.h" />
     <ClInclude Include="URLify.h" />
     <ClInclude Include="ValidParentheses.h" />
+    <ClInclude Include="WordBreak.h" />
     <ClInclude Include="ZigZagConversion.h" />
   </ItemGroup>
   <ItemGroup>

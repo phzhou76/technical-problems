@@ -6,7 +6,7 @@
 
 /**
  * Problem: Given a non-empty string s and a dictionary wordDict containing a
- * list of non-emptu words, determine if s can be segmented into a space-separated
+ * list of non-empty words, determine if s can be segmented into a space-separated
  * sequence of one or more dictionary words.
  *
  * Note: The same word in the dictionary may be reused multiple times in the
