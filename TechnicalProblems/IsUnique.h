@@ -18,7 +18,9 @@ class IsUnique
 {
 public:
 
-	/** Implementation with a hash map. */
+	/** Implementation with a hash map. Note that a hash table would be better
+	 * in this situation, since we don't need to know the counts, we just need
+	 * to know that they exist. */
 	static bool determineIsUnique(std::string inputString)
 	{
 		if (inputString.length() < 2)

@@ -16,9 +16,9 @@ public:
 		/* Map of chars to their last seen indices in the string. The indices in
 		 * this hash map are only valid if they are within the currently examined
 		 * substring; i.e. if the index value is less than the start of the
-		 * substring, it should be treated as if it didn't exist.
-		 */
+		 * substring, it should be treated as if it didn't exist. */
 		std::unordered_map<char, int> charLastSeen;
+
 		int maxSubstringLength = 0;
 		int substringStartIndex = 0;
 
@@ -33,8 +33,7 @@ public:
 		 * copies of that char existed in the substring before this char.
 		 *
 		 * In either case, the last known position of the char should be updated,
-		 * and the length of the substring should be calculated.
-		 */
+		 * and the length of the substring should be calculated. */
 		for (int i = 0; i < inputString.length(); ++i)
 		{
 			if (charLastSeen.find(inputString.at(i)) == charLastSeen.end()

@@ -9,6 +9,21 @@
  */
 class IntegerToRoman
 {
+
+	/* This problem can be solved by extracting each digit from the ones place
+	 * to the most significant digit. Each digit is then run through its own
+	 * method to convert it to its roman numeral representation. However, this
+	 * could be better implemented by only using one method definition instead
+	 * of 3. The character patterns between the ones, tens, hundreds, and thousands
+	 * digits are exact same; only the actual characters themselves differ.
+	 *
+	 * For each digit, pass the following characters into the method:
+	 *	1. Ones Digit: 'I', 'V', and 'X'.
+	 *	2. Tens Digit: 'X', 'L', and 'C'.
+	 *	3. Hundreds Digit: 'C', 'D', and 'M'.
+	 *	4. Thousands Digit: 'M'. (Other characters don't matter, since the max
+	 *		thousands digit is 3.)
+	 */
 	std::string intToRoman(int num)
 	{
 		std::string romanNumber = "";

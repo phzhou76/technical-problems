@@ -151,16 +151,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AddOne.h" />
     <ClInclude Include="AddTwoNumbers.h" />
+    <ClInclude Include="BinaryTreeInorderTraversal.h" />
     <ClInclude Include="CheckPermutation.h" />
+    <ClInclude Include="CombinationSumII.h" />
+    <ClInclude Include="ConstructBinaryTree.h" />
     <ClInclude Include="ContainerWithMostWater.h" />
+    <ClInclude Include="CopyListRandomPointer.h" />
+    <ClInclude Include="DeleteNodeInLinkedList.h" />
+    <ClInclude Include="DesignCache.h" />
+    <ClInclude Include="DiagonalTraverse.h" />
     <ClInclude Include="DivideTwoIntegers.h" />
     <ClInclude Include="EvaluateReversePolishNotation.h" />
+    <ClInclude Include="ExcelSheetColumnNumber.h" />
+    <ClInclude Include="FactorialTrailingZeroes.h" />
     <ClInclude Include="FirstLastElementSortedArray.h" />
     <ClInclude Include="FizzBuzz.h" />
+    <ClInclude Include="FlattenBinaryTreeToLinkedList.h" />
     <ClInclude Include="GenerateParentheses.h" />
+    <ClInclude Include="GroupAnagrams.h" />
+    <ClInclude Include="HeightReconstruction.h" />
     <ClInclude Include="ImplementStrStr.h" />
+    <ClInclude Include="InsertionSortList.h" />
     <ClInclude Include="IntegerToRoman.h" />
+    <ClInclude Include="IntersectionLinkedLists.h" />
+    <ClInclude Include="InvertBinaryTree.h" />
+    <ClInclude Include="LargestRectangleInHistogram.h" />
+    <ClInclude Include="LeetCodeLinkedListNode.h" />
+    <ClInclude Include="LeetCodeTreeNode.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListCycle.h" />
     <ClInclude Include="LinkedListNode.h" />
@@ -168,35 +187,79 @@
     <ClInclude Include="LongestCommonPrefix.h" />
     <ClInclude Include="LongestIncreasingSubsequence.h" />
     <ClInclude Include="LongestPalindromicSubstring.h" />
+    <ClInclude Include="LongestSubarrayNonnegativeIntegers.h" />
     <ClInclude Include="LongestSubstring.h" />
+    <ClInclude Include="LRUCache.h" />
     <ClInclude Include="MajorityElement.h" />
+    <ClInclude Include="MajorityElementII.h" />
     <ClInclude Include="MaximumDepthBinaryTree.h" />
+    <ClInclude Include="MaximumProductSubarray.h" />
+    <ClInclude Include="MaximumSizeRectangle.h" />
     <ClInclude Include="MaximumSubarray.h" />
     <ClInclude Include="MedianSortedArrays.h" />
     <ClInclude Include="MergedKSortedLists.h" />
+    <ClInclude Include="MergeIntervals.h" />
+    <ClInclude Include="MergeSortedArray.h" />
     <ClInclude Include="MergeTwoSortedLists.h" />
+    <ClInclude Include="MinimumEditDistance.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="MoveZeroes.h" />
+    <ClInclude Include="MultiplyStrings.h" />
+    <ClInclude Include="NextPermutation.h" />
     <ClInclude Include="NumberOfOneBits.h" />
+    <ClInclude Include="PalindromeLinkedList.h" />
     <ClInclude Include="PalindromeNumber.h" />
     <ClInclude Include="PalindromePermutation.h" />
+    <ClInclude Include="PartitionList.h" />
+    <ClInclude Include="PascalsTriangle.h" />
+    <ClInclude Include="PascalsTriangleII.h" />
     <ClInclude Include="PathSum.h" />
     <ClInclude Include="PathSumII.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Permutations.h" />
+    <ClInclude Include="PermutationsII.h" />
+    <ClInclude Include="PopulateNextRightPointers.h" />
+    <ClInclude Include="PopulateNextRightPointersII.h" />
+    <ClInclude Include="PostorderTraversal.h" />
+    <ClInclude Include="PreorderTraversal.h" />
+    <ClInclude Include="PrintJSONFormatString.h" />
     <ClInclude Include="ProductOfArrayExceptSelf.h" />
+    <ClInclude Include="RegularExpressionMatch.h" />
+    <ClInclude Include="RemoveDuplicatesFromSortedList.h" />
+    <ClInclude Include="RemoveDuplicatesFromSortedArrayII.h" />
+    <ClInclude Include="RemoveDuplicatesFromSortedListII.h" />
     <ClInclude Include="RemoveElement.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedArray.h" />
     <ClInclude Include="RemoveNthFromLastNode.h" />
     <ClInclude Include="ReverseInteger.h" />
+    <ClInclude Include="ReverseLinkedList.h" />
+    <ClInclude Include="ReverseLinkedListII.h" />
+    <ClInclude Include="ReverseNodesInKGroup.h" />
     <ClInclude Include="ReverseString.h" />
+    <ClInclude Include="ReverseWordsInString.h" />
     <ClInclude Include="RomanToInteger.h" />
+    <ClInclude Include="RotatedSortedArraySearch.h" />
+    <ClInclude Include="RotateImage.h" />
     <ClInclude Include="SearchInsertPosition.h" />
+    <ClInclude Include="SimplifyPath.h" />
     <ClInclude Include="SingleNumber.h" />
+    <ClInclude Include="SortColors.h" />
+    <ClInclude Include="SpiralMatrix.h" />
+    <ClInclude Include="SquareRoot.h" />
     <ClInclude Include="StringToInteger.h" />
+    <ClInclude Include="Subsets.h" />
+    <ClInclude Include="SubsetsII.h" />
+    <ClInclude Include="SumOfTwoIntegers.h" />
+    <ClInclude Include="SumRootToLeafNumbers.h" />
     <ClInclude Include="SwapNodesInPairs.h" />
+    <ClInclude Include="ThreeSumClosest.h" />
+    <ClInclude Include="TopKFrequentElements.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="TwoSum.h" />
+    <ClInclude Include="UniquePaths.h" />
+    <ClInclude Include="UniquePathsII.h" />
     <ClInclude Include="URLify.h" />
+    <ClInclude Include="ValidParentheses.h" />
     <ClInclude Include="ZigZagConversion.h" />
   </ItemGroup>
   <ItemGroup>
@@ -207,14 +270,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TechnicalProblems.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Arrays and Strings.txt" />
-    <Text Include="Bit Manipulation.txt" />
-    <Text Include="Linked Lists.txt" />
-    <Text Include="Recursion and Dynamic Programming.txt" />
-    <Text Include="Stacks and Queues.txt" />
-    <Text Include="Trees and Graphs.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

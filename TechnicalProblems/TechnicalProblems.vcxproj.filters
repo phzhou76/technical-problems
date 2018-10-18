@@ -19,9 +19,6 @@
     <Filter Include="Header Files\Linked Lists">
       <UniqueIdentifier>{70354511-06f8-4902-98b8-367ec8e65e87}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\Notes">
-      <UniqueIdentifier>{8d0e4a46-59a6-4ba0-aa99-b36f59a3dda9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Numerical Manipulation">
       <UniqueIdentifier>{3a85f277-84fd-4a1d-b250-ae634cdf38a2}</UniqueIdentifier>
     </Filter>
@@ -30,6 +27,39 @@
     </Filter>
     <Filter Include="Header Files\Trees and Graphs">
       <UniqueIdentifier>{4840a269-3414-4af4-ab80-3e6016a2266a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Recursion and Dynamic Programming">
+      <UniqueIdentifier>{e9b2f136-2cdc-4d3a-8c05-76a588018964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System Design">
+      <UniqueIdentifier>{28b384ac-230f-4776-a09e-1f8ab11675c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Storage Scalability">
+      <UniqueIdentifier>{7df581d0-7b66-49ef-b35f-0bcdc6719059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Arrays and Strings\TODO Problems">
+      <UniqueIdentifier>{b7cbcde3-4e86-4b71-a32e-8344c505c2ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System Design\TODO Problems">
+      <UniqueIdentifier>{baace2d0-2ef4-4615-b9c7-8dd609d6bae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{8403d179-4fe0-47a1-8268-ceac90236a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\TODO Problems">
+      <UniqueIdentifier>{f3f4752f-d3fb-47c2-b06f-a22cc00e9c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Arrays and Strings\Incomplete Problems">
+      <UniqueIdentifier>{deebea14-6c0b-445f-b06a-68f521722ffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Linked Lists\TODO Problems">
+      <UniqueIdentifier>{72f9efcf-ae07-4927-acbf-3843a1d20cf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stacks and Queues\TODO Problems">
+      <UniqueIdentifier>{cbfb4b9c-4e65-4840-9ad9-046c0ef9be9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stacks and Queues\Incomplete Problems">
+      <UniqueIdentifier>{bff540ae-5bb7-40d8-9b84-faa62c294d8c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -102,9 +132,6 @@
     <ClInclude Include="MergedKSortedLists.h">
       <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
-    <ClInclude Include="LongestIncreasingSubsequence.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RemoveElement.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
@@ -174,6 +201,198 @@
     <ClInclude Include="MoveZeroes.h">
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
+    <ClInclude Include="LongestIncreasingSubsequence.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="SumOfTwoIntegers.h">
+      <Filter>Header Files\Numerical Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTreeInorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="TopKFrequentElements.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="Permutations.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcelSheetColumnNumber.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseLinkedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteNodeInLinkedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="UniquePaths.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="UniquePathsII.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="PascalsTriangle.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="PascalsTriangleII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="SpiralMatrix.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeIntervals.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="AddOne.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MajorityElementII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignCache.h">
+      <Filter>Header Files\Storage Scalability</Filter>
+    </ClInclude>
+    <ClInclude Include="NextPermutation.h">
+      <Filter>Header Files\Arrays and Strings\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="LRUCache.h">
+      <Filter>Header Files\System Design\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="DiagonalTraverse.h">
+      <Filter>Header Files\Arrays and Strings\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="FactorialTrailingZeroes.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="SquareRoot.h">
+      <Filter>Header Files\Math\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatedSortedArraySearch.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="RotateImage.h">
+      <Filter>Header Files\Arrays and Strings\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiplyStrings.h">
+      <Filter>Header Files\Arrays and Strings\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseWordsInString.h">
+      <Filter>Header Files\Arrays and Strings\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintJSONFormatString.h">
+      <Filter>Header Files\Arrays and Strings\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeSortedArray.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreeSumClosest.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="SortColors.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveDuplicatesFromSortedArrayII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveDuplicatesFromSortedListII.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveDuplicatesFromSortedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="LeetCodeLinkedListNode.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="PartitionList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertionSortList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="IntersectionLinkedLists.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseLinkedListII.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="PalindromeLinkedList.h">
+      <Filter>Header Files\Linked Lists\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseNodesInKGroup.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="SimplifyPath.h">
+      <Filter>Header Files\Stacks and Queues\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestSubarrayNonnegativeIntegers.h">
+      <Filter>Header Files\Arrays and Strings\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="SumRootToLeafNumbers.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="LeetCodeTreeNode.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightReconstruction.h">
+      <Filter>Header Files\Stacks and Queues\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="InvertBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PermutationsII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="ValidParentheses.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="CombinationSumII.h">
+      <Filter>Header Files\Arrays and Strings\TODO Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Subsets.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="SubsetsII.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupAnagrams.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="CopyListRandomPointer.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="FlattenBinaryTreeToLinkedList.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PreorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PostorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PopulateNextRightPointers.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PopulateNextRightPointersII.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="LargestRectangleInHistogram.h">
+      <Filter>Header Files\Arrays and Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSizeRectangle.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumProductSubarray.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularExpressionMatch.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MinimumEditDistance.h">
+      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -182,25 +401,5 @@
     <ClCompile Include="TechnicalProblems.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Arrays and Strings.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Linked Lists.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Stacks and Queues.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Trees and Graphs.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Bit Manipulation.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
-    <Text Include="Recursion and Dynamic Programming.txt">
-      <Filter>Resource Files\Notes</Filter>
-    </Text>
   </ItemGroup>
 </Project>
