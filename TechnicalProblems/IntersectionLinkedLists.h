@@ -29,7 +29,8 @@ public:
 	 * headB are the same distance from the intersecting node. Advance until the
 	 * intersecting node has been found. If the pointers reach the end of their
 	 * respective lists, that means the intersecting node was never found, so an
-	 * intersection never existed. */
+	 * intersection never existed. 
+	 */
 	ListNode * getIntersectionNode(ListNode * headA, ListNode * headB)
 	{
 		if (headA == nullptr || headB == nullptr)
@@ -37,6 +38,7 @@ public:
 			return nullptr;
 		}
 
+		/* Calculate the lengths of both singly-linked lists. */
 		int lenA = 0;
 		int lenB = 0;
 
@@ -73,6 +75,8 @@ public:
 			}
 		}
 
+		/* Now that both linked lists are the same distance from the end, attempt
+		 * to find the first node where the pointers match. */
 		while (headA != nullptr)
 		{
 			if (headA == headB)

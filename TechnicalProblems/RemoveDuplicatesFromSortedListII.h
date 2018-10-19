@@ -13,9 +13,9 @@
 class RemoveDuplicatesFromSortedListII
 {
 public:
-
 	LinkedListNode<int> * deleteDuplicates(LinkedListNode<int> * head)
 	{
+		/* Edge Case: If the linked list doesn't exist, return null. */
 		if (head == nullptr)
 		{
 			return nullptr;

@@ -34,7 +34,8 @@ public:
 	 *		area = (right - left + 1) * histogram[i]
 	 *
 	 * The left and right indices in this solution would each take O(n) runtime,
-	 * so the overall solution would have a O(n^2) runtime. */
+	 * so the overall solution would have a O(n^2) runtime.
+	 */
 	int largestRectangleArea(std::vector<int> &histogram)
 	{
 		/* Create an empty stack, which holds the indices of the histogram array.
@@ -52,7 +53,7 @@ public:
 			/* If this bar's height is taller than the height of the bar on top
 			 * of the stack, push it to the stack. We now need to find a bar that
 			 * is shorter than this stack before finding a bar that is shorter
-			 * than the bar that was previously on top of the stack. 
+			 * than the bar that was previously on top of the stack.
 			 *
 			 * Edge case: If the stack is empty, that means one of two things:
 			 *	1. This is the first bar in the histogram.
@@ -66,7 +67,7 @@ public:
 			/* If this bar's height is lower than that of the bar on top of the
 			 * stack, then we have found the stopping point for the right side
 			 * of the rectangle where the top stack bar is the shortest bar in
-			 * the rectangle. 
+			 * the rectangle.
 			 *
 			 * Then, the left side of this rectangle is located where the index
 			 * of the previously top node of the stack. It is guaranteed that all

@@ -31,8 +31,10 @@ class TopKFrequentElements
 {
 public:
 
-	/* This is a O(nlogk) solution, where k is the number of unique numbers in
-	 * the array, and n is the size of the array. */
+	/* This is a O(klogk) solution, where k is the number of unique numbers in
+	 * the array. However, if O(n) is larger than O(klogk), then this solution is
+	 * actually a O(n) solution.
+	 */
 	std::vector<int> topKFrequent(std::vector<int> &nums, int k)
 	{
 		/* Maps each number to the count of it. */

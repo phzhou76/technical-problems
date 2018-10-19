@@ -11,9 +11,27 @@
 class LongestSubarrayNonnegativeIntegers
 {
 public:
+
+	/* Use a sliding window approach. */
 	int getSubarray(std::vector<int> integers)
 	{
-		
+		int longestSubarray = 0;
+		int leftIndex = 0;
+
+		for (int i = 0; i < integers.size(); ++i)
+		{
+			if (integers[i] >= 0)
+			{
+				int subarrayLength = i - leftIndex + 1;
+				longestSubarray = std::max(longestSubarray, subarrayLength);
+			}
+			else
+			{
+				leftIndex = i + 1;
+			}
+		}
+
+		return longestSubarray;
 	}
 };
 

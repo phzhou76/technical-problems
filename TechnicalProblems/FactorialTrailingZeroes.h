@@ -35,7 +35,8 @@ public:
 	 * 5^6: 4617 / 5^6 = 0.295488, so we can just stop here.
 	 *
 	 * Add all of the previous factor counts to obtain how many trailing zeroes
-	 * exist in n!. */
+	 * exist in n!. 
+	 */
 	int trailingZeroes(int n)
 	{
 		int factorCount = 0;

@@ -2,7 +2,7 @@
 #ifndef _FLATTEN_BINARY_TREE_TO_LINKED_LIST_H_
 #define _FLATTEN_BINARY_TREE_TO_LINKED_LIST_H_
 
-#include "LeetCodeTreeNode.h"
+#include "TreeNode.h"
 
 /**
  * Problem: Given a binary tree, flatten it to a linked list in-place.
@@ -11,10 +11,17 @@ class FlattenBinaryTreeToLinkedList
 {
 public:
 
-	/* This problem can be solved with a postorder traversal. Obtain the left
-	 * and right subtrees, and then attach the right subtree to the END of the
-	 * left subtree, and make the left subtree as the right subtree of the
-	 * current node. */
+	/* Recursive Algorithm:
+	 *	1. Base Case: Return null.
+	 *	2. Recursive Case: Obtain the left and right subtrees. 
+	 *		2a. Then, traverse the left subtree to find its rightmost, bottommost
+	 *			node.
+	 *		2b. Have that node's right child pointer point to the right subtree.
+	 *		2c. Clear the current node's left child pointer.
+	 *		2d. Have the current node's right child pointer point to the right
+	 *			subtree.
+	 *		2e. Return the current node.
+	 */
 	void flatten(TreeNode * root)
 	{
 		root = flattenHelper(root);

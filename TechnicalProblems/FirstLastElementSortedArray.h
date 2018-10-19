@@ -21,9 +21,10 @@ public:
 	 * we can do binary search on the array, and if we detect the target during our
 	 * recursion, determine if the target's index is smaller than the minimum index,
 	 * or greater than the maximum index. */
-	std::vector<int> searchRange(std::vector<int>& nums, int target) {
-		/* Target cannot be found inside an empty array. */
-		if (nums.size() == 0)
+	std::vector<int> searchRange(std::vector<int>& nums, int target)
+	{
+		/* Edge Case: Target cannot be found inside an empty array. */
+		if (nums.empty())
 		{
 			return std::vector<int>{-1, -1};
 		}
@@ -46,7 +47,7 @@ public:
 		/* Determine if target value has been hit. */
 		if (nums[midpoint] == target)
 		{
-			/* Target value has not been hit yet. */
+			/* Target value has not been hit before. */
 			if (*minTargetIndex == -1 && *maxTargetIndex == -1)
 			{
 				*minTargetIndex = *maxTargetIndex = midpoint;

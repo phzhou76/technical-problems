@@ -45,7 +45,8 @@ public:
 	 *		Minimum of:
 	 *			1. dp[i - 1][j] (Top)
 	 *			2. dp[i - 1][j - 1] (Diagonal)
-	 *			3. dp[i][j - 1] (Left) */
+	 *			3. dp[i][j - 1] (Left) 
+	 */
 	int minDistance(std::string word1, std::string word2)
 	{
 		std::vector<std::vector<int>> dp(word2.size() + 1,

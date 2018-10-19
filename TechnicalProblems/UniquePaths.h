@@ -22,8 +22,6 @@ public:
 			return 0;
 		}
 
-		/* Dynamic programming solution. */
-
 		/* Holds the number of paths that can be used to reach [i, j]. */
 		std::vector<std::vector<int>> pathCounts(m, std::vector<int>(n, 0));
 

@@ -21,9 +21,7 @@ class SpiralMatrix
 public:
 	std::vector<int> spiralOrder(std::vector<std::vector<int>> &matrix)
 	{
-		std::cout << "Function is running." << std::endl;
-
-		/* Can't examine elements in a matrix if the matrix is empty. */
+		/* Edge Case: Can't extract spiral order if the matrix is empty. */
 		if (matrix.empty() || matrix[0].empty())
 		{
 			return std::vector<int>();
@@ -31,13 +29,12 @@ public:
 
 		std::vector<int> spiralArray;
 
-		/* Row[] and column[][] indicators for the top left element of the box 
-		 * layer. */
+		/* Row[] and column[][] indices for the top left element of the box layer. */
 		int topLeftRow = 0;
 		int topLeftColumn = 0;
 
-		/* Row[] and column[][] indicators for the bottom right element of the 
-		 * box layer.*/
+		/* Row[] and column[][] indices for the bottom right element of the box
+		 * layer.*/
 		int bottomRightRow = matrix.size() - 1;
 		int bottomRightColumn = matrix[0].size() - 1;
 
@@ -47,15 +44,11 @@ public:
 		 * through. */
 		while (topLeftRow <= bottomRightRow && topLeftColumn <= bottomRightColumn)
 		{
-			std::cout << "Loop is running." << std::endl;
-
 			/* Edge case: The box layer only has a width of 1 (i.e. the top left
 			 * x-coordinate and the bottom right x-coordinate are the same. Add
 			 * all of the elements in this column layer. */
 			if (topLeftColumn == bottomRightColumn)
 			{
-				std::cout << "Elements from this column will be added." << std::endl;
-
 				for (int i = topLeftRow; i <= bottomRightRow; ++i)
 				{
 					spiralArray.push_back(matrix[i][topLeftColumn]);
@@ -66,9 +59,7 @@ public:
 			 * all of the elements in this row layer. */
 			else if (topLeftRow == bottomRightRow)
 			{
-				std::cout << "Elements from this row will be added." << std::endl;
-
-				for (int i = topLeftColumn; i <= bottomRightColumn; ++i) 
+				for (int i = topLeftColumn; i <= bottomRightColumn; ++i)
 				{
 					spiralArray.push_back(matrix[topLeftRow][i]);
 				}
@@ -77,15 +68,11 @@ public:
 			 * box layer. */
 			else
 			{
-				std::cout << "Elements from the box layer will be added." << std::endl;
-
 				/* Add elements from the top portion of the box layer (excluding
 				 * the last element of the top row, since that will be used for
 				 * the right side). */
 				for (int i = topLeftColumn; i < bottomRightColumn; ++i)
 				{
-					std::cout << "Element in top row is being added: " 
-						<< matrix[topLeftRow][i] << std::endl;
 					spiralArray.push_back(matrix[topLeftRow][i]);
 				}
 
@@ -94,18 +81,14 @@ public:
 				 * the bottom side). */
 				for (int i = topLeftRow; i < bottomRightRow; ++i)
 				{
-					std::cout << "Element in right column is being added: "
-						<< matrix[i][bottomRightColumn] << std::endl;
 					spiralArray.push_back(matrix[i][bottomRightColumn]);
 				}
 
 				/* Add elements from the bottom portion of the box layer (excluding
-				 * the first element of the bottom row, since that will be used 
+				 * the first element of the bottom row, since that will be used
 				 * for the left side). */
 				for (int i = bottomRightColumn; i > topLeftColumn; --i)
 				{
-					std::cout << "Element in bottom row is being added: " 
-						<< matrix[bottomRightRow][i] << std::endl;
 					spiralArray.push_back(matrix[bottomRightRow][i]);
 				}
 
@@ -114,8 +97,6 @@ public:
 				 * row). */
 				for (int i = bottomRightRow; i > topLeftRow; --i)
 				{
-					std::cout << "Element in left column is being added: " 
-						<< matrix[i][topLeftColumn] << std::endl;
 					spiralArray.push_back(matrix[i][topLeftColumn]);
 				}
 			}

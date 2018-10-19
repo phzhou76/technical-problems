@@ -48,7 +48,8 @@ public:
 	 *
 	 * The next field will be guaranteed to be set for currNode, since the previous
 	 * level's iteration must have set it, starting from the root setting the next
-	 * level's next fields. */
+	 * level's next fields.
+	 */
 	void connect(TreeLinkNode * root)
 	{
 		if (root == nullptr)

@@ -22,7 +22,7 @@ public:
 	 * scanned. */
 	std::string longestPalindrome(std::string inputStr)
 	{
-		/* Edge case: If the string is length 0 or 1, then it itself is the
+		/* Edge Case: If the string is length 0 or 1, then it itself is the
 		 * longest palindromic substring. */
 		if (inputStr.length() < 2)
 		{

@@ -6,8 +6,8 @@
 
 /**
  * Problem: Suppose an array sorted in ascending order is rotated at some pivot
- * unknown to you beforehand. For example, [0, 1, 2, 3] became [2, 3, 0, 1]. 
- * You are given a target value to search for. If the target value is found in 
+ * unknown to you beforehand. For example, [0, 1, 2, 3] became [2, 3, 0, 1].
+ * You are given a target value to search for. If the target value is found in
  * the array, return its index. Otherwise, return -1.
  *
  * You may assume that no duplicate values exist in the array.
@@ -57,7 +57,7 @@ public:
 		/* Now that the index of the lowest value element in the array has been
 		 * found, we can do normal binary search, but with taking the rotation
 		 * into account. */
-		int rotationIndex = lowIndex;
+		int rotationShift = lowIndex;
 		lowIndex = 0;
 		highIndex = nums.size() - 1;
 
@@ -65,11 +65,11 @@ public:
 		{
 			/* Calculate the mid index like you normally would in binary search. */
 			int midIndex = (lowIndex + highIndex) >> 1;
-			
+
 			/* Then, use the number of rotations to shift the midIndex to the
 			 * correct spot. If the index of the lowest value element was 2, then
 			 * the entire array rotated by 2 elements. */
-			int realMidIndex = (midIndex + rotationIndex) % nums.size();
+			int realMidIndex = (midIndex + rotationShift) % nums.size();
 
 			/* Use the adjusted mid index to look for the target value. */
 			if (nums[realMidIndex] == target)

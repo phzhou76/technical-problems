@@ -52,24 +52,29 @@ public:
 	 *	2. If the current char in the pattern is a wildcard (pattern[j] == '*'),
 	 *		then there are two subcases that we need to check.
 	 *
-	 *		2a. Check the previous char before the wildcard (i.e. pattern[j - 1]).
-	 *			If this previous char matched the current char in the string,
-	 *			OR if this previous char was '.', which means it can take on any
-	 *			char, then the current char in the string matches the current
-	 *			char in the pattern.
+	 *		2a. Assume that there are zero occurrences of the wildcard pattern
+	 *			for now. Then, take a look at whether or not the string until the
+	 *			current char matches the pattern before the wildcard pattern.
+	 *			This is located at T[i][j - 2].
+	 *	
+	 *		2b. Then, see if there is at least one occurrence of the wildcard
+	 *			pattern. See if the current char matched the previous pattern
+	 *			char (since that specifies the intake for the wildcard). 
 	 *
-	 *			Look at whether or not the previous char in the string matches
-	 *			the wildcard pattern, or T[i - 1][j].
+	 *			If this previous pattern char (pattern[j - 2]) matches the current
+	 *			char or if it contains '.', then we can assume that at least one
+	 *			occurrence exists for the wildcard pattern.
 	 *
-	 *		2b. However, if the current char doesn't match the previous char before
-	 *			the wildcard, then the wildcard pattern will have 0 occurrences.
+	 *			Then, we can see if the string up until before the current char
+	 *			matches the wildcard pattern. This is located at T[i - 1][j].
 	 *
-	 *			Look at whether or not the current char in the string matches the
-	 *			pattern char before the wildcard sequence, or T[i][j - 2].
+	 *		2c. At least one of the two conditions (0 occurrences or 1+ occurrences)
+	 *			must be true for T[i][j] to be true. (2a || 2b)
 	 *
 	 *	3. If neither of the above two conditions match, then we will set this
 	 *		to false, since the current char couldn't possibly match the current
-	 *		char in the pattern. */
+	 *		char in the pattern. 
+	 */
 	bool isMatch(std::string s, std::string p)
 	{
 		/* Create a 2D matrix that holds the empty pattern + pattern on the column

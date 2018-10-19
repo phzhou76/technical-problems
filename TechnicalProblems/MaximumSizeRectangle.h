@@ -24,7 +24,8 @@ public:
 	 * On each iteration, after the column heights for each element in the row have
 	 * been calculated, find the maximum area of that "histogram" (see the solution
 	 * in LargestRectangleHistogram). Record the maximum area of that row if it
-	 * is greater than the overall maximum area found. */
+	 * is greater than the overall maximum area found. 
+	 */
 	int maximalRectangle(std::vector<std::vector<char>> &matrix)
 	{
 		/* If the matrix has no rows or no columns, return 0. */

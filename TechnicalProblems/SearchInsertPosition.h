@@ -12,9 +12,10 @@
  */
 class SearchInsertPosition
 {
-	int searchInsert(std::vector<int>& nums, int target) {
-		/* Edge case: Check if the target should be inserted or found at either end
-		 * of the array. */
+	int searchInsert(std::vector<int> &nums, int target) 
+	{
+		/* Edge Case: Check if the target should be inserted or found at either
+		 * end of the array. */
 		if (nums.empty() || target <= nums[0])
 		{
 			return 0;
@@ -38,7 +39,7 @@ class SearchInsertPosition
 			return (nums[min] >= target) ? min : min + 1;
 		}
 
-		int midpoint = (min + max) >> 1;
+		int midpoint = (min + max) / 2;
 
 		/* If the target value is less than or equal to the value at the midpoint,
 		 * then the insertion index is the midpoint or before (in the event that

@@ -3,52 +3,73 @@
 #define _POSTORDER_TRAVERSAL_H_
 
 #include "pch.h"
-#include "LeetCodeTreeNode.h"
+#include "TreeNode.h"
 
 /**
  * Problem: Given a binary tree, return the postorder traversal of its nodes'
- * values. 
+ * values.
  */
 class PostorderTraversal
 {
 public:
 
-	/* Postorder traversal can be implemented by just implementing preorder
-	 * traversal, but reversing the order. I.e. when a node is popped from the
-	 * stack to mark that it was visited in preorder traversal, instead push that
-	 * node to another stack to visit later. At the very end of the algorithm,
-	 * the last node of preorder traversal would be the first node of postorder
-	 * traversal, and the first node of preorder traversal would be the last
-	 * node of postorder traversal. */
+	/* Postorder traversal can be implemented by just reversing the order that
+	 * nodes are visited in preorder traversal. This can be done with a two-stack
+	 * process.
+	 *
+	 * The idea is that if the root node of a subtree is the first node visited
+	 * by a preorder traversal, then if it is placed in a stack, it will be the
+	 * last node visited in a subtree, which is what postorder traversal is.
+	 *
+	 * Algorithm:
+	 *	1. Start with two stacks: One stack for visiting nodes like a preorder
+	 *		traversal algorithm would, and the other for reversing the nodes for
+	 *		postorder traversal.
+	 *	2. Push the root node to the preorder traversal stack, if it exists.
+	 *	3. While there are still nodes to visit in the tree (i.e. while stack is
+	 *		not empty):
+	 *		3a. Pop the topmost element off the stack.
+	 *		3b. "Cache" the node to visit later in a postorder traversal in the
+	 *			postorder stack.
+	 *		3c. Add the children of that node to the preorder traversal stack.
+	 *			Note that we add the left child first before the right child,
+	 *			unlike the typical implementation for preorder traversal. Since
+	 *			postorder traversal will reverse whatever preorder traversal
+	 *			visits, we want to visit the right child first, then the left
+	 *			child in preorder traversal.
+	 */
 	std::vector<int> postorderTraversal(TreeNode * root)
 	{
+		/* Edge Case: Cannot perform postorder traversal on empty tree. */
 		if (root == nullptr)
 		{
 			return std::vector<int>();
 		}
 
-		/* Contains nodes that have yet to be visited. */
+		/* Contains nodes that have yet to be visited, i.e. preorder traversal. */
 		std::stack<TreeNode *> toVisit;
-		std::stack<TreeNode *> postorderList;
+
+		/* Contains nodes to visit in preorder traversal. */
+		std::stack<TreeNode *> postorderVisit;
 
 		toVisit.push(root);
 
 		while (!toVisit.empty())
 		{
 			/* Pop the top of the toVisit stack, and "cache" the node to visit
-			 * later in another stack. */
+			 * later in another stack. By using a stack, we ensure that the first
+			 * node we encounter in a subtree will be the last node we actually
+			 * visit. */
 			TreeNode * visitLater = toVisit.top();
 			toVisit.pop();
+			postorderVisit.push(visitLater);
 
-			/* By using a stack, we ensure that the first node we encounter in
-			 * a subtree will be the last node we actually visit. */
-			postorderList.push(visitLater);
-
-			/* Then, push the children of the node, just like in preorder fashion. 
+			/* Then, push the children of the node, just like in preorder fashion.
 			 * However, instead of pushing the left child after the right child,
 			 * we'll push the right child after the left child. This ensures that
-			 * the right child is on top of the stack, which means it will come
-			 * after the left child in the postorder traversal. */
+			 * the right child will be the first to be visited in preorder
+			 * traversal, which means that it will be the second to be visited in
+			 * postorder traversal. */
 			if (visitLater->left != nullptr)
 			{
 				toVisit.push(visitLater->left);
@@ -60,19 +81,19 @@ public:
 			}
 		}
 
-		/* After the "preorder" traversal has finished, the postorderList stack
-		 * will have contained the reversed preorder traversal, where the root
-		 * of this tree will be at the bottom of the stack instead of the top.
-		 * Push these values into a list. */
-		std::vector<int> postorderArray;
-		
-		while (!postorderList.empty())
+		/* After the preorder traversal has finished, the postorder traversal
+		 * stack will contain the reversed sequence of the preorder traversal,
+		 * where the root of a subtree will be below its left and right subtrees
+		 * in the stack. Push these values into a list. */
+		std::vector<int> postorderList;
+
+		while (!postorderVisit.empty())
 		{
-			postorderArray.push_back(postorderList.top()->val);
-			postorderList.pop();
+			postorderList.push_back(postorderVisit.top()->val);
+			postorderVisit.pop();
 		}
 
-		return postorderArray;
+		return postorderList;
 	}
 };
 

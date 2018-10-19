@@ -13,7 +13,7 @@ class LongestIncreasingSubsequence
 public:
 	int lengthOfLIS(std::vector<int>& nums)
 	{
-		/* Edge case - longest increasing subsequence of an array of 0 or 1
+		/* Edge Case: Longest increasing subsequence of an array of 0 or 1
 		 * elements is just the array's size. */
 		if (nums.size() < 2)
 		{

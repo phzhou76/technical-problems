@@ -27,7 +27,7 @@ public:
 	 * value will hold a negative value, while the maximum value will hold a positive
 	 * value. If another negative value exists, then multiplying the minimum value
 	 * by that negative value could make it the maximum value. On the other hand,
-	 * multiplying the maximum value by that negative value could make it the 
+	 * multiplying the maximum value by that negative value could make it the
 	 * minimum value.
 	 *
 	 * Have the minimum and maximum start out at the first value. Then, loop from
@@ -43,10 +43,11 @@ public:
 	 * Else, make the current number the new minimum.
 	 *
 	 * Additionally, if the newly calculated product between the previous product
-	 * and the current number is greater than the current number, make that the 
+	 * and the current number is greater than the current number, make that the
 	 * new maximum. Else, make the current number the new maximum.
 	 *
-	 * Update the global maximum from the new maximum as needed. */
+	 * Update the global maximum from the new maximum as needed.
+	 */
 	int maxProduct(std::vector<int> &nums)
 	{
 		/* Store the maximum product that has been found so far. */

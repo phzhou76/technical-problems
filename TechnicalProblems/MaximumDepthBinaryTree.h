@@ -13,18 +13,20 @@
 class MaximumDepthBinaryTree
 {
 public:
+
+	/* Recursive Algorithm:
+	 *	1. Base Case: If the node is null, then it has a depth of 0.
+	 *	2. Recursive Case: Take the maximum between the depths of the left and
+	 *		right subtrees, and add 1.
+	 */
 	int maxDepth(TreeNode * root)
 	{
 		return maxDepthHelper(root);
 	}
-
-	/* This problem can be solved recursively. The base case is in which the node
-	 * being examined is null, at which 0 can be returned. Then, for each node
-	 * that actually exists, take the maximum length of the left subtree and 
-	 * the right subtree. */
+	
 	int maxDepthHelper(TreeNode * node)
 	{
-		/* Base case: Return a path length of 0. */
+		/* Base case: Return a depth of 0. */
 		if (node == nullptr)
 		{
 			return 0;

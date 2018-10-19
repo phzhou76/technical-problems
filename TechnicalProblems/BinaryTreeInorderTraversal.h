@@ -15,15 +15,6 @@ class BinaryTreeInorderTraversal
 public:
 	std::vector<int> inorderTraversal(TreeNode * root)
 	{
-		/* Recursive approach. */
-#if 0
-		std::vector<int> inorderList;
-		inorderTraversalHelper(root, inorderList);
-		return inorderList;
-#endif
-
-		/* Iterative approach. */
-#if 1
 		std::vector<int> inorderList;
 		std::stack<TreeNode *> toVisitStack;
 
@@ -69,7 +60,6 @@ public:
 		}
 
 		return inorderList;
-#endif
 	}
 
 	void inorderTraversalHelper(TreeNode * node, std::vector<int> &inorderList)

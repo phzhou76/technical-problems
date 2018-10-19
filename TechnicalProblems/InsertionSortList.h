@@ -20,7 +20,7 @@ class InsertionSortList
 public:
 	ListNode * insertionSortList(ListNode * head)
 	{
-		/* Nothing to sort if less than 2 elements. */
+		/* Edge Case: Nothing to sort if less than 2 elements. */
 		if (head == nullptr || head->next == nullptr)
 		{
 			return head;
@@ -28,7 +28,10 @@ public:
 
 		/* Create a fake head that will contain the sorted portion of the list. */
 		ListNode * sortedList = new ListNode(0);
+
+		/* Points to an unsorted value in the linked list. */
 		ListNode * currPtr = head;
+
 		while (currPtr != nullptr)
 		{
 			/* Obtain the value to sort. Advance the pointer in the unsorted list,

@@ -24,6 +24,7 @@ class SortColors
 public:
 	void sortColors(std::vector<int> &nums)
 	{
+		/* Edge Case: No colors need to be sorted of arrays of size 1 or less. */
 		if (nums.size() < 2)
 		{
 			return;
@@ -64,6 +65,8 @@ public:
 				nums[unknownValuePtr] = nums[twosEnd];
 				nums[twosEnd--] = 2;
 			}
+			/* Else, the unknown value pointer is pointing to a 1. Move onto the
+			 * next value. */
 			else
 			{
 				++unknownValuePtr;

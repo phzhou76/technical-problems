@@ -20,18 +20,42 @@ class ReverseNodesInKGroup
 {
 public:
 
-	/* This problem can be solved with the algorithm that is used to reverse one
-	 * single segment of a linked list (see ReverseLinkedListII). The only
-	 * difference is that the preReverseNode would update on every "iteration".
-	 * At the end of every iteration, the old start node of that reversed segment
-	 * becomes the new preReverseNode. We can calculate how many times we are 
-	 * able to create reversed lists by first calculating the length of the 
-	 * list, and using length / k to determine the number of reversals that we 
-	 * can do. */
+	/* Algorithm (Using Pointers):
+	 *	1. Since we need to reverse the entire linked list, including the head,
+	 *		we'll want to create a fake head that points to the head. This fake
+	 *		head will be the first pre-reverse node (i.e. the node that will
+	 *		point to the beginning of the reversed list).
+	 *	2. Have a start pointer point to the head of the linked list. The start
+	 *		pointer will mark the starting node of the unreversed list.
+	 *	3. Have a next pointer point to the node after the head. This pointer is
+	 *		used to determine the next node to place at the beginning of the
+	 *		reversed portion of the list.
+	 *	4. We'll want to calculate the number of reversals that we want to do.
+	 *		To do this, we'll first calculate the length of the linked list, and
+	 *		then divide the length by k.
+	 *	5. For length / k times, do the following:
+	 *		5a. For k - 1 times, do the following:
+	 *			5aa. Have the start node point to the next node to reverse (i.e.
+	 *				reverseNext->next).
+	 *			5ab. Have the reverse node point to the node that pre-reverse is
+	 *				pointing to.
+	 *			5ac. Have the pre-reverse node point to the reverse node.
+	 *			5ad. Have the reverse node point to the node that the start node
+	 *				is pointing to.
+	 *		5b. Once the inner loop has finished, the start node should now be
+	 *			the last node in the reversed list. This is now the new pre-reverse
+	 *			node.
+	 *		5c. Set the start pointer to the node after the new pre-reverse node.
+	 *		5d. ONLY if the start node isn't null, then set the reverse node to
+	 *			the next node after the start node. It's possible for the start
+	 *			node to be null if the length of the list divided evenly into k.
+	 *	6. Delete the fake head and return the actual reversed head of the linked
+	 *		list.
+	 */
 	ListNode * reverseKGroup(ListNode * head, int k)
 	{
-		/* Can't reverse anything if there is no list, or if the reverse list
-		 * length is just 1. */
+		/* Edge Case: Can't reverse anything if the list is empty or if the 
+		 * size of reverse sublists is just 1. */
 		if (head == nullptr || k == 1)
 		{
 			return head;

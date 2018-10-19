@@ -60,7 +60,8 @@ public:
 	 *  10 10 10   1
 	 *
 	 * Then, for each respective element in the two caches, multiply the results
-	 * together and return it as a new array. */
+	 * together and return it as a new array. 
+	 */
 	std::vector<int> productExceptSelf(std::vector<int> &nums)
 	{
 		/* Edge case: Cannot create a product without at least 2 elements. */

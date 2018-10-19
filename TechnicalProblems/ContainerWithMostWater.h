@@ -22,7 +22,7 @@ public:
 		 * all possible containers and determines which container holds the most
 		 * water. Thus, this algorithm has a O(n^2) runtime and a O(1) space 
 		 * complexity. */
-#if 1
+#if 0
 		/* Width of containers can go from 1 to the number of lines - 1, as the
 		 * lines form the sides of the containers. */
 		for (int containerWidth = 1; containerWidth < height.size(); ++containerWidth)

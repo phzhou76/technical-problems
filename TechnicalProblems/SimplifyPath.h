@@ -30,7 +30,8 @@ public:
 	 * Note: You can use a list instead of a stack for this problem, and just keep
 	 * pushing and popping from the back of the list. This can make sweeping
 	 * through the list of directories easier, since we can directly start from
-	 * the beginning and go to the end. */
+	 * the beginning and go to the end. 
+	 */
 	std::string simplifyPath(std::string path)
 	{
 

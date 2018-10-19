@@ -17,8 +17,9 @@
 class SwapNodesInPairs
 {
 public:
-	LinkedListNode<int>* swapPairs(LinkedListNode<int>* head) {
-		/* Edge case - can't swap if there's one or less nodes. */
+	LinkedListNode<int> * swapPairs(LinkedListNode<int> * head) 
+	{
+		/* Edge Case: Can't swap if there's one or less nodes. */
 		if (head == nullptr || head->mNextNode == nullptr)
 		{
 			return head;

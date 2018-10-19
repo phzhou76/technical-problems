@@ -17,7 +17,8 @@ public:
 
 	/* Instead of deleting this particular node, which cannot be done without a
 	 * reference to the previous node, we can move the value of the next node
-	 * to this node, and delete the next node safely. */
+	 * to this node, and delete the next node safely. 
+	 */
 	void deleteNode(LinkedListNode<int> * node)
 	{
 		node->mData = node->mNextNode->mData;

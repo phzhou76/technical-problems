@@ -13,37 +13,48 @@ class RemoveDuplicatesFromSortedList
 public:
 	ListNode * deleteDuplicates(ListNode * head)
 	{
-		if (head == nullptr || head->next == nullptr)
+		/* Edge Case: Can't delete duplicates if there is no linked list. */
+		if (head == nullptr)
 		{
-			return head;
+			return nullptr;
 		}
 
-		/* For this problem, we'll need two pointers. One pointer will point to
-		 * the first instance of the current value. The other pointer will be
-		 * used to delete each node that has the same value as the current value. */
-		ListNode * currPtr = head;
-		ListNode * scanPtr = nullptr;
+		/* Points to the last unique value encountered. */
+		ListNode * uniqueEndPtr = head;
+		
+		/* Used to scan ahead and look for unique values. */
+		ListNode * currPtr = uniqueEndPtr->next;
 
+		/* Scan towards the end. */
 		while (currPtr != nullptr)
 		{
-			int currValue = currPtr->val;
-			scanPtr = currPtr->next;
-
-			/* If there is a duplicate value, scan ahead and continue to delete
-			 * nodes until the end of the list has been reached or until a node
-			 * with a different value has been encountered. */
-			while (scanPtr != nullptr && scanPtr->val == currValue)
+			/* If the current node is equal to the last unique value encountered,
+			 * then delete this node and move onto the next node. */
+			if (currPtr->val == uniqueEndPtr->val)
 			{
-				ListNode * deleteNode = scanPtr;
-				scanPtr = scanPtr->next;
+				ListNode * deleteNode = currPtr;
+				currPtr = currPtr->next;
 				delete deleteNode;
 			}
 
-			/* scanPtr should now point to a node of different value, or it has
-			 * reached the end of the list, and is now nullptr. */
-			currPtr->next = scanPtr;
-			currPtr = currPtr->next;
+			/* If the current node is not equal to the last unique value encountered,
+			 * then this is a unique value. Advance the unique pointer to this value
+			 * and advance both pointers. */
+			else
+			{
+				uniqueEndPtr->next = currPtr;
+				uniqueEndPtr = uniqueEndPtr->next;
+				currPtr = currPtr->next;
+			}
 		}
+		
+		/* Because we only keep the first value, and delete all other duplicate
+		 * nodes afterward, there is a possible memory access issue at the end.
+		 * If multiple duplicate values exist at the end, the first instance of
+		 * those nodes will be kept, while the rest will be deleted. At the end,
+		 * the first instance will be pointing to a deleted memory address, so
+		 * we need to set it to null. */
+		uniqueEndPtr->next = nullptr;
 
 		return head;
 	}

@@ -2,9 +2,9 @@
 #ifndef _SUM_OF_TWO_INTEGERS_H_
 #define _SUM_OF_TWO_INTEGERS_H_
 
-/** 
+/**
  * Problem: Calculate the sum of two integers a and b, but you are not allowed to
- * use the operator + and -. 
+ * use the operator + and -.
  */
 class SumOfTwoIntegers
 {
@@ -15,9 +15,9 @@ public:
 	 * two values, if the carry is not taken into factor, can be calculated with
 	 * a ^ b. Then, the carry between the two values can be calculated with
 	 * a & b
-	 * 
+	 *
 	 * The sum between the two values, if the carry is not taken into factor, can
-	 * be calculated with a ^ b. 
+	 * be calculated with a ^ b.
 	 *		0 + 0 = 0
 	 *		0 + 1 = 1
 	 *		1 + 0 = 1
@@ -32,7 +32,8 @@ public:
 	 * If the carry is then shifted to the left, the sum and carry values can
 	 * then be added together with a ^ carry (without the carry of this current
 	 * sum taken into account). The old sum and the old shifted carry can be ANDed
-	 * together to calculate the new carry. Repeat until the carry is 0. */
+	 * together to calculate the new carry. Repeat until the carry is 0.
+	 */
 	int getSum(int a, int b)
 	{
 		int sumWithoutCarry = a ^ b;
