@@ -28,9 +28,6 @@
     <Filter Include="Header Files\Trees and Graphs">
       <UniqueIdentifier>{4840a269-3414-4af4-ab80-3e6016a2266a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Recursion and Dynamic Programming">
-      <UniqueIdentifier>{e9b2f136-2cdc-4d3a-8c05-76a588018964}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\System Design">
       <UniqueIdentifier>{28b384ac-230f-4776-a09e-1f8ab11675c6}</UniqueIdentifier>
     </Filter>
@@ -60,6 +57,9 @@
     </Filter>
     <Filter Include="Header Files\Stacks and Queues\Incomplete Problems">
       <UniqueIdentifier>{bff540ae-5bb7-40d8-9b84-faa62c294d8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Recursion and DP">
+      <UniqueIdentifier>{e9b2f136-2cdc-4d3a-8c05-76a588018964}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -202,7 +202,7 @@
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
     <ClInclude Include="LongestIncreasingSubsequence.h">
-      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+      <Filter>Header Files\Recursion and DP</Filter>
     </ClInclude>
     <ClInclude Include="SumOfTwoIntegers.h">
       <Filter>Header Files\Numerical Manipulation</Filter>
@@ -226,10 +226,10 @@
       <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
     <ClInclude Include="UniquePaths.h">
-      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+      <Filter>Header Files\Recursion and DP</Filter>
     </ClInclude>
     <ClInclude Include="UniquePathsII.h">
-      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+      <Filter>Header Files\Recursion and DP</Filter>
     </ClInclude>
     <ClInclude Include="PascalsTriangle.h">
       <Filter>Header Files\Arrays and Strings</Filter>
@@ -382,16 +382,19 @@
       <Filter>Header Files\Arrays and Strings</Filter>
     </ClInclude>
     <ClInclude Include="MaximumSizeRectangle.h">
-      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+      <Filter>Header Files\Recursion and DP</Filter>
     </ClInclude>
     <ClInclude Include="MaximumProductSubarray.h">
-      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+      <Filter>Header Files\Recursion and DP</Filter>
     </ClInclude>
     <ClInclude Include="RegularExpressionMatch.h">
-      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+      <Filter>Header Files\Recursion and DP</Filter>
     </ClInclude>
     <ClInclude Include="MinimumEditDistance.h">
-      <Filter>Header Files\Recursion and Dynamic Programming</Filter>
+      <Filter>Header Files\Recursion and DP</Filter>
+    </ClInclude>
+    <ClInclude Include="WordBreak.h">
+      <Filter>Header Files\Recursion and DP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
