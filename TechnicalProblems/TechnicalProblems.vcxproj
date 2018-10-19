@@ -177,13 +177,12 @@
     <ClInclude Include="IntegerToRoman.h" />
     <ClInclude Include="IntersectionLinkedLists.h" />
     <ClInclude Include="InvertBinaryTree.h" />
+    <ClInclude Include="IsUnique.h" />
     <ClInclude Include="LargestRectangleInHistogram.h" />
     <ClInclude Include="LeetCodeLinkedListNode.h" />
-    <ClInclude Include="LeetCodeTreeNode.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListCycle.h" />
     <ClInclude Include="LinkedListNode.h" />
-    <ClInclude Include="IsUnique.h" />
     <ClInclude Include="LongestCommonPrefix.h" />
     <ClInclude Include="LongestIncreasingSubsequence.h" />
     <ClInclude Include="LongestPalindromicSubstring.h" />
@@ -225,11 +224,11 @@
     <ClInclude Include="PrintJSONFormatString.h" />
     <ClInclude Include="ProductOfArrayExceptSelf.h" />
     <ClInclude Include="RegularExpressionMatch.h" />
-    <ClInclude Include="RemoveDuplicatesFromSortedList.h" />
+    <ClInclude Include="RemoveDuplicatesFromSortedArray.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedArrayII.h" />
+    <ClInclude Include="RemoveDuplicatesFromSortedList.h" />
     <ClInclude Include="RemoveDuplicatesFromSortedListII.h" />
     <ClInclude Include="RemoveElement.h" />
-    <ClInclude Include="RemoveDuplicatesFromSortedArray.h" />
     <ClInclude Include="RemoveNthFromLastNode.h" />
     <ClInclude Include="ReverseInteger.h" />
     <ClInclude Include="ReverseLinkedList.h" />
@@ -254,6 +253,7 @@
     <ClInclude Include="SwapNodesInPairs.h" />
     <ClInclude Include="ThreeSumClosest.h" />
     <ClInclude Include="TopKFrequentElements.h" />
+    <ClInclude Include="TreeLinkNode.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="TwoSum.h" />
     <ClInclude Include="UniquePaths.h" />
