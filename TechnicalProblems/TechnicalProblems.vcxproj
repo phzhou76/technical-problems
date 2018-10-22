@@ -155,6 +155,7 @@
     <ClInclude Include="AddTwoNumbers.h" />
     <ClInclude Include="BinaryTreeInorderTraversal.h" />
     <ClInclude Include="CheckPermutation.h" />
+    <ClInclude Include="ClimbingStairs.h" />
     <ClInclude Include="CombinationSumII.h" />
     <ClInclude Include="ConstructBinaryTree.h" />
     <ClInclude Include="ContainerWithMostWater.h" />
@@ -189,6 +190,7 @@
     <ClInclude Include="LongestSubarrayNonnegativeIntegers.h" />
     <ClInclude Include="LongestSubstring.h" />
     <ClInclude Include="LRUCache.h" />
+    <ClInclude Include="MagicIndex.h" />
     <ClInclude Include="MajorityElement.h" />
     <ClInclude Include="MajorityElementII.h" />
     <ClInclude Include="MaximumDepthBinaryTree.h" />
@@ -236,6 +238,7 @@
     <ClInclude Include="ReverseNodesInKGroup.h" />
     <ClInclude Include="ReverseString.h" />
     <ClInclude Include="ReverseWordsInString.h" />
+    <ClInclude Include="RobotGridPath.h" />
     <ClInclude Include="RomanToInteger.h" />
     <ClInclude Include="RotatedSortedArraySearch.h" />
     <ClInclude Include="RotateImage.h" />
@@ -256,7 +259,6 @@
     <ClInclude Include="TreeLinkNode.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="TwoSum.h" />
-    <ClInclude Include="UniquePaths.h" />
     <ClInclude Include="UniquePathsII.h" />
     <ClInclude Include="URLify.h" />
     <ClInclude Include="ValidParentheses.h" />

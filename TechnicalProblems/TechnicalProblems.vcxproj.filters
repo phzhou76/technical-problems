@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Dynamic Programming">
+      <UniqueIdentifier>{b77c793e-7291-4774-b63a-e0498be323f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -330,12 +333,6 @@
     <ClInclude Include="TwoSum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UniquePaths.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UniquePathsII.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="URLify.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -347,6 +344,18 @@
     </ClInclude>
     <ClInclude Include="ZigZagConversion.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClimbingStairs.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="UniquePathsII.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotGridPath.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MagicIndex.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
