@@ -5,14 +5,34 @@
 #include "pch.h"
 
 /**
- * Problem: Given a collection of numbers that could contain duplicates, return
- * all possible subsets.
+ * Given a collection of integers that might contain duplicates, nums, return all
+ * possible subsets (the power set).
  *
- * Notes:
- *	1. The solution set must not contain duplicate subsets.
+ * Note: The solution set must not contain duplicate subsets.
+ *
+ * Source: https://leetcode.com/problems/subsets-ii/description/
  */
 class SubsetsII
 {
+	/* Backtracking (Recursive) Solution: This solution uses the same exact
+	 * approach as if the input had all distinct numbers, with some slight
+	 * modifications.
+	 *
+	 * Instead of just adding numbers from the array, we need to use a hash map
+	 * to add unique numbers at each recursive call. Thus, we will use a hash
+	 * map to contain each unique number with the available counts left for it.
+	 *
+	 * Another approach is to use a sorting algorithm to sort the original array
+	 * of numbers so duplicate values are located next to each other. Only
+	 * recursively call on a new subset if the current value is different from
+	 * the previous value that was used for a recursive call.
+	 *
+	 * Time Complexity: O(2^n), since there are 2^n possible subsets that we
+	 *		need to calculate.
+	 * Space Complexity: O(n) for the recursion call stack, since the recursion
+	 *		has a max depth of n, where the current subset consists of all
+	 *		numbers.
+	 */
 	std::vector<std::vector<int>> subsetsWithDup(std::vector<int> &nums)
 	{
 		std::sort(nums.begin(), nums.end());
@@ -24,9 +44,10 @@ class SubsetsII
 		return subsetList;
 	}
 
-	/* The helper method is the exact same as Subsets, but with a slight modification
-	 * to the branching algorithm. */
-	void subsetsWithDupHelper(std::vector<int> &nums, std::vector<std::vector<int>> &subsetList,
+	/* The helper method is the exact same as Subsets, but with a slight
+	 * modification to the branching algorithm. */
+	void subsetsWithDupHelper(std::vector<int> &nums,
+		std::vector<std::vector<int>> &subsetList,
 		std::vector<int> currSubset, int startIndex)
 	{
 		/* Add the current subset to the list, since we need to add all possible

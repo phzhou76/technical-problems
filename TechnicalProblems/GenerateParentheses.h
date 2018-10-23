@@ -5,20 +5,22 @@
 #include "pch.h"
 
 /**
- * Problem: Given n pairs of parentheses, write a function to generate all
- * combinations of well-formed parentheses.
+ * Given n pairs of parentheses, write a function to generate all combinations
+ * of well-formed parentheses.
+ *
+ * Source: https://leetcode.com/problems/generate-parentheses/description/
  */
 class GenerateParentheses
 {
 public:
-	
-	/* This can be done with a recursive solution. We can first create an empty
-	 * string and send in two integers, one for the number of free left parentheses,
-	 * and the other for the number of free right parentheses. 
+
+	/* Backtracking (Recursive Solution): First, create an empty string and send
+	 * in two integers, one for the number of free left parentheses, and the
+	 * other for the number of free right parentheses.
 	 *
-	 * Base Case: If the number of left and right parentheses is 0, then that means
-	 * the currently built string has been fully built up. Add the string to the
-	 * array of valid parenthesis strings.
+	 * Base Case: If the number of left and right parentheses is 0, then that
+	 * means the currently built string has been fully built up. Add the string
+	 * to the array of valid parenthesis strings.
 	 *
 	 * Cases:
 	 *	1. If there are still left parentheses remaining to be used, recursively
@@ -27,12 +29,14 @@ public:
 	 *	2. If there are still right parentheses remaining to be used AND if there
 	 *		are less left parentheses than right parentheses, then recursively
 	 *		call the method with a right parentheses appended, and subtract one
-	 *		from the right parentheses count. 
+	 *		from the right parentheses count.
 	 *
 	 * We need to check if there are less left parentheses than right parentheses
-	 * before attaching a right parentheses to the string because valid parenthesis 
-	 * pairs require that a left parenthesis exist that hasn't been "paired up"
-	 * yet. */
+	 * before attaching a right parentheses to the string because valid
+	 * parenthesis pairs require that a left parenthesis exist that hasn't been
+	 * "paired up"
+	 * yet.
+	 */
 	std::vector<std::string> generateParenthesis(int n) {
 		std::vector<std::string> parenthesisCombination;
 		generateParenthesisHelper("", n, n, parenthesisCombination);

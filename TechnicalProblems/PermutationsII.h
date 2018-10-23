@@ -5,21 +5,29 @@
 #include "pch.h"
 
 /**
- * Problem: Given a collection of numbers that might contain duplicates, return
- * all possible unique permutations.
+ * Given a collection of numbers that might contain duplicates, return all
+ * possible unique permutations.
+ *
+ * Source: https://leetcode.com/problems/permutations-ii/description/
  */
 class PermutationsII
 {
 public:
 
-	/* This problem can be easily visualized with a trie-like tree. To solve this
-	 * problem, we need to keep track of how many of each unique number that we
-	 * have to use. Then, because we want to avoid duplicate permutations, we want
-	 * to only use unique numbers in the current digit. For example, if the input
-	 * was [1, 1, 2], then for each "digit" in the permutation, we would only look
-	 * at 1 once and 2 once. Looking at 1 twice would lead to duplicate permutations.
-	 * Add the permutation to the list if the permutation has used up all of the
-	 * numbers in the input. */
+	/* Backtracking (Recursive) Solution: This problem can be implemented with
+	 * the same approach as distinct integer permutations, but with a few
+	 * modifications. Since duplicate permutations are not allowed, we will need
+	 * a hash map to keep track of each unique number and their counts.
+	 *
+	 * When iterating through each available number to place at the end of the
+	 * currently developing permutation, we can only use unique numbers that are
+	 * available to be used.
+	 *
+	 * For example, if the input was [1, 1, 2], then for each "digit" in the
+	 * permutation, we would only look at 1 once and 2 once. Looking at 1 twice
+	 * would lead to duplicate permutations. Add the permutation to the list if
+	 * the permutation has used up all of the numbers in the input.
+	 */
 	std::vector<std::vector<int>> permuteUnique(std::vector<int> &nums)
 	{
 		/* Count the number of each unique number. */

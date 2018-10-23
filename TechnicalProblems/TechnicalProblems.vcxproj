@@ -156,6 +156,7 @@
     <ClInclude Include="BinaryTreeInorderTraversal.h" />
     <ClInclude Include="CheckPermutation.h" />
     <ClInclude Include="ClimbingStairs.h" />
+    <ClInclude Include="Coins.h" />
     <ClInclude Include="CombinationSumII.h" />
     <ClInclude Include="ConstructBinaryTree.h" />
     <ClInclude Include="ContainerWithMostWater.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="FirstLastElementSortedArray.h" />
     <ClInclude Include="FizzBuzz.h" />
     <ClInclude Include="FlattenBinaryTreeToLinkedList.h" />
+    <ClInclude Include="FloodFill.h" />
     <ClInclude Include="GenerateParentheses.h" />
     <ClInclude Include="GroupAnagrams.h" />
     <ClInclude Include="HeightReconstruction.h" />
@@ -256,6 +258,7 @@
     <ClInclude Include="SwapNodesInPairs.h" />
     <ClInclude Include="ThreeSumClosest.h" />
     <ClInclude Include="TopKFrequentElements.h" />
+    <ClInclude Include="TowersOfHanoi.h" />
     <ClInclude Include="TreeLinkNode.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="TwoSum.h" />

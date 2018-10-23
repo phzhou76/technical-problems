@@ -5,16 +5,43 @@
 #include "pch.h"
 
 /**
- * Problem: Given a set of distinct integers nums, return all possible subsets.
+ * Given a set of distinct integers nums, return all possible subsets (the power
+ * set).
  *
- * Notes:
- *	1. The solution set must not contain duplicate subsets.
+ * Note: The solution set must not contain duplicate subsets.
+ *
+ * Source: https://leetcode.com/problems/subsets/description/
  */
 class Subsets
 {
 public:
 
-	/* This problem can be solved with backtracking. */
+	/* Backtracking (Recursive) Solution: First, create a list to contain subset
+	 * lists, and an empty subset list to represent the current subset being
+	 * worked on. Then, pass the list of subsets, and the current subset to the
+	 * recursive method.
+	 *
+	 * Since we need to add all subsets to the list, the current subset will be
+	 * immediately added to the list of subsets when the recursive method begins.
+	 * We also need to hold the index after that of the last element added to the
+	 * current subset (if the current subset was empty, then this index value
+	 * will be 0). This will be the start index to add numbers from the array.
+	 *
+	 * Sweep through the array of numbers starting from that start index (since
+	 * all numbers before the start index have been added to a subset already).
+	 * For each number, add the number to the current subset, and recursively
+	 * call the helper method with the start index adjusted to after the added
+	 * number.
+	 *
+	 * When the method returns, the previous recursive call will backtrack by
+	 * popping the value off the current subset and continue to look for other
+	 * values to add to the subset.
+	 *
+	 * Time Complexity: O(2^n), since there are O(2^n) possible subsets that the
+	 *		algorithm needs to visit.
+	 * Space Complexity: O(n) for recursive call stack, where n is the number of
+	 *		elements in the input array.
+	 */
 	std::vector<std::vector<int>> subsets(std::vector<int> &nums)
 	{
 		std::vector<std::vector<int>> subsetList;
@@ -24,7 +51,7 @@ public:
 		return subsetList;
 	}
 
-	/* We only add integers to the subset list that are at startIndex or after so
+	/* Only add integers to the subset list that are at startIndex or after so
 	 * that we don't create duplicate subsets. */
 	void subsetsHelper(std::vector<int> &nums, std::vector<std::vector<int>> &subsetList,
 		std::vector<int> &currSubset, int startIndex)
