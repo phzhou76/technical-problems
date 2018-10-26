@@ -19,12 +19,15 @@
     <Filter Include="Header Files\Recursion">
       <UniqueIdentifier>{aa77bcfc-1801-4347-a115-ea1bddca8bcf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Dynamic Programming\Unfinished">
+      <UniqueIdentifier>{42d55eec-8e48-4322-91a8-d7f74f6a09b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Arrays">
+      <UniqueIdentifier>{3465af66-b953-43dc-9095-e0e66456f955}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AddOne.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AddTwoNumbers.h">
@@ -367,7 +370,10 @@
       <Filter>Header Files\Recursion</Filter>
     </ClInclude>
     <ClInclude Include="Coins.h">
-      <Filter>Header Files\Dynamic Programming</Filter>
+      <Filter>Header Files\Dynamic Programming\Unfinished</Filter>
+    </ClInclude>
+    <ClInclude Include="PlusOne.h">
+      <Filter>Header Files\Arrays</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

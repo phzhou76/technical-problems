@@ -2,69 +2,59 @@
 #ifndef _ADD_TWO_NUMBERS_H_
 #define _ADD_TWO_NUMBERS_H_
 
-#include "LinkedListNode.h"
+#include "pch.h"
+#include "LeetCodeLinkedListNode.h"
 
 /**
- * Problem: Given two non-empty linked lists representing two non-negative integers,
- * add the two numbers and return it as a linked list. The numbers are stored in
- * reverse order; i.e. 807 would be stored as 7->0->8.
+ * You are given two non-empty linked lists representing two non-negative
+ * integers. The digits are stored in reverse order and each of their nodes
+ * contains a single digit. Add the two numbers and return it as a linked list.
+ *
+ * You may assume that the two numbers do not contain any leading zeroes, except
+ * for the number 0.
+ *
+ * Note: The number 807 would be stored as 7->0->8.
+ *
+ * Source: https://leetcode.com/problems/add-two-numbers/description/
  */
 class AddTwoNumbers
 {
 public:
-	static LinkedListNode<int> * addTwoNumbers(LinkedListNode<int> * num1,
-		LinkedListNode<int> * num2)
+	ListNode * addTwoNumbers(ListNode * l1, ListNode * l2)
 	{
-		LinkedListNode<int> * sumList = nullptr;
-		LinkedListNode<int> * currentDigit = nullptr;
-
-		/* Continue to sum up digits until one or both lists run out of digits. */
-		int carry = 0;
-		while (num1 != nullptr && num2 != nullptr)
+		/* Edge Case: If the linked lists could be empty, it would need to be
+		 * checked here. */
+		if (l1 == nullptr || l2 == nullptr)
 		{
-			int sum = num1->mData + num2->mData + carry;
+			throw std::invalid_argument("Empty lists detected.");
+		}
+
+		/* Create a fake head for the summed list. */
+		ListNode * sumList = new ListNode(0);
+		ListNode * sumListPtr = sumList;
+
+		/* Sum digits from both lists until one of them has run out of digits. */
+		int carry = 0;
+		while (l1 != nullptr && l2 != nullptr)
+		{
+			int sum = l1->val + l2->val + carry;
 			int digit = sum % 10;
 			carry = sum / 10;
 
-			/* Initialize sum list. */
-			if (sumList == nullptr)
-			{
-				sumList = currentDigit = new LinkedListNode<int>(digit);
-			}
-			else
-			{
-				currentDigit->mNextNode = new LinkedListNode<int>(digit);
-				currentDigit = currentDigit->mNextNode;
-			}
+			sumListPtr->next = new ListNode(digit);
+			sumListPtr = sumListPtr->next;
 
-			/* Increment digit pointers of both numbers. */
-			num1 = num1->mNextNode;
-			num2 = num2->mNextNode;
+			l1 = l1->next;
+			l2 = l2->next;
 		}
 
-		/* Extract the digits from the remaining list, if there is one. */
-		LinkedListNode<int> * remainingList = (num1 == nullptr) ? num2 : num1;
-
+		/* Since at least one list has been completely emptied, add the remainder
+		 * of the other list to the sum. */
+		ListNode * remainingList = (l1 == nullptr) ? l2 : l1;
 		while (remainingList != nullptr)
 		{
-			int sum = remainingList->mData + carry;
-			int digit = sum % 10;
-			carry = sum / 10;
-
-			/* Don't need to check if sumList is null, since non-empty lists are guaranteed. */
-			currentDigit->mNextNode = new LinkedListNode<int>(digit);
-			currentDigit = currentDigit->mNextNode;
-
-			remainingList = remainingList->mNextNode;
+			int sum = remainingList->val + carry;
 		}
-
-		/* Possible that carry is still 1 after adding the two numbers, need to create new digit. */
-		if (carry == 1)
-		{
-			currentDigit->mNextNode = new LinkedListNode<int>(carry);
-		}
-
-		return sumList;
 	}
 };
 

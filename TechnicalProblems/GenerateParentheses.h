@@ -34,8 +34,7 @@ public:
 	 * We need to check if there are less left parentheses than right parentheses
 	 * before attaching a right parentheses to the string because valid
 	 * parenthesis pairs require that a left parenthesis exist that hasn't been
-	 * "paired up"
-	 * yet.
+	 * "paired up" yet.
 	 */
 	std::vector<std::string> generateParenthesis(int n) {
 		std::vector<std::string> parenthesisCombination;

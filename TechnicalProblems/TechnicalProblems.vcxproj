@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AddOne.h" />
+    <ClInclude Include="PlusOne.h" />
     <ClInclude Include="AddTwoNumbers.h" />
     <ClInclude Include="BinaryTreeInorderTraversal.h" />
     <ClInclude Include="CheckPermutation.h" />
