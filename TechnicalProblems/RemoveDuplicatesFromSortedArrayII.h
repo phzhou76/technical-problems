@@ -45,6 +45,7 @@ public:
 					++oldPointer;
 				}
 			}
+
 			/* If the current value being looked at is different from the previous
 			 * value being looked at, just add the current value immediately to
 			 * the new array. */

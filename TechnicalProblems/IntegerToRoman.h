@@ -5,10 +5,14 @@
 #include "pch.h"
 
 /**
- * Problem: Convert a given integer to its roman numeral representation.
+ * Given an integer, convert a given integer to its roman numeral representation.
+ * Input is guaranteed to be within the range from 1 to 3999.
+ *
+ * Source: https://leetcode.com/problems/integer-to-roman/description/
  */
 class IntegerToRoman
 {
+public:
 
 	/* This problem can be solved by extracting each digit from the ones place
 	 * to the most significant digit. Each digit is then run through its own

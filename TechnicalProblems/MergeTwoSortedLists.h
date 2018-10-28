@@ -5,15 +5,18 @@
 #include "LinkedListNode.h"
 
 /**
- * Problem: Merge two sorted linked lists and return it as a new list. The new
- * list should be made by splicing together the nodes of the first two lists.
+ * Merge two sorted linked lists and return it as a new list. The new list
+ * should be made by splicing together the nodes of the first two lists.
+ *
+ * Source: https://leetcode.com/problems/merge-two-sorted-lists/description/
  */
 class MergeTwoSortedLists
 {
 public:
-	LinkedListNode<int>* mergeTwoLists(LinkedListNode<int>* l1, LinkedListNode<int>* l2) {
-		/* Initial checking to ensure lists actually exist. If one list doesn't exist, the
-		 * merged list is just the other list. */
+	LinkedListNode<int>* mergeTwoLists(LinkedListNode<int>* l1, LinkedListNode<int>* l2)
+	{
+		/* Initial checking to ensure lists actually exist. If one list doesn't
+		 * exist, the merged list is just the other list. */
 		if (l1 == nullptr)
 		{
 			return l2;
@@ -38,8 +41,8 @@ public:
 			l2 = l2->mNextNode;
 		}
 
-		/* Continue to add the minimum of the two lists to the current list until one list
-		 * runs out of elements. */
+		/* Continue to add the minimum of the two lists to the current list until 
+		 * one list runs out of elements. */
 		while (l1 != nullptr && l2 != nullptr)
 		{
 			if (l1->mData < l2->mData)

@@ -5,8 +5,8 @@
 #include "pch.h"
 
 /**
- * Problem: Given an integer array of size n, find all elements that appear strictly
- * more than n/3 times. (E.g. if there is an array of 3 elements, an element that
+ * Given an integer array of size n, find all elements that appear strictly more
+ * than n/3 times. (E.g. if there is an array of 3 elements, an element that
  * appears once doesn't count.)
  *
  * Questions:
@@ -14,6 +14,8 @@
  *	2. Should I return all possible elements that appear more than n/3 times, or
  *		just one of them? For this problem, at most two elements can appear more
  *		than n/3 times (two elements would take up greater than 2/3 space).
+ *
+ * Source: https://leetcode.com/problems/majority-element-ii/description/
  */
 class MajorityElementII
 {
@@ -31,7 +33,8 @@ public:
 	 *	1. The first pass is used to generate two possible candidate values that
 	 *		have a count of greater than N/3.
 	 *	2. The second pass is used to count the frequency of those candidate values
-	 *		to confirm that the count is greater than N/3. */
+	 *		to confirm that the count is greater than N/3.
+	 */
 	std::vector<int> majorityElement(std::vector<int> &nums)
 	{
 		if (nums.empty())
@@ -50,14 +53,14 @@ public:
 
 		/* Generate two possible candidate values that may have a count of greater
 		 * than N/3.
-		 * 
+		 *
 		 * Explanation: Let's say that we want to find the element whose count is
 		 * greater than N/2. If there is one, then there is a "pair" between that
 		 * majority element and some different value, with some count of the
 		 * majority element being "unpaired". So, given a count of this majority
 		 * element, each time a different value appears, subtract one from this
-		 * majority element to signify that a "pair" has been formed. 
-		 * 
+		 * majority element to signify that a "pair" has been formed.
+		 *
 		 * We can expand this example to find at most two elements whose count is
 		 * greater than N/3. Assuming that we currently hold two possible candidates
 		 * for this majority element, finding a different value from either
@@ -101,7 +104,7 @@ public:
 				count2 = 1;
 			}
 			/* Case 5: Both candidates have been set and differ from this value.
-			 * Create a triplet between the two candidates and this value, and 
+			 * Create a triplet between the two candidates and this value, and
 			 * subtract a "pairable" count from both candidates. */
 			else
 			{

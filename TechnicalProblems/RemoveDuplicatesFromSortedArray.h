@@ -18,7 +18,8 @@ class RemoveDuplicatesFromSortedArray
 	 *	1. Sweep through the array until a different value is found.
 	 *		1a. "Push" the different value to the end of the unique values subarray.
 	 *		1b. Have the pointer point to the newly pushed different value.
-	 *	2. Repeat step 1 until the end of the array has been reached. */
+	 *	2. Repeat step 1 until the end of the array has been reached.
+	 */
 	int removeDuplicates(std::vector<int>& nums)
 	{
 		/* No duplicates can exist if there are less than 2 elements. */

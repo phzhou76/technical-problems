@@ -6,9 +6,11 @@
 #include "TreeNode.h"
 
 /**
- * Problem: Given a binary tree, find its maximum depth. The maximum depth is
- * defined as the number of nodes along the longest path from the root node down
- * to the farthest leaf node. 
+ * Given a binary tree, find its maximum depth. The maximum depth is defined as
+ * the number of nodes along the longest path from the root node down
+ * to the farthest leaf node.
+ * 
+ * https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
  */
 class MaximumDepthBinaryTree
 {

@@ -5,8 +5,10 @@
 #include "pch.h"
 
 /**
- * Problem: Given an array nums, write a function to move all 0s to the end of it
- * while maintaining the relative order of the non-zero elements.
+ * Given an array nums, write a function to move all 0s to the end of it while
+ * maintaining the relative order of the non-zero elements.
+ *
+ * Source: https://leetcode.com/problems/move-zeroes/description/
  */
 class MoveZeroes
 {
@@ -15,7 +17,8 @@ public:
 	/* This problem can be solved by first marking the 0th index as the spot past
 	 * the non-zero elements. Then, scan the array to start moving the non-zero
 	 * elements to the non-zero subarray. After that, fill the rest of the array
-	 * from the end of the non-zero subarray to the end of the array with 0s. */
+	 * from the end of the non-zero subarray to the end of the array with 0s.
+	 */
 	void moveZeroes(std::vector<int> &nums)
 	{
 		/* Marks the end of the non-zero subarray. For reference, if this value

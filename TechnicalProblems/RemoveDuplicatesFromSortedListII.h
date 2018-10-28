@@ -55,6 +55,7 @@ public:
 				currPtr = currPtr->mNextNode;
 				delete deleteNode;
 			}
+
 			/* Else, connect the "new" list to this unique node, and advance both
 			 * the new and old list pointers. */
 			else
@@ -72,6 +73,7 @@ public:
 		LinkedListNode<int> * deleteNode = newListHeadPtr;
 		newListHeadPtr = newListHeadPtr->mNextNode;
 		delete deleteNode;
+
 		return newListHeadPtr;
 	}
 };

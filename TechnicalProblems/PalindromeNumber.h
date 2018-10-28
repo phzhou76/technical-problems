@@ -5,14 +5,18 @@
 #include "pch.h"
 
 /**
- * Problem: Determine whether or not an integer is a palindrome. An integer is a
- * palindrome if it is read the same forwards or backwards. This means that negative
- * numbers cannot be palindromes, as the negative sign is included as a part of
- * the integer in determining if it is a palindrome or not. */
+ * Determine whether or not an integer is a palindrome. An integer is a
+ * palindrome if it is read the same forwards or backwards. This means that
+ * negative numbers cannot be palindromes, as the negative sign is included as a
+ * part of the integer in determining if it is a palindrome or not.
+ *
+ * Source: https://leetcode.com/problems/palindrome-number/description/
+ */
 class PalindromeNumber
 {
 public:
-	static bool isPalindrome(int inputInt) {
+	bool isPalindrome(int inputInt)
+	{
 		/* Negative numbers cannot be palindromes. */
 		if (inputInt < 0)
 		{
@@ -38,7 +42,7 @@ public:
 		{
 			int leftDigit = digits[i];
 			int rightDigit = digits[digits.size() - 1 - i];
-			
+
 			/* Opposing digits do not match up. */
 			if (leftDigit != rightDigit)
 			{

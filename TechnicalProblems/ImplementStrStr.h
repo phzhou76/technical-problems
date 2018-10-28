@@ -5,40 +5,40 @@
 #include "pch.h"
 
 /**
- * Problem: Implement strStr().
+ * Implement strStr().
  *
- * Return the index of the first occurrence of needle in haystack, or -1 if 
+ * Return the index of the first occurrence of needle in haystack, or -1 if
  * needle is not part of haystack.
  *
  * Questions:
  *	1. What value should be returned if the needle is empty?
  *	2. What value should be returned if the haystack is empty?
+ *
+ * Source: https://leetcode.com/problems/implement-strstr/description/
  */
 class ImplementStrStr
 {
 public:
-	int strStr(std::string haystack, std::string needle) {
+	int strStr(std::string haystack, std::string needle)
+	{
 		/* Edge case - if the needle doesn't exist. */
 		if (needle.length() == 0)
 		{
 			return 0;
 		}
 
-		/* Scan through the haystack until the first character of the
-		 * needle has been encountered in the haystack. Then, scan the
-		 * string for needle.length() - 1 characters ahead to see if
-		 * a match has been found. If not, then continue to scan the
-		 * haystack until the first character of the needle has been
-		 * encountered again. */
+		/* Scan through the haystack until the first character of the needle has
+		 * been encountered in the haystack. 
+		 *
+		 * Then, scan the string for needle.length() - 1 characters ahead to see
+		 * if a match has been found. 
+		 *
+		 * If not, then continue to scan the haystack until the first character 
+		 * of the needle has been encountered again. */
 		for (int i = 0; i < haystack.length(); ++i)
 		{
-			/* If the first character of the needle has been encountered
-			 * in the haystack, then scan ahead in the string to see if
-			 * the rest of the needle has a match.
-			 *
-			 * Check that the length of the current place in the haystack
-			 * plus length of needle doesn't go past last character of
-			 * haystack. */
+			/* Check that the length of the current place in the haystack plus 
+			 * length of needle doesn't go past last character of the haystack. */
 			if (haystack[i] == needle[0] && i + needle.length() <= haystack.length())
 			{
 				for (int j = 0; j < needle.length(); ++j)

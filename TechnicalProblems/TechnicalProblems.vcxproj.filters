@@ -19,93 +19,36 @@
     <Filter Include="Header Files\Recursion">
       <UniqueIdentifier>{aa77bcfc-1801-4347-a115-ea1bddca8bcf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Dynamic Programming\Unfinished">
-      <UniqueIdentifier>{42d55eec-8e48-4322-91a8-d7f74f6a09b4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Arrays">
       <UniqueIdentifier>{3465af66-b953-43dc-9095-e0e66456f955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Linked Lists">
+      <UniqueIdentifier>{250a4725-31d8-4c86-bae0-bfb53ddc1494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backtracking">
+      <UniqueIdentifier>{277aacf5-1d10-4afd-9149-ed83289320cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Incomplete Problems">
+      <UniqueIdentifier>{46801b05-ebec-4771-bb05-85215e6df719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stacks and Queues">
+      <UniqueIdentifier>{28bab92e-3185-4826-a283-62f99b3fd7b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Trees and Graphs">
+      <UniqueIdentifier>{48250a4e-b4e2-4827-a758-807d89952d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{bca467c8-8e8d-4d06-9960-8692b4fcda41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Bit Manipulation">
+      <UniqueIdentifier>{b36c428d-229e-4d9d-b73a-013893b6deb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Strings">
+      <UniqueIdentifier>{edf3dbb4-e8b4-4aac-955f-f6da37b32262}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AddTwoNumbers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BinaryTreeInorderTraversal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CheckPermutation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CombinationSumII.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ConstructBinaryTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ContainerWithMostWater.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CopyListRandomPointer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DeleteNodeInLinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DesignCache.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DiagonalTraverse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DivideTwoIntegers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EvaluateReversePolishNotation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ExcelSheetColumnNumber.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FactorialTrailingZeroes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FirstLastElementSortedArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FizzBuzz.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FlattenBinaryTreeToLinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GroupAnagrams.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HeightReconstruction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ImplementStrStr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InsertionSortList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IntegerToRoman.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IntersectionLinkedLists.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InvertBinaryTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IsUnique.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LargestRectangleInHistogram.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LeetCodeLinkedListNode.h">
@@ -114,136 +57,7 @@
     <ClInclude Include="LinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedListCycle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LinkedListNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LongestCommonPrefix.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LongestIncreasingSubsequence.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LongestPalindromicSubstring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LongestSubarrayNonnegativeIntegers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LongestSubstring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LRUCache.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MajorityElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MajorityElementII.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MaximumDepthBinaryTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MaximumProductSubarray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MaximumSizeRectangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MaximumSubarray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MedianSortedArrays.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MergedKSortedLists.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MergeIntervals.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MergeSortedArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MergeTwoSortedLists.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MinimumEditDistance.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MinStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveZeroes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MultiplyStrings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NextPermutation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NumberOfOneBits.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PalindromeLinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PalindromeNumber.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PalindromePermutation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PartitionList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PascalsTriangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PascalsTriangleII.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PathSum.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PathSumII.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PopulateNextRightPointers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PopulateNextRightPointersII.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PostorderTraversal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PreorderTraversal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PrintJSONFormatString.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ProductOfArrayExceptSelf.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RegularExpressionMatch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RemoveDuplicatesFromSortedArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RemoveDuplicatesFromSortedArrayII.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RemoveDuplicatesFromSortedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RemoveDuplicatesFromSortedListII.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RemoveElement.h">
@@ -369,11 +183,218 @@
     <ClInclude Include="FloodFill.h">
       <Filter>Header Files\Recursion</Filter>
     </ClInclude>
-    <ClInclude Include="Coins.h">
-      <Filter>Header Files\Dynamic Programming\Unfinished</Filter>
-    </ClInclude>
     <ClInclude Include="PlusOne.h">
       <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="AddTwoNumbers.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckPermutation.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="CombinationSumII.h">
+      <Filter>Header Files\Backtracking</Filter>
+    </ClInclude>
+    <ClInclude Include="Coins.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerWithMostWater.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="CopyListRandomPointer.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteNodeInLinkedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignCache.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="DiagonalTraverse.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="DivideTwoIntegers.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="EvaluateReversePolishNotation.h">
+      <Filter>Header Files\Stacks and Queues</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcelSheetColumnNumber.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="FactorialTrailingZeroes.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstLastElementSortedArray.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="FizzBuzz.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="FlattenBinaryTreeToLinkedList.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupAnagrams.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightReconstruction.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplementStrStr.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertionSortList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegerToRoman.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="IntersectionLinkedLists.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="InvertBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="IsUnique.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="LargestRectangleInHistogram.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListCycle.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestCommonPrefix.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestIncreasingSubsequence.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestPalindromicSubstring.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestSubarrayNonnegativeIntegers.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestSubstring.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="LRUCache.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="MajorityElement.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="MajorityElementII.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumDepthBinaryTree.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumProductSubarray.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSizeRectangle.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSubarray.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MedianSortedArrays.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="MergedKSortedLists.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeIntervals.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeSortedArray.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeTwoSortedLists.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="MinimumEditDistance.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="MinStack.h">
+      <Filter>Header Files\Stacks and Queues</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveZeroes.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiplyStrings.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="NextPermutation.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="NumberOfOneBits.h">
+      <Filter>Header Files\Bit Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="PalindromeLinkedList.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="PalindromeNumber.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="PalindromePermutation.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="PartitionList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="PascalsTriangle.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="PascalsTriangleII.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="PathSum.h">
+      <Filter>Header Files\Backtracking</Filter>
+    </ClInclude>
+    <ClInclude Include="PathSumII.h">
+      <Filter>Header Files\Backtracking</Filter>
+    </ClInclude>
+    <ClInclude Include="PopulateNextRightPointers.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PopulateNextRightPointersII.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintJSONFormatString.h">
+      <Filter>Header Files\Incomplete Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="PostorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductOfArrayExceptSelf.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularExpressionMatch.h">
+      <Filter>Header Files\Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTreeInorderTraversal.h">
+      <Filter>Header Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="PreorderTraversal.h">
+      <Filter>Header Files\Trees and Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveDuplicatesFromSortedArray.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveDuplicatesFromSortedArrayII.h">
+      <Filter>Header Files\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveDuplicatesFromSortedList.h">
+      <Filter>Header Files\Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveDuplicatesFromSortedListII.h">
+      <Filter>Header Files\Linked Lists</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -5,8 +5,8 @@
 #include "LeetCodeLinkedListNode.h"
 
 /**
- * Problem: Sort a linked list using insertion sort. The algorithm of insertion
- * sort is as follows:
+ * Sort a linked list using insertion sort. The algorithm of insertion sort is 
+ * as follows:
  *	1. Insertion sort maintains two portions of the array: one portion that has
  *		been already sorted, and the other portion that's not sorted yet.
  *	2. The sort will consume one element from the unsorted portion and place it
@@ -14,6 +14,8 @@
  *	3. The sort will need to scan the entire sorted portion to determine where the
  *		element should be placed at.
  *	4. Repeat the process until the unsorted portion is empty.
+ *
+ * Source: https://leetcode.com/problems/insertion-sort-list/description/
  */
 class InsertionSortList
 {

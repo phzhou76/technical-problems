@@ -5,8 +5,10 @@
 #include "pch.h"
 
 /**
- * Problem: Given a column title as in an Excel spreadsheet, return its corresponding
+ * Given a column title as in an Excel spreadsheet, return its corresponding
  * column number.
+ *
+ * Source: https://leetcode.com/problems/excel-sheet-column-title/description/
  */
 class ExcelSheetColumnNumber
 {
@@ -18,9 +20,10 @@ public:
 	 * one. 
 	 *
 	 * For example, the 'A' in "AAZ" would be calculated by extracting its
-	 * numerical value (1), and multiplying it by 26 * 26. This is similar to how
-	 * the 5 in 526 would be calculated - extract the 5 from 526, and multiply it
-	 * by 10 * 10 to account for its digit place. */
+	 * numerical value (1), and multiplying it by 26 * 26. This is similar to 
+	 * how the 5 in 526 would be calculated - extract the 5 from 526, and
+	 * multiply it by 10 * 10 to account for its digit place. 
+	 */
 	int titleToNumber(std::string s)
 	{
 		int columnNumber = 0;

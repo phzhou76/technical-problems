@@ -5,9 +5,11 @@
 #include "pch.h"
 
 /**
- * Problem: There are two sorted arrays nums1 and nums2 of size m and n, respectively.
+ * There are two sorted arrays nums1 and nums2 of size m and n, respectively.
  * Find the median of the two sorted arrays. The runtime complexity should be
  * O(log(m+n)). It is safe to assume that the arrays cannot be both empty.
+ *
+ * Source: https://leetcode.com/problems/median-of-two-sorted-arrays/description/
  */
 class MedianSortedArrays
 {

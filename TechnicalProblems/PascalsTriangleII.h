@@ -5,8 +5,8 @@
 #include "pch.h"
 
 /**
- * Problem: Given a non-negative index k where k <= 33, return the kth index row
- * of Pascal's Triangle. Note that the index k is zero-based.
+ * Given a non-negative index k where k <= 33, return the kth index row of 
+ * Pascal's Triangle. Note that the index k is zero-based.
  *
  * Note: Each entry in Pascal's table is actually equal to n choose k, where both 
  * n and k are zero-based. For example, the first row would be C(0,0). The second
@@ -20,6 +20,8 @@
  *
  * Issue with this approach is that factorials blow up in value very quickly, which
  * leads to overflows, so we should just build a row at a time.
+ *
+ * Source: https://leetcode.com/problems/pascals-triangle-ii/description/
  */
 class PascalsTriangleII
 {

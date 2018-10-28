@@ -5,8 +5,8 @@
 #include "pch.h"
 
 /**
- * Problem: Given a matrix of M * N elements (M rows, N columns), return all
- * elements of the matrix in diagonal order, as follows:
+ * Given a matrix of M * N elements (M rows, N columns), return all elements of 
+ * the matrix in diagonal order, as follows:
  *
  * Input:
  * [1, 2, 3]
@@ -16,7 +16,10 @@
  * Output: [1, 2, 4, 7, 5, 3, 6, 8, 9]
  *
  * Questions:
- *	1. What should be returned if the matrix is empty, or if it is one-dimensional?
+ *	1. What should be returned if the matrix is empty, or if it is 
+ *		one-dimensional?
+ *
+ * Source: https://leetcode.com/problems/diagonal-traverse/description/
  */
 class DiagonalTraverse
 {
@@ -52,7 +55,8 @@ public:
 	 *
 	 * Invert the upward bool at the end of every diagonal. Eventually, when both
 	 * the row and the column go out of bounds, then we know we've gone through
-	 * every element. */
+	 * every element. 
+	 */
 	std::vector<int> findDiagonalOrder(std::vector<std::vector<int>> &matrix)
 	{
 

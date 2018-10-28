@@ -5,9 +5,9 @@
 #include "TreeLinkNode.h"
 
 /**
- * Problem: Given a binary tree in which each node has a left, right, and next
- * pointer, populate each next pointer to point to its next right node. If there
- * is no next right node, the next pointer should be set to null.
+ * Given a binary tree in which each node has a left, right, and next pointer, 
+ * populate each next pointer to point to its next right node. If there is no 
+ * next right node, the next pointer should be set to null.
  *
  * Initially, all next pointers are set to null.
  *
@@ -15,6 +15,8 @@
  *	1. You may only use constant extra space.
  *	2. Recursive approaches are fine - the implicit stack space does not count as
  *		extra space for this problem.
+ *
+ * Source: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/
  */
 class PopulateNextRightPointersII
 {

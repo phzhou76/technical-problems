@@ -5,10 +5,12 @@
 #include "pch.h"
 
 /**
- * Problem: Given a string s, find the longest palindromic substring in s. You
- * may assume that the maximum length of s is 1000.
+ * Given a string s, find the longest palindromic substring in s. You may assume
+ * that the maximum length of s is 1000.
  *
  * Note: A palindrome string is a string that reads the same in both directions.
+ *
+ * Source: https://leetcode.com/problems/longest-palindromic-substring/description/
  */
 class LongestPalindromicSubstring
 {
@@ -19,7 +21,8 @@ public:
 	 * outwards towards the left and right sides. Check that the characters on
 	 * both the left and right sides are the same. Repeat this process for every
 	 * character in the string until the last character in the string has been
-	 * scanned. */
+	 * scanned. 
+	 */
 	std::string longestPalindrome(std::string inputStr)
 	{
 		/* Edge Case: If the string is length 0 or 1, then it itself is the

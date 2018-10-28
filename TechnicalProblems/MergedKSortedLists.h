@@ -6,15 +6,18 @@
 #include "LinkedListNode.h"
 
 /**
- * Problem: Merge k sorted linked lists and return it as one sorted list. Analyze
- * and describe its complexity.
+ * Merge k sorted linked lists and return it as one sorted list. Analyze and
+ * describe its complexity.
+ * 
+ * Source: https://leetcode.com/problems/merge-k-sorted-lists/
  */
 class MergedKSortedLists
 {
 public:
 
-	/* The runtime of this algorithm should be O(n * r), where n is the number of lists, and r
-	 * is the length of the longest list. */
+	/* The runtime of this algorithm should be O(n * r), where n is the number of
+	 * lists, and r is the length of the longest list. 
+	 */
 	LinkedListNode<int>* mergeKLists(std::vector<LinkedListNode<int>*>& lists)
 	{
 		/* Can't merge if no lists are available. */
@@ -23,7 +26,8 @@ public:
 			return nullptr;
 		}
 
-		/* Instantiate the merged list by obtaining the minimum element of the lists. */
+		/* Instantiate the merged list by obtaining the minimum element of the 
+		 * lists. */
 		LinkedListNode<int> * mergedList = nullptr;
 		LinkedListNode<int> * currentNode = nullptr;
 		int minimumNodeIndex = findMinimumNodeIndex(lists);
@@ -31,12 +35,13 @@ public:
 		mergedList = currentNode = lists[minimumNodeIndex];
 		lists[minimumNodeIndex] = lists[minimumNodeIndex]->mNextNode;
 
-		/* The findMinimumNodeIndex method will continue to return the index of the list
-		 * that has the lowest value. If there are no lists left, then it will just return -1. */
+		/* The findMinimumNodeIndex method will continue to return the index of
+		 * the list that has the lowest value. If there are no lists left, then 
+		 * it will just return -1. */
 		while ((minimumNodeIndex = findMinimumNodeIndex(lists)) != -1)
 		{
-			/* Update the current node's next node, and then update both the current node
-			 * pointer and the list's pointer that was just used. */
+			/* Update the current node's next node, and then update both the 
+			 * current node pointer and the list's pointer that was just used. */
 			currentNode->mNextNode = lists[minimumNodeIndex];
 			currentNode = currentNode->mNextNode;
 			lists[minimumNodeIndex] = lists[minimumNodeIndex]->mNextNode;
@@ -63,8 +68,8 @@ public:
 		int minValue = std::numeric_limits<int>::max();
 		int minIndex = -1;
 
-		/* To find just the minimum value, a min heap does not need to be used. A simple O(n)
-		 * sweep can be used instead. */
+		/* To find just the minimum value, a min heap does not need to be used. 
+		 * A simple O(n) sweep can be used instead. */
 		for (int i = 0; i < lists.size(); ++i)
 		{
 			if (lists[i] != nullptr && lists[i]->mData < minValue)

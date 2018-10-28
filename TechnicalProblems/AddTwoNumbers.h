@@ -20,6 +20,29 @@
 class AddTwoNumbers
 {
 public:
+
+	/* Iterative Solution: First, create a fake head for the start of the new
+	 * sum linked list. Then, sweep through both linked lists until one list runs
+	 * out of digits:
+	 *	1. Calculate the sum between the two digits and the carry.
+	 *	2. Calculate the digit from the sum.
+	 *	3. Calculate the carry from the sum.
+	 *	4. Assign the sum's digit to the sum linked list.
+	 *
+	 * After this loop ends, at least one of the linked lists will be empty.
+	 * Sweep through the other linked list and add its digits to the sum linked
+	 * list, taking the carry into account. Repeat the above steps for each digit.
+	 *
+	 * At the end, if the carry is still 1, then a new most significant digit
+	 * must be created for the sum linked list.
+	 *
+	 * Delete the fake head, and return the head of the sum linked list.
+	 *
+	 * Time Complexity: O(n), where n is the length of the longer of the two
+	 *		linked lists.
+	 * Space Complexity: O(n), where n is the length of the longer of the two
+	 *		linked lists.
+	 */
 	ListNode * addTwoNumbers(ListNode * l1, ListNode * l2)
 	{
 		/* Edge Case: If the linked lists could be empty, it would need to be
@@ -54,7 +77,28 @@ public:
 		while (remainingList != nullptr)
 		{
 			int sum = remainingList->val + carry;
+			int digit = sum % 10;
+			carry = sum / 10;
+
+			sumListPtr->next = new ListNode(digit);
+			sumListPtr = sumListPtr->next;
+
+			remainingList = remainingList->next;
 		}
+
+		/* If the carry is still 1, then a new most significant digit needs to
+		 * be created. */
+		if (carry == 1)
+		{
+			sumListPtr->next = new ListNode(1);
+		}
+
+		/* Delete the fake head, and return the head of the sum list. */
+		ListNode * deleteNode = sumList;
+		sumList = sumList->next;
+		delete deleteNode;
+		
+		return sumList;
 	}
 };
 

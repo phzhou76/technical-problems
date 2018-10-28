@@ -6,14 +6,17 @@
 #include "LinkedListNode.h"
 
 /**
- * Problem: Given a linked list, determine if it has a cycle in it.
+ * Given a linked list, determine if it has a cycle in it.
  *
  * Follow up: Can you solve it without using extra space?
+ *
+ * Source: https://leetcode.com/problems/linked-list-cycle/description/
  */
 class LinkedListCycle
 {
 public:
-	bool hasCycle(LinkedListNode<int> *head) {
+	bool hasCycle(LinkedListNode<int> *head)
+	{
 		/* Have two pointers, one that moves one node per iteration, and another
 		 * that moves two nodes per iteration. */
 		LinkedListNode<int> * slowPointer = head;

@@ -5,15 +5,19 @@
 #include "TreeNode.h"
 
 /**
- * Problem: Invert a binary tree. This means that each left and right subtree are
+ * Invert a binary tree. This means that each left and right subtree are
  * switched around.
+ *
+ * Source: https://leetcode.com/problems/invert-binary-tree/description/
  */
 class InvertBinaryTree
 {
 public:
 
-	/* Recursive Approach: 
+	/* Recursive Approach:
+	 *
 	 *	1. First, recursively call the method on the left and right subtrees.
+	 *
 	 *	2. Then, take the left and right subtrees, and assign the current node's
 	 *		left child to point to the right subtree, and the right child to point
 	 *		to the left subtree.

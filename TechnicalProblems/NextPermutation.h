@@ -40,7 +40,8 @@ public:
 	 * 
 	 * Then, sort the digits to the right of the swapped digit in ascending order
 	 * so that the minimum value possible to the right of the swapped digit is 
-	 * achieved. */
+	 * achieved. 
+	 */
 	void nextPermutation(std::vector<int> &nums)
 	{
 

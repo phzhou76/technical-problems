@@ -5,13 +5,15 @@
 #include "pch.h"
 
 /**
- * Problem: Given a string, find the length of the longest substring without
- * repeating characters.
+ * Given a string, find the length of the longest substring without repeating 
+ * characters.
+ *
+ * Source: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
  */
 class LongestSubstring
 {
 public:
-	static int lengthOfLongestSubstring(std::string inputString)
+	int lengthOfLongestSubstring(std::string inputString)
 	{
 		/* Map of chars to their last seen indices in the string. The indices in
 		 * this hash map are only valid if they are within the currently examined

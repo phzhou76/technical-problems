@@ -3,10 +3,10 @@
 #define _POPULATE_NEXT_RIGHT_POINTERS_H_
 
 /**
- * Problem: Given a binary tree where each node in the tree has a left, right,
- * and next pointer, populate each next pointer to point to its next right node.
- * If there is no next right node, the next pointer should be set to null.
- * Initially, all next pointers are set to null.
+ * Given a binary tree where each node in the tree has a left, right, and next
+ * pointer, populate each next pointer to point to its next right node. If there
+ * is no next right node, the next pointer should be set to null. Initially, all
+ * next pointers are set to null.
  *
  * Notes:
  *	1. You may only use constant extra space.
@@ -14,6 +14,8 @@
  *		space for this problem.
  *	3. You may assume that it is a perfect binary tree (i.e. all leaves are at
  *		the same level, and every parent has two children.
+ *
+ * Source: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/
  */
 struct TreeLinkNode
 {

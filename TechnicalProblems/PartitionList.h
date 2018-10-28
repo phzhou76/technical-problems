@@ -5,9 +5,11 @@
 #include "LeetCodeLinkedListNode.h"
 
 /**
- * Problem: Given a linked list and a value x, partition it such that all nodes
- * less than x come before nodes greater than or equal to x. You should preserve
- * the original relative order of the nodes in each of the two partition.
+ * Given a linked list and a value x, partition it such that all nodes less than
+ * x come before nodes greater than or equal to x. You should preserve the 
+ * original relative order of the nodes in each of the two partition.
+ *
+ * Source: https://leetcode.com/problems/partition-list/description/
  */
 class PartitionList
 {
@@ -47,8 +49,10 @@ public:
 
 		/* Now that we have the left and the right partitions, we need to take
 		 * care of two possible edge cases:
+		 *
 		 *	1. All elements are on the left partition. If that's the case,
 		 *		return the left partition without the fake head.
+		 *
 		 *	2. All elements are on the right partition. If that's the case, just
 		 *		return the right partition without the fake head. 
 		 *

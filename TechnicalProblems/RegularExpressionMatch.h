@@ -28,7 +28,7 @@ public:
 	/* Dynamic Programming Solution:
 	 *
 	 * Create a 2D matrix T of boolean values of rows equal to the length of the
-	 * string, and columns equal to the length of the pattern.
+	 * string + !, and columns equal to the length of the pattern + 1.
 	 *
 	 * Then, at element T[i][j] in the matrix, where i is the current char in the
 	 * string being examined, and j is the current char in the pattern being matched

@@ -5,11 +5,13 @@
 #include "pch.h"
 
 /**
- * Problem: Given a collection of intervals, merge all overlapping intervals.
+ * Given a collection of intervals, merge all overlapping intervals.
  *
  * Examples:
  *	1. [[1, 4], [4, 5]] -> [[1, 5]], since the intervals [1, 4] and [4, 5] are
  *		considered to be overlapping.
+ *
+ * Source: https://leetcode.com/problems/merge-intervals/description/
  */
 
 struct Interval
@@ -39,10 +41,12 @@ public:
 	 * interval into the merged list, and start examining each interval afterwards.
 	 *
 	 * Possible scenarios:
+	 *
 	 *	1. If the current interval begins after the previous interval ends (i.e.
 	 *		the current interval's start value is greater than the previous
 	 *		interval's end value), then we know that the intervals do not overlap.
 	 *		In this case, append the current interval to the merged array.
+	 *
 	 *	2. If the current interval begins before or at where the previous interval
 	 *		ends (i.e. the current interval's start value is less than or equal
 	 *		to the previous interval's end value), then we know that the intervals
@@ -50,14 +54,15 @@ public:
 	 *		the greater of the end values between the merged interval and the
 	 *		current interval.
 	 *
-	 * Repeat this process for every interval in the list, and return the result. */
+	 * Repeat this process for every interval in the list, and return the result.
+	 */
 	std::vector<Interval> merge(std::vector<Interval> &intervals)
 	{
 		if (intervals.empty())
 		{
 			return std::vector<Interval>();
 		}
-		
+
 		/* Sort the intervals in ascending start values. */
 		std::sort(intervals.begin(), intervals.end(), IntervalComparator());
 
@@ -66,8 +71,8 @@ public:
 
 		for (auto it : intervals)
 		{
-			/* Case: If the current interval is completely outside of the previous 
-			 * interval, then just add this new interval to the list of merged 
+			/* Case: If the current interval is completely outside of the previous
+			 * interval, then just add this new interval to the list of merged
 			 * intervals. */
 			if (it.start > mergedIntervals.back().end)
 			{

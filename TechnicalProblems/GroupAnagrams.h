@@ -5,25 +5,33 @@
 #include "pch.h"
 
 /**
- * Problem: Given an array of strings, group anagrams together.
+ * Given an array of strings, group anagrams together.
  *
- * Notes:
+ * Note:
  *	1. All inputs will be in lowercase.
  *	2. The order of your output does not matter.
+ *
+ * Source: https://leetcode.com/problems/group-anagrams/
  */
 class GroupAnagrams
 {
 public:
 
-	/* If we need to find groups of strings that are anagrams and place them next
-	 * to each other, then we can use a hash map to collect strings that have
-	 * identical character counts to their original index. In this implementation,
-	 * sorting algorithms were used to rearrange the strings so that the anagrams
-	 * would produce identical hash values, but a linear approach could also be
-	 * used to create identical hashes. For example, if the input string was
-	 * ababcdcd, then the output string that could be hashed would look like 
-	 * a2b2c2d2. */
-	std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string> &strs)
+	/* Hashing Solution: If we need to find groups of strings that are anagrams
+	 * and place them next to each other, then we can use a hash map that maps
+	 * strings with identical character counts to their original string indices.
+	 *
+	 * Use a sorting algorithm to rearrange each string in the input list of
+	 * strings so that anagrams will produce the same hash values.
+	 *
+	 * However, a linear approach could also be used to create identical hashes.
+	 * This would involve counting each character in the string, and then
+	 * putting the counts of each character in a string. For example, if the
+	 * input string was ababcdcd, then the output string would look like
+	 * a2b2c2d2.
+	 */
+	std::vector<std::vector<std::string>> groupAnagrams(
+		std::vector<std::string> &strs)
 	{
 		/* Maps sorted strings to the indices where the unsorted strings came
 		 * from. We'll need to create a copy of the input so that the original
@@ -31,8 +39,8 @@ public:
 		std::unordered_map<std::string, std::vector<int>> stringIndices;
 		std::vector<std::string> strsCopy = std::vector<std::string>(strs);
 
-		/* Since anagrams have the same character counts, we can sort them so that
-		 * anagrams will hash to the same value. */
+		/* Since anagrams have the same character counts, we can sort them so
+		 * that anagrams will hash to the same value. */
 		for (int i = 0; i < strsCopy.size(); ++i)
 		{
 			std::sort(strsCopy[i].begin(), strsCopy[i].end());
@@ -60,7 +68,7 @@ public:
 				anagramGroups.back().push_back(strs[stringIndex]);
 			}
 		}
-		
+
 		return anagramGroups;
 	}
 };

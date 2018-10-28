@@ -6,40 +6,50 @@
 #include "TreeNode.h"
 
 /**
- * Problem: Given the inorder and postorder traversal of a tree, construct the
- * binary tree.
+ * Given the inorder and postorder traversal of a tree, construct the binary
+ * tree.
  *
- * Notes:
+ * Note:
  *	1. You may assume that duplicates do not exist in the tree.
+ *
+ * Source: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
  */
 class ConstructBinaryTree
 {
 public:
 
-	 /* By definition, in postorder traversal, the last element that is visited
-	  * is the root of the tree. Draw the array of both the inorder and postorder
-	  * traversal. Using the postorder array, we can find the root of that subtree,
-	  * and divide the array of inorder elements at that root for the left and
-	  * right subtrees.
-	  *
-	  * Recursive Algorithm:
-	  *	1. First, create a hash map that maps each number to its postorder
-	  *		position for faster lookups.
-	  *	2. Then, pass the inorder traversal array, the hash map, the lower bound
-	  *		of the entire inorder array, and the higher bound of the entire
-	  *		inorder array to the recursive method.
-	  *	3. Within the recursive method:
-	  *		3a. Within the allowed range of the inorder array, find the number
-	  *			with the highest postorder index position, since that will be the
-	  *			root of the subtree.
-	  *		3b. Create a node for the root of this subtree.
-	  *		3c. If the inorder index of the root node is greater than the lower
-	  *			bound of the inorder subarray, then recurse onto the left subtree.
-	  *			Have the subtree root's left child point to the result.
-	  *		3d. If the inorder index of the root node is less than the higher
-	  *			bound of the inorder subarray, then recurse onto the right subtree.
-	  *			Have the subtree root's right child point to the result.
-	  */
+	/* Recursive Solution: In postorder traversal, the last element that is
+	 * visited is the root of the tree. Draw the array of both the inorder and
+	 * postorder traversal. Using the postorder array, we can find the root of
+	 * that subtree, and divide the array of inorder elements at that root for
+	 * the left and right subtrees.
+	 *
+	 * Recursive Algorithm:
+	 *	1. First, create a hash map that maps each number to its postorder
+	 *		position for faster lookups.
+	 *
+	 *	2. Then, pass the inorder traversal array, the hash map, the lower bound
+	 *		of the entire inorder array, and the higher bound of the entire
+	 *		inorder array to the recursive method.
+	 *
+	 *	3. Within the recursive method:
+	 *
+	 *		3a. Within the subtree's range of the inorder array, find the number
+	 *			with the highest postorder index position, since that will be
+	 *			the root of the subtree.
+	 *
+	 *		3b. Create a node for the root of this subtree using the number with
+	 *			the highest postorder index position.
+	 *
+	 *		3c. If the inorder index of the root node is greater than the lower
+	 *			bound of the inorder subarray, then recurse onto the left
+	 *			subtree. Have the subtree root's left child point to the result.
+	 * 
+	 *		3d. If the inorder index of the root node is less than the higher
+	 *			bound of the inorder subarray, then recurse onto the right 
+	 *			subtree. Have the subtree root's right child point to the 
+	 *			result.
+	 */
 	TreeNode * buildTree(std::vector<int> &inorder, std::vector<int> &postorder)
 	{
 		/* Edge Case: Can't build a tree if no elements exist. */
@@ -80,8 +90,8 @@ public:
 				rootInorderIndex - 1);
 		}
 
-		/* Recurse onto the right subtree if it exists (i.e. if the root index is
-		 * less than the higher bound of the subtree. */
+		/* Recurse onto the right subtree if it exists (i.e. if the root index
+		 * is less than the higher bound of the subtree. */
 		if (rootInorderIndex < highIndex)
 		{
 			newNode->right = buildTreeHelper(inorder, elmtOrder,

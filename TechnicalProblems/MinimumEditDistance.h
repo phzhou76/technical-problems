@@ -5,13 +5,15 @@
 #include "pch.h"
 
 /**
- * Problem: Given two words word1 and word2, find the minimum number of operations
+ * Given two words word1 and word2, find the minimum number of operations
  * required to convert word1 to word2.
  *
  * Allowed Operations:
  *	1. Insert a character.
  *	2. Delete a character.
  *	3. Replace a character.
+ *
+ * Source: https://leetcode.com/problems/edit-distance/description/
  */
 class MinimumEditDistance
 {
@@ -35,9 +37,11 @@ public:
 	 * word1 to 'agcdf' would require 5 insert operations.
 	 *
 	 * Then, for each char between word 1 and word2:
+	 * 
 	 *	1. If the two chars match, then no operations between the two chars are
 	 *		needed. In this case, just take the number of operations to transform
 	 *		word1 to word2, excluding these chars. (dp[i - 1][j - 1])
+	 * 
 	 *	2. If the two chars do not match, then take the minimum of the operations
 	 *		from the top, diagonal, and left (they are all the minimum operations
 	 *		needed to transform a part of word1 to a part of word2) and add 1 to it.

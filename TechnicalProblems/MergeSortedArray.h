@@ -5,14 +5,16 @@
 #include "pch.h"
 
 /**
- * Problem: Given two sorted integer arrays num1 and num2, merge nums2 into nums1
- * as one sorted array.
+ * Given two sorted integer arrays num1 and num2, merge nums2 into nums1 as one
+ * sorted array.
  *
  * Notes:
  *	1. The number of elements initialized in nums1 and nums2 are m and n,
  *		respectively.
  *	2. You may assume that nums1 has enough space to hold additional elements from
  *		nums2.
+ *
+ * Source: https://leetcode.com/problems/merge-sorted-array/description/
  */
 class MergeSortedArray
 {
@@ -20,7 +22,8 @@ public:
 	
 	/* Similar to the Replace Space problem, we just need to start copying elements
 	 * to the back of the array first, since there's empty space there and we want
-	 * to avoid overwriting any data. */
+	 * to avoid overwriting any data. 
+	 */
 	void merge(std::vector<int> &nums1, int m, std::vector<int> &nums2, int n)
 	{
 		int nums1Index = m - 1;

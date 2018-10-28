@@ -5,22 +5,26 @@
 #include "pch.h"
 
 /**
- * Problem: Write a method to find the longest common prefix string amongst an
- * array of strings.
+ * Write a method to find the longest common prefix string amongst an array of
+ * strings.
  *
  * If there is no common prefix, return an empty string "".
  *
  * Note: All given inputs are in lowercase letters a-z.
+ *
+ * Source: https://leetcode.com/problems/longest-common-prefix/description/
  */
 class LongestCommonPrefix
 {
 public:
-	std::string longestCommonPrefix(std::vector<std::string>& strs) {
+	std::string longestCommonPrefix(std::vector<std::string> &strs)
+	{
 		/* Error: There is no common prefix if no strings are available. */
 		if (strs.size() < 1)
 		{
 			return "";
 		}
+
 		/* If only one string is available, then it itself is the common prefix. */
 		else if (strs.size() == 1)
 		{

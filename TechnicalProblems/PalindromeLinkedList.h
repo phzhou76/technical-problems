@@ -5,8 +5,10 @@
 #include "LeetCodeLinkedListNode.h"
 
 /**
- * Problem: Given a singly-linked list, determine if it is a palindrome. Could this
+ * Given a singly-linked list, determine if it is a palindrome. Could this 
  * problem be solved in O(n) time and O(1) space?
+ *
+ * Source: https://leetcode.com/problems/palindrome-linked-list/description/
  */
 class PalindromeLinkedList
 {
@@ -51,7 +53,8 @@ public:
 	 * stack and increment the pointer after each iteration, and continue until
 	 * the stack is empty. 
 	 *
-	 * This approach will have a space complexity of O(n). */
+	 * This approach will have a space complexity of O(n). 
+	 */
 	bool isPalindrome(ListNode * head)
 	{
 

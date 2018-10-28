@@ -3,8 +3,8 @@
 #define _DIVIDE_TWO_INTEGERS_H_
 
 /**
- * Problem: Given two integers, dividend and divisor, divide two integers without
- * using the multiplication, division, or mod operator.
+ * Given two integers, dividend and divisor, divide two integers without using 
+ * the multiplication, division, or mod operator.
  *
  * Return the quotient after dividing dividend by divisor. The integer division
  * should truncate toward zero.
@@ -20,6 +20,8 @@
  * Output: -2 
  *
  * Note: The divisor will never by 0.
+ *
+ * Source: https://leetcode.com/problems/divide-two-integers/description/
  */
 class DivideTwoIntegers
 {

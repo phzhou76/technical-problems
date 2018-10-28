@@ -5,8 +5,10 @@
 #include "pch.h"
 
 /**
- * Problem: Given an integer array nums, find the contiguous subarray within an
- * array (containing at least one number) which has the largest product.
+ * Given an integer array nums, find the contiguous subarray within an array
+ * (containing at least one number) which has the largest product.
+ *
+ * Source: https://leetcode.com/problems/maximum-product-subarray/description/
  */
 class MaximumProductSubarray
 {
@@ -34,19 +36,12 @@ public:
 	 * the 2nd number onwards to the last number in the array. If the current
 	 * number is negative, then we need to swap the minimum and maximum values to
 	 * account for the following:
+	 *
 	 *	1. Multiplying max * negative (if max is positive) could result in lowest
 	 *		min value.
+	 *
 	 *	2. Multiplying min * negative (if min is negative) could result in highest
 	 *		max value.
-	 * Then, if the newly calculated product between the previous product and the
-	 * current number is less than the current number, make that the new minimum.
-	 * Else, make the current number the new minimum.
-	 *
-	 * Additionally, if the newly calculated product between the previous product
-	 * and the current number is greater than the current number, make that the
-	 * new maximum. Else, make the current number the new maximum.
-	 *
-	 * Update the global maximum from the new maximum as needed.
 	 */
 	int maxProduct(std::vector<int> &nums)
 	{

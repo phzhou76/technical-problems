@@ -5,8 +5,10 @@
 #include "pch.h"
 
 /**
- * Problem: Given a 2D binary matrix filled with 0s and 1s, find the largest
- * rectangle containing only 1s, and return its area.
+ * Given a 2D binary matrix filled with 0s and 1s, find the largest rectangle
+ * containing only 1s, and return its area.
+ *
+ * Source: https://leetcode.com/problems/maximal-rectangle/description/
  */
 class MaximumSizeRectangle
 {
@@ -24,7 +26,7 @@ public:
 	 * On each iteration, after the column heights for each element in the row have
 	 * been calculated, find the maximum area of that "histogram" (see the solution
 	 * in LargestRectangleHistogram). Record the maximum area of that row if it
-	 * is greater than the overall maximum area found. 
+	 * is greater than the overall maximum area found.
 	 */
 	int maximalRectangle(std::vector<std::vector<char>> &matrix)
 	{
@@ -87,14 +89,14 @@ public:
 		/* Used to mark the right side of a rectangle where a specific column is
 		 * the shortest column in the rectangle. */
 		int rightSideIndex = 0;
-		
+
 		while (rightSideIndex < columnHeights.size())
 		{
 			/* If the current column is taller than the column on top of the stack,
 			 * then we will need to find a max width rectangle for this column
 			 * first before we find one for the column on top of the stack. The
 			 * column on top of the stack will serve as the left side for this
-			 * rectangle, as it is shorter than the current column. 
+			 * rectangle, as it is shorter than the current column.
 			 *
 			 * Edge case: If the stack is empty, then this column is either the
 			 * first column, or all other columns to the left of it are taller

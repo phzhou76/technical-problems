@@ -5,7 +5,7 @@
 #include "LeetCodeLinkedListNode.h"
 
 /**
- * Problem: Write a program to find the node at which the intersection of two 
+ * Write a program to find the node at which the intersection of two 
  * singly-linked lists begins.
  *
  * Notes:
@@ -15,6 +15,8 @@
  *	3. You may assume that there are no cycles anywhere in the entire linked
  *		list structure.
  *	4. Your code should preferably run in O(n) time and use only O(1) memory.
+ *
+ * Source: https://leetcode.com/problems/intersection-of-two-linked-lists/description/
  */
 class IntersectionLinkedLists
 {

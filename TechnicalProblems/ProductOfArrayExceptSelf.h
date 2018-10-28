@@ -17,6 +17,8 @@
  * Note: Please solve it without division and in O(n).
  * Note: Try to solve the problem with constant space complexity. The output array
  *		does not count as extra space for the purpose of space complexity analysis.
+ *
+ * Source: https://leetcode.com/problems/product-of-array-except-self/
  */
 class ProductOfArrayExceptSelf
 {

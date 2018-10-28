@@ -5,9 +5,11 @@
 #include "pch.h"
 
 /**
- * Problem: Given n non-negative integers representing the histogram's bar height
- * where the width of each bar is 1, find the area of the larges rectangle in the
+ * Given n non-negative integers representing the histogram's bar height where 
+ * the width of each bar is 1, find the area of the larges rectangle in the
  * histogram.
+ *
+ * Source: https://leetcode.com/problems/largest-rectangle-in-histogram/description/
  */
 class LargestRectangleInHistogram
 {
@@ -15,12 +17,15 @@ public:
 
 	/* Solution: For each bar i in the histogram, we want to calculate the area
 	 * of the widest rectangle where i is the shortest bar in the rectangle.
+	 * 
 	 *	1. i, since it is the shortest bar in the rectangle, will be the limiting
 	 *		height of that rectangle.
+	 *
 	 *	2. There can only be one possible rectangle of maximum width where i is
 	 *		the shortest bar in the rectangle, as the rectangle will spread out
 	 *		until it hits bars shorter than i, or until it hits the edges of the
 	 *		histogram.
+	 *
 	 * Once we have the widest rectangles of each bar i, where i is the shortest
 	 * bar in the rectangle, we can just find the rectangle of the greatest area
 	 * and return that value.
@@ -88,7 +93,9 @@ public:
 				/* Calculate the area of the widest rectangle where the top bar
 				 * is the shortest bar in the rectangle. */
 				int height = histogram[topIndex];
-				int length = barIndices.empty() ? currIndex : (currIndex - barIndices.top() - 1);
+				int length = barIndices.empty() ? currIndex 
+					: (currIndex - barIndices.top() - 1);
+
 				int topIndexArea = height * length;
 
 				if (topIndexArea > maxArea)
@@ -108,7 +115,9 @@ public:
 			/* Calculate the area of the widest rectangle where the top bar
 			 * is the shortest bar in the rectangle. */
 			int height = histogram[topIndex];
-			int length = barIndices.empty() ? currIndex : (currIndex - barIndices.top() - 1);
+			int length = barIndices.empty() ? currIndex 
+				: (currIndex - barIndices.top() - 1);
+
 			int topIndexArea = height * length;
 
 			if (topIndexArea > maxArea)

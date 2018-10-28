@@ -5,8 +5,17 @@
 #include "pch.h"
 
 /**
- * Problem: Given an unsorted array of integers, find the length of longest 
- * increasing subsequence.
+ * Given an unsorted array of integers, find the length of longest increasing 
+ * subsequence.
+ *
+ * Note:
+ *	1. There may be more than one LIS combination; it is only necessary for you
+ *		to return the length.
+ *	2. Your algorithm should run in O(n^2) complexity.
+ *
+ * Follow-up: Could you improve it to O(n log n) time complexity?
+ *
+ * Source: https://leetcode.com/problems/longest-increasing-subsequence/description/
  */
 class LongestIncreasingSubsequence
 {
@@ -42,7 +51,12 @@ public:
 			 *
 			 * Note: If the maxValidLength remains 0 by the end of the loop, then
 			 * no valid subsequences could be found. Set the max length of the
-			 * subsequence that ends with the current value to 1. */
+			 * subsequence that ends with the current value to 1. 
+			 *
+			 * Note: If the algorithm can be improved to O(n log n), then it could
+			 * possibly be done here. Instead of scanning backwards to find the
+			 * maximum valid length, there should be a way to perform binary
+			 * search onto the subarray. */
 			int maxValidLength = 0;
 			for (int j = i - 1; j >= 0; --j)
 			{
